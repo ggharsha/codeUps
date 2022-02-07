@@ -8,17 +8,17 @@ const passport = require('passport');
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 
+router.get('/tutors',(req, res)=>{
+    console.log('req')
+} )
+
+
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
     res.json({id: req.user.id, 
                 username: req.user.username,
                 role: req.user.role});
 })
 
-router.delete('/:userId', (req, res)=>{
-    const id = req.params.userId;
-
-    
-})
 
 router.post('/register', (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
