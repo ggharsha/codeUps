@@ -1,0 +1,37 @@
+{
+  "name": "codeups",
+  "version": "1.0.0",
+  "description": "MERN Stack Project: codeUps",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "frontend-install": "npm install --prefix frontend",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggharsha/codeUps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ggharsha/codeUps/issues"
+  },
+  "homepage": "https://github.com/ggharsha/codeUps#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "concurrently": "^7.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.0",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
