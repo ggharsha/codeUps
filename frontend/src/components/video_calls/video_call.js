@@ -1,9 +1,16 @@
 import React from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Peer from "peerjs";
+import io from "socket.io-client";
 
-export default class VideoCall extends React.Component {
 
+const socket = io.connect('http://localhost:8000')
 
-    render() {
-        
-    }
+function VideoCall() {
+    const [ me, setMe ] = useState("");
+    const [ stream, setStream ] = useState();
+    const [ receivingCall, setReceivingCall ] = useState(false);
+    const [ caller, setCaller ] = useState("");
+    const [ callerSignal, setCallerSignal ] = useState();
+    
 }
