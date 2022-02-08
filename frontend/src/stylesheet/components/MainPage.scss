@@ -9,6 +9,7 @@ body {
     border: 1px solid red;
     margin: 0px 80px;
     height: 100vh;
+    display: flex;
 }
 
 .main-page-left {
@@ -23,4 +24,20 @@ body {
 
 .joinus {
     padding: 15px 30px;
+}
+
+.main-page-right {
+    border: 1px solid green;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+}
+
+.splash-photo {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    transform: rotate(0deg);
+    // transform: rotateY(-35deg) rotateX(15deg);
 }
