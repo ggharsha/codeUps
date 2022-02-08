@@ -33,9 +33,9 @@ io.on("connection", (socket) => {
 
     socket.on("answerCall", data => {
         io.to(data.to).emit("callAccepted", data.signal)
-        console.log("answer call")
+        console.log("call accepted")
     })
-})
+});
 
 const port = process.env.PORT || 9000;
 server.listen(port, () => console.log(`Server is running on port ${port}`));

@@ -53,6 +53,7 @@ function VideoCall() {
                 from: me,
                 name: name
             })
+            console.log("call user 2")
         })
 
         peer.on("stream", stream => {
@@ -62,6 +63,7 @@ function VideoCall() {
         socket.on("callAccepted", signal => {
             setCallAccepted(true);
             peer.signal(signal);
+            console.log("call accepted")
         })
 
         connectionRef.current = peer;
@@ -77,6 +79,7 @@ function VideoCall() {
 
         peer.on("signal", data => {
             socket.emit("answerCall", { signal: data, to: caller });
+            console.log("answer call")
         })
 
         peer.on("stream", stream => {
@@ -88,9 +91,9 @@ function VideoCall() {
     }
 
     const leaveCall = () => {
-        setCallEnded(true);
-        connectionRef.current.destroy();
-        socket.disconnect();
+        setCallEnded(true)
+        connectionRef.current.destroy()
+        console.log("end call?")
     }
 
     return (
