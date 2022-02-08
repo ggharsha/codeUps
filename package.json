@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ggharsha/codeUps#readme",
   "dependencies": {
+    "@babel/core": "^7.17.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.1",
     "concurrently": "^7.0.0",
@@ -29,6 +30,7 @@
     "mongoose": "^6.2.0",
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0",
+    "sass": "^1.49.7",
     "socket.io": "^4.4.1",
     "validator": "^13.7.0"
   },
