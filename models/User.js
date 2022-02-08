@@ -21,7 +21,7 @@ const UserSchema = new Schema({
         required: false
     },
     role: {
-        type: String,
+        type: Array,
         required: true
     },
     languages:{

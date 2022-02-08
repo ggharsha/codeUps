@@ -14,9 +14,10 @@ module.exports = function validateRegisterInput(data) {
     if(Validator.isEmpty(data.role)){
         errors.role = 'pls choose your role as a student or tutor'
     }
-    if (Validator.isEmpty(data.languages)){
-        errors.languages = 'pls select at least one language'
-    }
+
+    // if (Validator.isEmpty(data.languages)){
+    //     errors.languages = 'pls select at least one language'
+    // }
 
     if (!Validator.isLength(data.username, { min: 2, max: 30 })) {
         errors.username = 'username must be between 2 and 30 characters';
