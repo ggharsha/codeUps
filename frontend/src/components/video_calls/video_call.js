@@ -1,10 +1,10 @@
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import Peer from "simple-peer";
-import io from "socket.io-client";
+import { io } from "socket.io-client";
 // import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-const socket = io.connect('http://localhost:9000') // consider refactoring for prod
+const socket = io.connect('http://localhost:8000') // consider refactoring for prod
 
 function VideoCall() {
     const [ me, setMe ] = useState("");

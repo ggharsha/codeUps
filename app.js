@@ -16,16 +16,20 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 
-
 // socket.io
 const http = require("http");
 const server = http.createServer(app);
+const cors = require("cors");
 const io = require("socket.io")(server, {
     cors: {
         origin: "http://localhost:3000",
-        methods: ["GET", "POST"]
+        methods: ["GET", "POST"],
+        cors: true,
+        allowEI03: true
     }
 });
+
+app.use(cors());
 // end socket.io
 
 mongoose
@@ -62,9 +66,6 @@ io.on("connection", (socket) => {
         io.to(data.to).emit("callAccepted", data.signal)
     })
 })
-
-server.listen(9000, () => console.log("listening on port 9000"))
-
 // end socket.io
 
 //images
@@ -80,5 +81,5 @@ app.get('/images/:key', (req, res)=>{
 
 
 const port = process.env.PORT || 8000;
-
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+// app.listen(port, () => console.log(`Server is running on port ${port}`));
+server.listen(port, () => console.log(`Server is running on port ${port}`));
