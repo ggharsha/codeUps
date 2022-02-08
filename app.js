@@ -20,6 +20,9 @@ if (process.env.NODE_ENV === 'production') {
 const http = require("http");
 const server = http.createServer(app);
 const cors = require("cors");
+
+app.use(cors());
+
 const io = require("socket.io")(server, {
     cors: {
         origin: "http://localhost:3000",
@@ -28,8 +31,6 @@ const io = require("socket.io")(server, {
         allowEI03: true
     }
 });
-
-app.use(cors());
 // end socket.io
 
 mongoose
@@ -51,19 +52,23 @@ require('./config/passport')(passport);
 // socket.io
 io.on("connection", (socket) => {
     socket.emit("me", socket.id)
+    console.log("connected")
 
     socket.on("disconnect", () => {
         socket.broadcast.emit("callEnded")
+        console.log("disconnected")
     })
 
     socket.on("callUser", data => {
         io.to(data.userToCall).emit("callUser", { 
             signal: data.signalData, from: data.from, name: data.name 
         })
+        console.log("call user")
     })
 
     socket.on("answerCall", data => {
         io.to(data.to).emit("callAccepted", data.signal)
+        console.log("answer call")
     })
 })
 // end socket.io
