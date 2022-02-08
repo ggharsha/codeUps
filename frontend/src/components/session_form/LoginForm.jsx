@@ -40,7 +40,6 @@ class LoginForm extends React.Component {
 
 
   render() {
-    console.log(this.props.errors)
     return (
       <div className='login-form-container'>
         <h1 className='login-title'>Login</h1>
