@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const db = require('./config/keys').mongoURI;
 const users = require("./routes/api/users");
+const videos = require("./routes/api/videos")
 const passport = require('passport');
 const path = require('path');
 const multer = require('multer');
@@ -38,6 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use("/api/users", users);
+app.use('/api/videos', videos);
 
 app.use(passport.initialize())
 require('./config/passport')(passport);
