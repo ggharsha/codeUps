@@ -17,8 +17,7 @@
 }
 
 .logo {
-    border: 1px solid red;
-    height: 30px;
+    height: 100%;
 }
 
 .signup {
@@ -34,5 +33,5 @@
 }
 
 .session-buttons:hover {
-    background-color: $medium-purple;
+    background-color: hsl(242, 84%, 64%);
 }

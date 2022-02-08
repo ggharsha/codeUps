@@ -27,7 +27,7 @@ class NavBar extends React.Component {
       } else {
         return (
             <div className="nav-bar-links">
-                <Link className="session-buttons signup" to={'/signup'}>Signup</Link>
+                <Link className="session-buttons signup" to={'/signup'}>Sign Up</Link>
                 <Link className="session-buttons" to={'/login'}>Login</Link>
             </div>
         );
@@ -38,7 +38,7 @@ class NavBar extends React.Component {
       return (
         <div className="nav-bar-container">
           <div className="nav-bar-wrapper">
-              <h1 className="logo">Code Ups</h1>
+              <img className="logo" src={require('../../images/logo.jpg')}/>
               { this.getLinks() }
           </div>
         </div>
