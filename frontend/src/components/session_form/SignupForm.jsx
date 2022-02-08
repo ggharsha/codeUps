@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -22,8 +21,6 @@ class SignupForm extends React.Component {
       },
       errors: {}
     }
-
-    console.log(this.state)
   }
 
   componentDidUpdate(prevProps) {
@@ -59,8 +56,6 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // this.props.signup(this.state)
-    //   .fail(() => this.setState({errors: this.props.errors}))
     let language = Object.keys(this.state.languages).filter(lang => this.state.languages[lang])
     const user = {
       username: this.state.username,
