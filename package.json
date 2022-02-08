@@ -23,6 +23,7 @@
   "homepage": "https://github.com/ggharsha/codeUps#readme",
   "dependencies": {
     "@babel/core": "^7.17.0",
+    "@fontsource/inter": "^4.5.3",
     "aws-sdk": "^2.585.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.1",
