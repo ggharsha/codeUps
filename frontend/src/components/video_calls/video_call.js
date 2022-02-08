@@ -1,8 +1,8 @@
 import React from 'react';
 import { useEffect, useRef, useState } from 'react';
-import Peer from "peerjs";
+import Peer from "simple-peer";
 import io from "socket.io-client";
-
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const socket = io.connect('http://localhost:8000') // consider refactoring for prod
 
@@ -40,15 +40,10 @@ function VideoCall() {
     }, [])
 
     const callUser = id => {
-        const peer = new Peer({ // consider refactoring for prod
-            host: "localhost",
-            port: 8000,
-            path: '/peerjs',
-            ssl: {
-                key: "",
-                cert: "",
-            },
-            proxied: true,
+        const peer = new Peer({
+            initiator: true,
+            trickle: false,
+            stream: stream
         })
 
         peer.on("signal", data => {
@@ -75,7 +70,40 @@ function VideoCall() {
     const answerCall = () => {
         setCallAccepted(true);
         const peer = new Peer({
-            // here
+            initiator: false,
+            trickle: false,
+            stream: stream
         })
+
+        peer.on("signal", data => {
+            socket.emit("answerCall", { signal: data, to: caller });
+        })
+
+        peer.on("stream", stream => {
+            userVideo.current.srcObject = stream;
+        })
+
+        peer.signal(callerSignal);
+        connectionRef.current = peer;
     }
+
+    const leaveCall = () => {
+        setCallEnded(true);
+        connectionRef.current.destroy();
+    }
+
+    return (
+        <div>
+            <div className='video-container'>
+                <div className='video'>
+                    { stream && <video playsInline muted ref={myVideo} autoPlay style={{ width: "600px" }} />}
+                </div>
+                <div className='video'>
+                    { callAccepted && !callEnded ? <video playsInline ref={userVideo} autoPlay style={{ width: "600px" }} /> : null }
+                </div>
+            </div>
+        </div>
+    )
 }
+
+export default VideoCall;
