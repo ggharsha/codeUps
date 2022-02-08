@@ -10,6 +10,13 @@ class LoginForm extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.errors !== this.props.errors) {
+      this.setState({errors: this.props.errors})
+    }
+  }
+
+
   update(field) {
     return (e) => this.setState({ [field] : e.currentTarget.value })
   }
@@ -18,8 +25,22 @@ class LoginForm extends React.Component {
     e.preventDefault();
     this.props.login(this.state)
   }
+  
+  renderErrors() {
+    return(
+      <ul className='errors-list'>
+        {Object.keys(this.state.errors).map((error, i) => (
+          <li className='error-item' key={i}>
+            {this.state.errors[error]}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
 
   render() {
+    console.log(this.props.errors)
     return (
       <div className='login-form-container'>
         <h1 className='login-title'>Login</h1>
@@ -34,6 +55,7 @@ class LoginForm extends React.Component {
         </div>
         <button type='submit'>Login</button>
         </form>
+        {this.renderErrors()}
       </div>
     )
   }

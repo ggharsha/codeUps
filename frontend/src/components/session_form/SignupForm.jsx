@@ -25,6 +25,25 @@ class SignupForm extends React.Component {
     console.log(this.state)
   }
 
+  componentDidUpdate(prevProps) {
+
+    if (this.props.signedIn) {
+      let language = Object.keys(this.state.languages).filter(lang => this.state.languages[lang])
+
+      const user = {
+        username: this.state.username,
+        email: this.state.email,
+        password: this.state.password,
+        password2: this.state.password2,
+        role: this.state.role,
+        languages: language
+      }
+      this.props.login(user)
+    } else if (prevProps.errors !== this.props.errors) {
+      this.setState({errors: this.props.errors})
+    }
+  }
+
   update(field) {
     return (e) => this.setState({ [field] : e.currentTarget.value })
   }
@@ -42,8 +61,6 @@ class SignupForm extends React.Component {
     // this.props.signup(this.state)
     //   .fail(() => this.setState({errors: this.props.errors}))
     let language = Object.keys(this.state.languages).filter(lang => this.state.languages[lang])
-
-
     const user = {
       username: this.state.username,
       email: this.state.email,
@@ -53,24 +70,19 @@ class SignupForm extends React.Component {
       languages: language
     }
 
-    
     this.props.signup(user)
-      .then(() => {this.props.login(user)})
-    
   }
 
   renderErrors() {
-    return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => {
-          return (
-            <li key={i}>
-              {this.state.errors[error]}
-            </li>
-          )
-        })}
+    return(
+      <ul className='errors-list'>
+        {Object.keys(this.state.errors).map((error, i) => (
+          <li className='error-item' key={i}>
+            {this.state.errors[error]}
+          </li>
+        ))}
       </ul>
-    )
+    );
   }
 
   render() {
@@ -137,6 +149,7 @@ class SignupForm extends React.Component {
           </div>
           <button type='submit'>Sign up</button>
         </form>
+        {this.renderErrors()}
       </div>
     )
   }
