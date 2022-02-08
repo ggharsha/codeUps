@@ -1,0 +1,37 @@
+@import '../variables.scss';
+
+
+.nav-bar-container {
+    width: 100vw;
+    height: 10vh;
+    border-bottom: 1px solid $medium-purple;
+    display: flex;
+}
+
+.nav-bar-wrapper {
+    width: 100%;
+    margin: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
+}
+
+.signup {
+    margin-right: 40px;
+}
+
+.session-buttons {
+    background-color: $darkest-purple;
+    color: white;
+    padding: 10px 13px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.session-buttons:hover {
+    background-color: hsl(242, 84%, 64%);
+}
