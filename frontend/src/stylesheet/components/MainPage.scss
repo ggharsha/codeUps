@@ -14,23 +14,37 @@ body {
 
 .main-page-left {
     border: 1px solid black;
-    width: 40%;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
 }
 
 .joinus {
+    margin-top: 30px;
     padding: 15px 30px;
+}
+
+.main-page-tagline {
+    color: $darkest-purple;
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+#tagline-codeups {
+    color: $darkGray;
+    font-size: 40px;
+    font-weight: 500;
 }
 
 .main-page-right {
     border: 1px solid green;
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 50%;
     height: 100%;
 }
 
@@ -38,6 +52,6 @@ body {
     width: 100%;
     height: auto;
     margin: auto;
-    transform: rotate(0deg);
+    // transform: rotateX(15deg);
     // transform: rotateY(-35deg) rotateX(15deg);
 }
