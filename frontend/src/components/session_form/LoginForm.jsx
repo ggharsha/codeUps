@@ -43,16 +43,16 @@ class LoginForm extends React.Component {
     return (
       <div className='login-form-container'>
         <h1 className='login-title'>Login</h1>
-        <form onSubmit={(e) => this.handleSubmit(e)}>
+        <form className='login-container' onSubmit={(e) => this.handleSubmit(e)}>
         <div className='username-container'>
-          <div>Username</div>
+          <div className='input-title'>Username</div>
           <input id='username' type='text' value={this.state.username} onChange={this.update('username')} />
         </div>
         <div className='password-container'>
-          <div>Password</div>
+          <div className='input-title'>Password</div>
           <input id='password' type='password' value={this.state.password} onChange={this.update('password')} />
         </div>
-        <button type='submit'>Login</button>
+        <button className='login-btn' type='submit'>Login</button>
         </form>
         {this.renderErrors()}
       </div>
