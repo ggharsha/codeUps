@@ -65,7 +65,7 @@ io.on("connection", (socket) => {
 // end socket.io
 
 //images
-// app.post('/images', uplaod.single('image')(req, res)=>{
+// app.post('/images', upload.single('image')(req, res)=>{
 //     res.send("okay")
 // })
 const {getFiles} = require('./s3')

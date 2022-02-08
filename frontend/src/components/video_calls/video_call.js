@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import Peer from "simple-peer";
 import io from "socket.io-client";
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+// import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const socket = io.connect('http://localhost:8000') // consider refactoring for prod
 
@@ -104,7 +104,34 @@ function VideoCall() {
             </div>
 
             <div className='my-id'>
-                
+                <div className="call-button">
+                    {callAccepted && !callEnded ? (
+                        <button
+                            onClick={leaveCall}
+                        >
+                            End Call
+                        </button>
+                    ) : (
+                        <button
+                            onClick={() => callUser(idToCall)}
+                        >
+                            Phone Icon
+                        </button>
+                    )}
+                    {idToCall}
+                </div>
+                <div>
+                    {receivingCall && !callAccepted ? (
+                        <div className="caller">
+                            <h1 >{name} is calling...</h1>
+                            <button 
+                                onClick={answerCall}
+                            >
+                                Answer
+                            </button>
+                        </div>
+                    ) : null}
+                </div>
             </div>
             {/* <div className="myId">
 
