@@ -62,6 +62,9 @@ io.on("connection", (socket) => {
         io.to(data.to).emit("callAccepted", data.signal)
     })
 })
+
+server.listen(9000, () => console.log("listening on port 9000"))
+
 // end socket.io
 
 //images
