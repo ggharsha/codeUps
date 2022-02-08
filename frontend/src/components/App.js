@@ -4,6 +4,8 @@ import { Switch } from 'react-router-dom';
 import NavBarContainer from './navbar/NavbarContainer';
 
 import MainPage from './main/MainPage';
+import { Route } from "react-router-dom";
+import VideoCall from './video_calls/video_call';
 import LoginPage from './session_form/LoginPage';
 import SignupPage from './session_form/SignupPage';
 
@@ -15,6 +17,8 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginPage} />
         <AuthRoute exact path="/signup" component={SignupPage} />
     </Switch>
+
+    <Route exact path="/video" component={VideoCall} />
 
   </div>
 );
