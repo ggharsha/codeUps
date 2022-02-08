@@ -50,11 +50,13 @@ class SignupForm extends React.Component {
       password: this.state.password,
       password2: this.state.password2,
       role: this.state.role,
-      languages: 'sd'
+      languages: language
     }
 
     
     this.props.signup(user)
+      .then(() => {this.props.login(user)})
+    
   }
 
   renderErrors() {
