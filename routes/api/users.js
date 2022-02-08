@@ -8,10 +8,25 @@ const passport = require('passport');
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 
-router.get('/tutors',(req, res)=>{
-    console.log('req')
-} )
 
+
+
+router.get('/tutors', (req, res)=>{
+   User.find({role: "tutor"}, ((err, tutors)=>{
+       res.json(tutors)
+   }))
+})
+router.get('/:id', (req, res)=>{
+    console.log(req)
+    User.findById(req.params.id)
+        .then(user=>{
+            if(!user){
+                return res.status(400).json(errors);
+            }else{
+                res.json({user})
+            }
+        })
+})
 
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
     res.json({id: req.user.id, 
