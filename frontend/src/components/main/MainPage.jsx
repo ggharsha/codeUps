@@ -20,17 +20,14 @@ class MainPage extends React.Component {
             />
           </div>
           <p id="tagline-codeups">with codeUps</p>
+          <p className="tagline">A place where students and teachers can connect to code</p>
           <div>
             <Link className="session-buttons joinus" to={'/signup'}>Join Us</Link>
           </div>
         </div>
         <div className="main-page-right">
-          <img className='splash-photo' src={require('../../images/splash.png')} />
+          <img className='splash-photo' src={require('../../images/splash.jpg')} />
         </div>
-        {/* <h1>A Twitter Clone</h1>
-        <footer>
-          Copyright &copy; 2019 Chirper
-        </footer> */}
       </div>
     );
   }
