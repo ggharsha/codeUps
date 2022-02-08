@@ -1,0 +1,23 @@
+div.signup-page {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  min-height: 800px;
+
+  img.signup-splash {
+    height: 100%;
+    flex: 2;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  div.signup-form-box {
+    height: 100%;
+    flex: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 100px;
+  }
+}

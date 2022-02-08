@@ -16,6 +16,7 @@ class SignupForm extends React.Component {
         Python: false,
         Java: false,
         C: false,
+        R: false,
         HTML: false,
         CSS: false
       },
@@ -88,66 +89,91 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className='signup-form-container'>
-        <h1 className='signup-title'>Sign Up</h1>
-        <form onSubmit={(e) => this.handleSubmit(e)}>
+        <h1 className='signup-title'>Sign up</h1>
+        <p className='signup-description'>Start learning today</p>
+        <form className='signup-form' onSubmit={(e) => this.handleSubmit(e)}>
           <div className='username-container'>
-            <div>Username</div>
+            <div className='input-title'>Username</div>
             <input id='username' type='text' value={this.state.username} onChange={this.update('username')} />
           </div>
           <div className='email-container'>
-            <div>Email</div>
+            <div className='input-title'>Email</div>
             <input id='email' type='text' value={this.state.email} onChange={this.update('email')} />
           </div>
           <div className='password-container'>
-            <div>Password</div>
+            <div className='input-title'>Password</div>
             <input id='password' type='password' value={this.state.password} onChange={this.update('password')} />
           </div>
           <div className='password2-container'>
-            <div>Confirm Password</div>
+            <div className='input-title'>Confirm Password</div>
             <input id='password2' type='password' value={this.state.password2} onChange={this.update('password2')} />
           </div>
           <div className='user-type-container'>
-            <div>Are you a</div>
+            <div className='input-title'>Are you a</div>
             <div className='radio-button-group'>
-              <input 
-                type='radio'
-                value='Student'
-                checked={this.state.role === 'Student'}
-                onChange={this.update('role')}
-              />Student
-              <input 
-                type='radio'
-                value='Tutor'
-                checked={this.state.role === 'Tutor'}
-                onChange={this.update('role')}
-              />Teacher
+              <label>
+                <input 
+                  type='radio'
+                  value='Student'
+                  checked={this.state.role === 'Student'}
+                  onChange={this.update('role')}
+                />Student
+              </label>
+              <label>
+                <input 
+                  type='radio'
+                  value='Tutor'
+                  checked={this.state.role === 'Tutor'}
+                  onChange={this.update('role')}
+                />Teacher
+              </label>
             </div>
           </div>
+          <div className='input-title'>Select your language(s)</div>
           <div className='language-container'>
-            <div>Select your language(s)</div>
             <div className='single-checkbox'>
-              <input type='checkbox' value='Ruby' onChange={(e) => this.updateCheckbox(e, 'Ruby')} />Ruby
+              <label>
+                <input type='checkbox' value='Ruby' onChange={(e) => this.updateCheckbox(e, 'Ruby')} />Ruby
+              </label>
             </div>
             <div className='single-checkbox'>
-              <input type='checkbox' value='JavaScript' onChange={(e) => this.updateCheckbox(e, 'JavaScript')} />JavaScript
+              <label>
+                <input type='checkbox' value='JavaScript' onChange={(e) => this.updateCheckbox(e, 'JavaScript')} />
+                JavaScript
+              </label>
             </div>
             <div className='single-checkbox'>
-              <input type='checkbox' value='Python' onChange={(e) => this.updateCheckbox(e, 'Python')} />Python
+              <label>
+                <input type='checkbox' value='Python' onChange={(e) => this.updateCheckbox(e, 'Python')} />Python
+              </label>
             </div>
             <div className='single-checkbox'>
-              <input type='checkbox' value='Java' onChange={(e) => this.updateCheckbox(e, 'Java')} />Java
+              <label>
+                <input type='checkbox' value='Java' onChange={(e) => this.updateCheckbox(e, 'Java')} />Java
+              </label>
             </div>
             <div className='single-checkbox'>
-              <input type='checkbox' value='C' onChange={(e) => this.updateCheckbox(e, 'C')} />C
+              <label>
+                <input type='checkbox' value='C' onChange={(e) => this.updateCheckbox(e, 'C')} />C
+              </label>
             </div>
             <div className='single-checkbox'>
-              <input type='checkbox' value='HTML' onChange={(e) => this.updateCheckbox(e, 'HTML')} />HTML
+              <label>
+                <input type='checkbox' value='R' onChange={(e) => this.updateCheckbox(e, 'R')} />R
+              </label>
             </div>
             <div className='single-checkbox'>
-              <input type='checkbox' value='CSS' onChange={(e) => this.updateCheckbox(e, 'CSS')} />CSS
+              <label>
+                <input type='checkbox' value='HTML' onChange={(e) => this.updateCheckbox(e, 'HTML')} />HTML
+              </label>
+            </div>
+            <div className='single-checkbox'>
+              <label>
+                <input type='checkbox' value='CSS' onChange={(e) => this.updateCheckbox(e, 'CSS')} />CSS
+              </label>
             </div>
           </div>
-          <button type='submit'>Sign up</button>
+          <button className='signup-btn' type='submit'>Sign up</button>
         </form>
         {this.renderErrors()}
       </div>
