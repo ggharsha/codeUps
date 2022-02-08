@@ -15,6 +15,8 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
     </Switch>
+    <img src = '/images/procreator-ux-design-studio-VzJjPuk53sk-unsplash.jpg'/>
+
   </div>
 );
 
