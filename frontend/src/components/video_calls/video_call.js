@@ -92,7 +92,8 @@ function VideoCall() {
 
     const leaveCall = () => {
         setCallEnded(true)
-        connectionRef.current.destroy()
+        connectionRef.current.destroy();
+        // window.location.reload();
         console.log("end call?")
     }
 
@@ -140,27 +141,20 @@ function VideoCall() {
 
                 <div className="call-button">
                     {callAccepted && !callEnded ? (
-                        <button
-                            onClick={leaveCall}
-                        >
+                        <button onClick={leaveCall}>
                             End Call
                         </button>
                     ) : (
-                        <button
-                            onClick={() => callUser(idToCall)}
-                        >
+                        <button onClick={() => callUser(idToCall)}>
                             Phone Icon
                         </button>
                     )}
-                    {idToCall}
                 </div>
                 <div>
                     {receivingCall && !callAccepted ? (
                         <div className="caller">
-                            <h1 >{name} is calling...</h1>
-                            <button 
-                                onClick={answerCall}
-                            >
+                            <h1>{name} is calling...</h1>
+                            <button onClick={answerCall}>
                                 Answer
                             </button>
                         </div>
