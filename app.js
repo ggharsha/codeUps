@@ -86,5 +86,5 @@ app.get('/images/:key', (req, res)=>{
 
 
 const port = process.env.PORT || 8000;
-// app.listen(port, () => console.log(`Server is running on port ${port}`));
-server.listen(port, () => console.log(`Server is running on port ${port}`));
+app.listen(port, () => console.log(`Server is running on port ${port}`));
+server.listen(9000, () => console.log(`Server is running on port 9000`));
