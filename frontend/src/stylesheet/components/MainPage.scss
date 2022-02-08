@@ -1,20 +1,6 @@
-@import '../variables.scss';
-
 body {
     background-color: $off-white;
     height: 100vh;
     width: 100vw;
     max-width: 100%;
-}
-
-.logo {
-    border: 1px solid red;
-}
-
-.nav-bar {
-    background-color: yellow;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
