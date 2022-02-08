@@ -23,7 +23,7 @@ router.get('/:id', (req, res)=>{
             if(!user){
                 return res.status(400).json(errors);
             }else{
-                res.json({user})
+                res.json(user)
             }
         })
 })
