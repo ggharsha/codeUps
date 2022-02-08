@@ -12,7 +12,7 @@ module.exports = function validateRegisterInput(data) {
     data.languages = validText(data.languages) ? data.languages : [];
 
     if(Validator.isEmpty(data.role)){
-        errors.role = 'pls choose your role as a student or tutor'
+        errors.role = 'Please select a role'
     }
 
     // if (Validator.isEmpty(data.languages)){
@@ -20,15 +20,15 @@ module.exports = function validateRegisterInput(data) {
     // }
 
     if (!Validator.isLength(data.username, { min: 2, max: 30 })) {
-        errors.username = 'username must be between 2 and 30 characters';
+        errors.username = 'Username must be between 2 and 30 characters';
     }
 
     if (Validator.isEmpty(data.username)) {
-        errors.username = 'username field is required';
+        errors.username = 'Please enter a username';
     }
 
     if (Validator.isEmpty(data.email)) {
-        errors.email = 'Email field is required';
+        errors.email = 'Please enter a password';
     }
 
     if (!Validator.isEmail(data.email)) {
@@ -36,15 +36,15 @@ module.exports = function validateRegisterInput(data) {
     }
 
     if (Validator.isEmpty(data.password)) {
-        errors.password = 'Password field is required';
+        errors.password = 'Please enter a password';
     }
 
     if (!Validator.isLength(data.password, { min: 6, max: 30 })) {
-        errors.password = 'Password must be at least 6 characters';
+        errors.password = 'Password muse be between 6 and 30 characters';
     }
 
     if (Validator.isEmpty(data.password2)) {
-        errors.password2 = 'Confirm Password field is required';
+        errors.password2 = 'Please confirm password';
     }
 
     if (!Validator.equals(data.password, data.password2)) {
