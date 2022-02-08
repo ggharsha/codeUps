@@ -5,7 +5,7 @@ import NavBarContainer from './navbar/NavbarContainer';
 
 import MainPage from './main/MainPage';
 import LoginFormContainer from './session_form/LoginFormContainer';
-import SignupFormContainer from './session_form/SignupFormContainer';
+import SignupPage from './session_form/SignupPage';
 
 const App = () => (
   <div>
@@ -13,9 +13,8 @@ const App = () => (
     <Switch>
         <AuthRoute exact path="/" component={MainPage} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupPage} />
     </Switch>
-    <img src = '/images/procreator-ux-design-studio-VzJjPuk53sk-unsplash.jpg'/>
 
   </div>
 );
