@@ -5,6 +5,9 @@ import NavBarContainer from './navbar/NavbarContainer';
 
 import MainPage from './main/MainPage';
 import LoginFormContainer from './session_form/LoginFormContainer';
+import SignupFormContainer from './session_form/SignupFormContainer';
+import { Route } from "react-router-dom";
+import VideoCall from './video_calls/video_call';
 import SignupPage from './session_form/SignupPage';
 
 const App = () => (
@@ -15,6 +18,8 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupPage} />
     </Switch>
+
+    <Route exact path="/video" component={VideoCall} />
 
   </div>
 );
