@@ -5,18 +5,47 @@ const router = express.Router();
 const Review = require('../../models/Review')
 const validateReviewInput = require('../../validation/review')
 
+const studentReviews = (req, res, next)=>{
+    Review.find({ studentId: req.params.id })
+        .then(reviews => {
+            if(reviews.length < 1) {
+                next()
+            }else{
+                console.log(reviews)
+                return res.json(reviews)
+            }
+        })
+        
+}
+const tutorReviews = (req, res, next) => {
 
-router.get('/:studentId',((req, res)=>{
-    Review.find({ studentId: req.params.studentId })
-        .then(reviews => { res.json(reviews) })
-        .catch(err => res.status(404).json({ noreviewsfound: "No reviews found" }))
-}))
+    Review.find({ tutorId: req.params.id })
+        .then(reviews => {
+            if (reviews.length < 1) {
+                next()
+            } else {
+                console.log("tutor")
+                return res.json(reviews)
+            }
+        })
+}
 
-router.get('/:tutorId', ((req, res) => {
-    Review.find({ tutorId: req.params.tutorId })
-        .then(reviews => { res.json(reviews) })
-        .catch(err => res.status(404).json({ noreviewsfound: "No reviews found" }))
-}))
+router.get('/:id', studentReviews, tutorReviews, (req, res)=>{
+   
+})
+
+// router.get('/:studentId',((req, res)=>{
+    
+//     Review.find({ studentId: req.params.studentId })
+//         .then(reviews => { res.json(reviews) })
+//         .catch(err => res.status(404).json({ noreviewsfound: "No reviews found" }))
+// }))
+
+// router.get('/:tutorId', ((req, res) => {
+//     Review.find({ tutorId: req.params.tutorId })
+//         .then(reviews => { res.json(reviews) })
+//         .catch(err => res.status(404).json({ noreviewsfound: "No reviews found" }))
+// }))
 
 
 const createReview = (req, res, next)=> {
@@ -79,7 +108,7 @@ const update = (req, res, next)=>{
     })
 }
 
-router.put('/edit', update, findStudent, findTutor,(req, res)=>{
+router.patch('/edit', update, findStudent, findTutor,(req, res)=>{
     
 
     const updatedReview = {
