@@ -11,7 +11,6 @@ class Card extends React.Component {
 
   flipCard() {
     this.setState({isFlipped: !this.state.isFlipped});
-    console.log('test')
   }
 
   render() {
