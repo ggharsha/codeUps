@@ -16,9 +16,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 20px 60px;
-    border: 1px solid orange;
+    justify-content: space-evenly;
+    margin: 20px 100px;
 }
 
 .developers {
@@ -40,6 +39,8 @@
 
 .name-links > p {
     margin-bottom: 7px;
+    font-weight: 500;
+    color: $darkestGray
 }
 
 .prof-links {
@@ -50,6 +51,11 @@
     display: flex;
     margin-right: 10px;
     font-size: 14px;
+}
+
+.prof-links a p {
+    margin-left: 2px;
+    color: $darkGray
 }
 
 .prof-links a > p:hover {
