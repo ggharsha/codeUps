@@ -21,7 +21,7 @@ io.on("connection", (socket) => {
 
     socket.on("disconnect", () => {
         socket.broadcast.emit("callEnded")
-        console.log("disconnected")
+        console.log("banana")
     })
 
     socket.on("callUser", data => {
@@ -29,11 +29,13 @@ io.on("connection", (socket) => {
             signal: data.signalData, from: data.from, name: data.name
         })
         console.log("call user")
+        console.log(socket.rooms)
     })
 
     socket.on("answerCall", data => {
         io.to(data.to).emit("callAccepted", data.signal)
         console.log("call accepted")
+        console.log(socket.rooms)
     })
 });
 
