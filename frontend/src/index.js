@@ -8,6 +8,7 @@ import { logout } from './actions/session_actions';
 import "@fontsource/inter";
 
 // test
+import * as ReviewUtil from './util/review_api_util'
 import * as UserAction from './actions/user_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,7 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchUser = UserAction.fetchUser;
-  window.fetchTutors = UserAction.fetchTutors;
-  window.fetchStudents = UserAction.fetchStudents;
+  // window.fetchUser = UserAction.fetchUser;
+  // window.fetchTutors = UserAction.fetchTutors;
+  // window.fetchStudents = UserAction.fetchStudents;
+  
+  
+
 })
