@@ -26,6 +26,8 @@ function VideoCall() {
         .then(stream => {
             setStream(stream)
             myVideo.current.srcObject = stream
+        }).catch(error => {
+            console.log(error)
         })
 
         socket.on("me", id => {
