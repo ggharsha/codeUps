@@ -10,7 +10,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 let socket;
 const port = process.env.PORT || 9000;
 if (process.env.NODE_ENV === 'production') {
-    socket = io.connect(`https://codeups.herokuapp.com:${port}`)
+    socket = io.connect(`https://codeups.herokuapp.com:${port}/socket.io/`)
 } else {
     socket = io.connect('http://localhost:9000')
 };
