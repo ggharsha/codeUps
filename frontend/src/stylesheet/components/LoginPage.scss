@@ -41,16 +41,16 @@ div.login-page {
     width: 300px;
     height: 35px;
     font-size: 1.2rem;
-    background: linear-gradient(45deg, hsl(242, 84%, 69%) 20%, hsl(242, 84%, 64%) 80%,);
+    background: linear-gradient(45deg, hsl(33, 87%, 64%) 20%, hsl(33, 87%, 55%) 80%,);
     border-radius: 3px;
     border: none;
-    color: #F3F3F3;
+    color: $darkestGray;
     cursor: pointer;
     margin-bottom: 15px;
 }
 
 .demo-btn:hover {
-    background: hsl(242, 84%, 62%);
+    background: hsl(33, 87%, 55%);
 }
 
 #or-divider {

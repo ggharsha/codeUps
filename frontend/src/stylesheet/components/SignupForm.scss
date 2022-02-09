@@ -76,5 +76,39 @@ div.signup-form-container {
     }
   }
 
+  .demo-btn {
+    width: 300px;
+    height: 35px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, hsl(33, 87%, 64%) 20%, hsl(33, 87%, 55%) 80%,);
+    border-radius: 3px;
+    border: none;
+    color: $darkestGray;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
 
+  .demo-btn:hover {
+      background: hsl(33, 87%, 55%);
+  }
+
+  #or-divider {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 15px
+  }
+
+  .or-signup {
+      width: 120px;
+      height: 1px;
+      background-color: $darkestGray;
+  }
+
+  #or-divider p {
+      font-size: 13px;
+      font-weight: 600;
+      color: $darkGray;
+      margin: 0px 18px;
+  }
 }
