@@ -1,0 +1,66 @@
+@import '../variables.scss';
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    min-height: 100px;
+    max-width: 100%;
+    position: absolute;
+    bottom: -100px;
+    border: 1px solid black;
+}
+
+.footer-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px 100px 20px 100px;
+}
+
+.developers {
+    border-bottom: 3px solid $darkest-purple;
+    font-weight: 600;
+    font-size: 18px;
+    color: $darkGray;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-links > p {
+    margin-bottom: 7px;
+    font-weight: 500;
+    color: $darkestGray
+}
+
+.prof-links {
+    display: flex;
+}
+
+.prof-links a {
+    display: flex;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.prof-links a p {
+    margin-left: 2px;
+    color: $darkGray
+}
+
+.prof-links a > p:hover {
+    color: hsl(242, 84%, 62%);
+    text-decoration: underline;
+}
+

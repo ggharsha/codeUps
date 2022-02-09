@@ -25,8 +25,9 @@ div.login-form-container {
     input[type=text],
     input[type=password] {
       width: 300px;
-      height: 25px;
+      height: 30px;
       font-size: 1.1rem; 
+      box-sizing: border-box;
 
       &:focus {
         outline-color: $medium-purple;

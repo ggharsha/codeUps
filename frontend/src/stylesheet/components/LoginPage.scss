@@ -1,7 +1,7 @@
 div.login-page {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   min-height: 800px;
 
@@ -18,5 +18,57 @@ div.login-page {
     flex: 1;
     object-fit: cover;
     overflow: hidden;
+    margin-left: 30px;
   }
+}
+
+.other-form {
+  color: $darkGray;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.other-form-link {
+  color: $darkestGray;
+  font-weight: 600;
+}
+
+.other-form-link:hover {
+  text-decoration: underline;
+}
+
+.demo-btn {
+    width: 300px;
+    height: 35px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, hsl(242, 84%, 69%) 20%, hsl(242, 84%, 64%) 80%,);
+    border-radius: 3px;
+    border: none;
+    color: #F3F3F3;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.demo-btn:hover {
+    background: hsl(242, 84%, 62%);
+}
+
+#or-divider {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 15px
+}
+
+.or {
+    flex-grow: 1;
+    height: 1px;
+    background-color: $darkestGray;
+}
+
+#or-divider p {
+    font-size: 13px;
+    font-weight: 600;
+    color: $darkGray;
+    margin: 0px 18px;
 }

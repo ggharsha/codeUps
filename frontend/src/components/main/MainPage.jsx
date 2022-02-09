@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
-import Card from './Card'
+import NavBarContainer from '../navbar/NavbarContainer';
+import Footer from '../footer/Footer';
+import Card from './Card';
 
 class MainPage extends React.Component {
 
 
   render() {
     return (
+      <>
+      <NavBarContainer />
       <div className="main-page-container">
         <div className='main-display'>
           <div className="main-page-left">
@@ -60,6 +64,8 @@ class MainPage extends React.Component {
           </div>
         </div>
       </div>
+      {/* <Footer /> */}
+      </>
     );
   }
 }

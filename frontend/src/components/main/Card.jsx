@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../footer/Footer';
 
 class Card extends React.Component {
   constructor(props) {
