@@ -11,24 +11,27 @@ const studentReviews = (req, res, next)=>{
             if(reviews.length < 1) {
                 next()
             }else{
+                console.log(reviews)
                 return res.json(reviews)
             }
         })
         
 }
 const tutorReviews = (req, res, next) => {
+
     Review.find({ tutorId: req.params.id })
         .then(reviews => {
             if (reviews.length < 1) {
                 next()
             } else {
+                console.log("tutor")
                 return res.json(reviews)
             }
         })
 }
 
 router.get('/:id', studentReviews, tutorReviews, (req, res)=>{
-    console.log(req)
+   
 })
 
 // router.get('/:studentId',((req, res)=>{
@@ -105,7 +108,7 @@ const update = (req, res, next)=>{
     })
 }
 
-router.put('/edit', update, findStudent, findTutor,(req, res)=>{
+router.patch('/edit', update, findStudent, findTutor,(req, res)=>{
     
 
     const updatedReview = {

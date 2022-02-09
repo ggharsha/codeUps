@@ -10,7 +10,7 @@ import "@fontsource/inter";
 // test
 import * as ReviewUtil from './util/review_api_util'
 import * as UserAction from './actions/user_actions';
-
+import * as ReviewAction from './actions/review_actions'
 document.addEventListener('DOMContentLoaded', () => {
   let store; 
 
@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.fetchTutors = UserAction.fetchTutors;
   // window.fetchStudents = UserAction.fetchStudents;
   
-  
+  window.getReviews = ReviewAction.getReviews;
+  window.createReview = ReviewAction.createReview;
+  window.updateReview = ReviewAction.updateReview;
+  window.deleteReview = ReviewAction.deleteReview;
 
 })
