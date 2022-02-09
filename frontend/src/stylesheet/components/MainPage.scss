@@ -10,8 +10,8 @@ body {
 
 .main-page-container {
     margin-left: 80px;
-    height: 750px;
-    // height: calc(100vh - 100px);
+    // height: 750px;
+    height: calc(100% - 200px);
     display: flex;
     flex-direction: column;
 }

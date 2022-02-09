@@ -11,7 +11,7 @@ class MainPage extends React.Component {
   render() {
     return (
       <>
-      {/* <NavBarContainer /> */}
+      <NavBarContainer />
       <div className="main-page-container">
         <div className='main-display'>
           <div className="main-page-left">
@@ -64,7 +64,7 @@ class MainPage extends React.Component {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
       </>
     );
   }

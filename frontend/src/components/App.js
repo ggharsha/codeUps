@@ -10,14 +10,14 @@ import LoginPage from './session_form/LoginPage';
 import SignupPage from './session_form/SignupPage';
 
 const App = () => (
-  <div>
-    <NavBarContainer />
+  <div className="main-content">
+    {/* <ProtectedRoute path="/" component={NavBarContainer} /> */}
     <Switch>
-        <AuthRoute exact path="/" component={MainPage} />
+        <Route exact path="/" component={MainPage} />
         <AuthRoute exact path="/login" component={LoginPage} />
         <AuthRoute exact path="/signup" component={SignupPage} />
     </Switch>
-    {/* <Footer /> */}
+    <Footer />
     <Route exact path="/video" component={VideoCall} />
 
   </div>
