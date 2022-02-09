@@ -7,6 +7,9 @@ import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 import "@fontsource/inter";
 
+// test
+import * as UserAction from './actions/user_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
   let store; 
 
@@ -36,5 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store} />, root);
 
   window.getState = store.getState;
-  
+  window.dispatch = store.dispatch;
+  window.fetchUser = UserAction.fetchUser;
+  window.fetchTutors = UserAction.fetchTutors;
+  window.fetchStudents = UserAction.fetchStudents;
 })
