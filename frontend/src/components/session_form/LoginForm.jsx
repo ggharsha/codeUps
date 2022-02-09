@@ -92,6 +92,12 @@ class LoginForm extends React.Component {
         <button className='login-btn' type='submit'>Login</button>
         </form>
         <button className='demo-btn' type='submit' onClick={this.loginDemoStudent}>Demo Student</button>
+        <div id="or-divider">
+          <div className="or"></div>
+          <p>OR</p>
+          <div className="or"></div>
+        </div>
+        <button className='demo-btn' type='submit' onClick={this.loginDemoStudent}>Demo Tutor</button>
         {this.renderErrors()}
       </div>
     )

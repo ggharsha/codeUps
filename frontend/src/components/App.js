@@ -11,13 +11,13 @@ import SignupPage from './session_form/SignupPage';
 
 const App = () => (
   <div>
-    <NavBarContainer />
+    {/* <NavBarContainer /> */}
     <Switch>
         <AuthRoute exact path="/" component={MainPage} />
         <AuthRoute exact path="/login" component={LoginPage} />
         <AuthRoute exact path="/signup" component={SignupPage} />
     </Switch>
-    <Footer />
+    {/* <Footer /> */}
     <Route exact path="/video" component={VideoCall} />
 
   </div>

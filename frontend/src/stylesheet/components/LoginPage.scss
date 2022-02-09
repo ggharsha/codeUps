@@ -31,8 +31,29 @@ div.login-page {
     border: none;
     color: #F3F3F3;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .demo-btn:hover {
     background: hsl(242, 84%, 62%);
+}
+
+#or-divider {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 15px
+}
+
+.or {
+    flex-grow: 1;
+    height: 1px;
+    background-color: $darkestGray;
+}
+
+#or-divider p {
+    font-size: 13px;
+    font-weight: 600;
+    color: $darkGray;
+    margin: 0px 18px;
 }

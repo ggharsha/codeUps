@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
+import NavBarContainer from '../navbar/NavbarContainer';
+import Footer from '../footer/Footer';
 
 
 class MainPage extends React.Component {
@@ -8,6 +10,8 @@ class MainPage extends React.Component {
 
   render() {
     return (
+      <>
+      <NavBarContainer />
       <div className="main-page-container">
         <div className="main-page-left">
           <div className="main-page-tagline">
@@ -29,6 +33,8 @@ class MainPage extends React.Component {
           <img className='splash-photo' src={require('../../images/splash.jpg')} />
         </div>
       </div>
+      <Footer />
+      </>
     );
   }
 }
