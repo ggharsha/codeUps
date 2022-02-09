@@ -3,16 +3,56 @@
 .footer-container {
     display: flex;
     flex-direction: column;
-    // border-bottom: 2px solid $darkest-purple;
-    height: 200px;
+    justify-content: center;
+    height: 150px;
     width: 100%;
-    min-height: 200px;
+    min-height: 100px;
     max-width: 100%;
-    border: 1px solid blue;
     position: absolute;
-    bottom: -200px;
+    border: 1px solid black;
 }
 
 .footer-wrapper {
-
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 60px;
+    border: 1px solid orange;
 }
+
+.developers {
+    border-bottom: 3px solid $darkest-purple;
+    font-weight: 600;
+    font-size: 18px;
+    color: $darkGray;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-links > p {
+    margin-bottom: 7px;
+}
+
+.prof-links {
+    display: flex;
+}
+
+.prof-links a {
+    display: flex;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.prof-links a > p:hover {
+    color: hsl(242, 84%, 62%);
+}
+
