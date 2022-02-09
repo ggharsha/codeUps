@@ -31,11 +31,6 @@ export const fetchUser = (userId) => (dispatch) => {
     .then((user) => dispatch(receiveUser(user)));
 }
 
-export const currentUser = () => (dispatch) => {
-  return UserApiUtil.fetchCurrent()
-    .then((currentUser) => dispatch(currentUser))
-}
-
 export const fetchTutors = () => (dispatch) => {
   return UserApiUtil.fetchTutors() 
     .then((tutors) => dispatch(receiveAllTutors(tutors)));
