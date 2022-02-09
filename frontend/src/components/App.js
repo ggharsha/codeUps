@@ -11,7 +11,7 @@ import SignupPage from './session_form/SignupPage';
 
 const App = () => (
   <div>
-    {/* <NavBarContainer /> */}
+    <NavBarContainer />
     <Switch>
         <AuthRoute exact path="/" component={MainPage} />
         <AuthRoute exact path="/login" component={LoginPage} />

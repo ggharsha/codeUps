@@ -11,7 +11,7 @@ class MainPage extends React.Component {
   render() {
     return (
       <>
-      <NavBarContainer />
+      {/* <NavBarContainer /> */}
       <div className="main-page-container">
         <div className="main-page-left">
           <div className="main-page-tagline">
