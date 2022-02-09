@@ -13,11 +13,13 @@ import IndexPage from './index/IndexPage'
 const App = () => (
   <div className="main-content">
     {/* <ProtectedRoute path="/" component={NavBarContainer} /> */}
+    <header><NavBarContainer/></header>
     <Switch>
         <Route exact path="/" component={MainPage} />
         <AuthRoute exact path="/login" component={LoginPage} />
-        <AuthRoute exact path='/index' component={IndexPage}/>
         <AuthRoute exact path="/signup" component={SignupPage} />
+        <ProtectedRoute exact path='/index' component={IndexPage} />
+       
     </Switch>
     <Footer />
     <Route exact path="/video" component={VideoCall} />

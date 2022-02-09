@@ -3,8 +3,11 @@ import { logout } from '../../actions/session_actions';
 
 import NavBar from './NavBar';
 
-const mapStateToProps = state => ({
-  loggedIn: state.session.isAuthenticated
+// const parseUrl = window.location.href.split('/')
+
+const mapStateToProps = (state, ownProps) => ({
+  loggedIn: state.session.isAuthenticated,
+  // currentUrl: parseUrl
 });
 
 export default connect(
