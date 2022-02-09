@@ -1,4 +1,3 @@
-const process = require("process");
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -44,7 +43,5 @@ io.on("connection", (socket) => {
     })
 })
 
-// const port = process.env.PORT || 9000;
-// server.listen(port, () => console.log(`Server is running on port ${port}`));
-
-server.listen(53154, () => console.log('server is running on heroku'))
+const port = process.env.PORT || 9000;
+server.listen(port, () => console.log(`Server is running on port ${port}`));
