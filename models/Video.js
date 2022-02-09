@@ -19,6 +19,10 @@ const VideoSchema = new Schema({
     featured:{
         type: Boolean,
         required:true
+    },
+    languages: {
+        type: Array,
+        required: true
     }
 })
 
