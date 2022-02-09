@@ -23,7 +23,9 @@ const VideoSchema = new Schema({
     languages: {
         type: Array,
         required: true
-    }
+    },
+    }, {
+    timestamps: true
 })
 
 module.exports = Video = mongoose.model('Video', VideoSchema)
