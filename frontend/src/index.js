@@ -42,4 +42,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.fetchUser = UserAction.fetchUser;
   window.fetchTutors = UserAction.fetchTutors;
+  window.fetchStudents = UserAction.fetchStudents;
 })
