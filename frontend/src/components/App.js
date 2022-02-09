@@ -11,10 +11,10 @@ import SignupPage from './session_form/SignupPage';
 import IndexPage from './index/IndexPage'
 
 const App = () => (
-  <div>
-    <NavBarContainer />
+  <div className="main-content">
+    {/* <ProtectedRoute path="/" component={NavBarContainer} /> */}
     <Switch>
-        <AuthRoute exact path="/" component={MainPage} />
+        <Route exact path="/" component={MainPage} />
         <AuthRoute exact path="/login" component={LoginPage} />
         <AuthRoute exact path='/index' component={IndexPage}/>
         <AuthRoute exact path="/signup" component={SignupPage} />

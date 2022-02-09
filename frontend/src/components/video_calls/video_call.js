@@ -5,6 +5,7 @@ import { io } from "socket.io-client";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const socket = io.connect('http://localhost:9000') // consider refactoring for prod
+// const socket = io.connect('https://codeups.herokuapp.com:53154/socket.io/');
 
 function VideoCall() {
     const [ me, setMe ] = useState("");
