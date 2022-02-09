@@ -8,13 +8,16 @@ const passport = require('passport');
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 
-
-
+router.get('/students', (req, res)=>{
+    User.find({role: "student"}, ((err, students)=>{
+        res.json(students)
+    }))
+})
 
 router.get('/tutors', (req, res)=>{
-   User.find({role: "tutor"}, ((err, tutors)=>{
-       res.json(tutors)
-   }))
+    User.find({role: "tutor"}, ((err, tutors)=>{
+        res.json(tutors)
+    }))
 })
 router.get('/:id', (req, res)=>{
     console.log(req)
