@@ -1,0 +1,42 @@
+.card {
+  margin: 0 auto;
+  width: 300px;
+  height: 400px;
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+
+    &.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0px 3px 18px 3px rgba(0,0,0,0.2);
+
+      &.card-face-front {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &.card-face-back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotateY(180deg)
+      }
+    }
+  }
+}

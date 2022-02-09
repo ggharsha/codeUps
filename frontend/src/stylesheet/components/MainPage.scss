@@ -7,8 +7,13 @@ body {
 
 .main-page-container {
     margin-left: 80px;
-    height: 750px;
     display: flex;
+    flex-direction: column;
+}
+
+.main-display {
+    display: flex;
+    height: 750px;
 }
 
 .main-page-left {
@@ -58,4 +63,12 @@ body {
     flex: 1;
     object-position: 20px -50px;
     z-index: -1;
+}
+
+.cards-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
