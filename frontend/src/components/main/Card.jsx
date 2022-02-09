@@ -14,7 +14,7 @@ class Card extends React.Component {
   }
 
   render() {
-    const { title, body} = this.props;
+    const { title, body, image} = this.props;
 
     return(
       <div className='card'>
@@ -23,10 +23,11 @@ class Card extends React.Component {
           onClick={() => this.flipCard()}
         >
           <div className='card-face card-face-front'>
-            <h1>{title}</h1>
+            <img src={image} />
+            <h2>{title}</h2>
           </div>
           <div className='card-face card-face-back'>
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <p>{body}</p>
           </div>
         </div>

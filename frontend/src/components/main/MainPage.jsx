@@ -30,23 +30,34 @@ class MainPage extends React.Component {
             <img className='splash-photo' src={require('../../images/splash.jpg')} />
           </div>
         </div>
-        <div className='cards-container'>
-          <Card 
-            title={'Collaboration'}
-            body={'Something about live chat'}
-          />
-          <Card 
-            title={'Learning'}
-            body={'Something about connecting with tutor'}
-          />
-          <Card 
-            title={'Uh...'}
-            body={'Something about watching videos'}
-          />
-          <Card 
-            title={'Community?'}
-            body={'another feature, idk what'}
-          />
+        <div className='about-site-row'>
+          <div className='about-site-container'>
+            <div className='about-site-content'>
+              <h2 className='about-title'>What we're about</h2>
+              <p className='about-body'>At codeUps, we believe that everyone deserves to learn from 
+              the best. With our expansive network of tutors from around the globe, 
+              you can connect with best of the best and learn with our huge selection 
+              of coding languages! Join today to get started and become 
+              the best developer you can be!</p>
+            </div>
+            <div className='cards-container'>
+              <Card 
+                title={'Collaboration'}
+                image={require('../../images/community.png')}
+                body={'Get connect with tutors in real time with live video calling.'}
+              />
+              <Card 
+                title={'Learning'}
+                image={require('../../images/learning.png')}
+                body={'Watch the most up to date videos on coding. We include a variety of languages and cool algorithms to learn from.'}
+              />
+              <Card 
+                title={'Flexibility'}
+                image={require('../../images/flexiblility.png')}
+                body={'Learn from our vast network of talented tutors from all over the globe to fit your own schedule.'}
+              />
+            </div>
+          </div>
         </div>
       </div>
     );
