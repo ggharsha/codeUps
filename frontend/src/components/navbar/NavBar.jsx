@@ -18,9 +18,6 @@ class NavBar extends React.Component {
       if (this.props.loggedIn) {
         return (
             <div className="nav-bar-links">
-                <Link to={'/tweets'}>All Tweets</Link>
-                <Link to={'/profile'}>Profile</Link>
-                <Link to={'/new_tweet'}>Write a Tweet</Link>
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
         );
@@ -38,7 +35,9 @@ class NavBar extends React.Component {
       return (
         <div className="nav-bar-container">
           <div className="nav-bar-wrapper">
-              <img className="logo" src={require('../../images/logo.svg').default}/>
+              <Link to={'/'}>
+                <img className="logo" src={require('../../images/logo.jpg')}/>
+              </Link>
               { this.getLinks() }
           </div>
         </div>

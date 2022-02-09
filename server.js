@@ -7,9 +7,16 @@ const cors = require("cors");
 
 app.use(cors());
 
+let origin;
+if (process.env.NODE_ENV === 'production') {
+    origin = 'http://codeups.herokuapp.com'
+} else {
+    origin = 'http://localhost:3000'
+}
+
 const io = require("socket.io")(server, {
     cors: {
-        origin: "http://localhost:3000",
+        origin: origin,
         methods: ["GET", "POST"],
         allowEI03: true
     }

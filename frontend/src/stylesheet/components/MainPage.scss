@@ -7,7 +7,7 @@ body {
 
 .main-page-container {
     margin-left: 80px;
-    height: 800px;
+    height: 750px;
     display: flex;
 }
 
@@ -55,10 +55,7 @@ body {
     height: 100%;
     margin: auto;
     object-fit: cover;
-    object-position: 100px 0;
-    // -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.9));
-    // -webkit-mask: 
-    //     linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%) left,
-    //     linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%) bottom;
+    flex: 1;
+    object-position: 20px -50px;
     z-index: -1;
 }
