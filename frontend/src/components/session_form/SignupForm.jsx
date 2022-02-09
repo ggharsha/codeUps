@@ -172,6 +172,13 @@ class SignupForm extends React.Component {
           <button className='signup-btn' type='submit'>Sign up</button>
         </form>
         <p className="other-form">Already have an account? <Link className="other-form-link" to='/login'>Login</Link></p>
+        <button className='demo-btn' type='submit' onClick={this.loginDemoStudent}>Demo Student</button>
+        <div id="or-divider">
+          <div className="or-signup"></div>
+          <p>OR</p>
+          <div className="or-signup"></div>
+        </div>
+        <button className='demo-btn' type='submit' onClick={this.loginDemoTutor}>Demo Tutor</button>
         {this.renderErrors()}
       </div>
     )
