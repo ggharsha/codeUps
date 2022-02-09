@@ -20,7 +20,6 @@ router.get('/tutors', (req, res)=>{
     }))
 })
 router.get('/:id', (req, res)=>{
-    console.log(req)
     User.findById(req.params.id)
         .then(user=>{
             if(!user){
