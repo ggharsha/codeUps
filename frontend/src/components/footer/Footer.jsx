@@ -4,23 +4,23 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="footer-container">
-                <div className="developers">
-                    DEVELOPERS
-                </div>
-                <div>
-                </div>
-                <div className="name-container">
-                    <div id="harsha">
-
+                <div className="footer-wrapper">
+                    <div className="developers">
+                        DEVELOPERS
                     </div>
-                    <div>
+                    <div className="name-container">
+                        <div id="harsha">
 
-                    </div>
-                    <div>
+                        </div>
+                        <div id="jingjing">
 
-                    </div>
-                    <div>
+                        </div>
+                        <div id="michelle">
 
+                        </div>
+                        <div id="perry">
+
+                        </div>
                     </div>
                 </div>
             </div>

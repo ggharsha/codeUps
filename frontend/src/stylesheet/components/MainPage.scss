@@ -1,13 +1,17 @@
+@import '../variables.scss';
+
 body {
     background-color: $off-white;
     height: 100vh;
     width: 100vw;
     max-width: 100%;
+    position: relative;
 }
 
 .main-page-container {
     margin-left: 80px;
     height: 750px;
+    // height: calc(100vh - 100px);
     display: flex;
 }
 
