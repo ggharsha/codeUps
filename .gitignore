@@ -1,2 +1,4 @@
 /node_modules
+
+package-lock.json
 keys_dev.js
