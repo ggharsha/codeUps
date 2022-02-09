@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-export const getStudentReviews = studentId => {
-    return axios.get(`/api/reviews/${studentId}`)
-}
+// export const getStudentReviews = studentId => {
+//     return axios.get(`/api/reviews/${studentId}`)
+// }
 
-export const getTutorReviews = tutorId => {
-    return axios.get(`/api/reviews/${tutorId}`)
+export const getReviews = id => {
+    return axios.get(`/api/reviews/${id}`)
 }
 
 export const createReview = review => {

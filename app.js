@@ -9,6 +9,7 @@ const passport = require('passport');
 const path = require('path');
 const multer = require('multer');
 const upload = multer({dest: 'uploads/'})
+const reviews = require('./routes/api/reviews')
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
@@ -28,6 +29,7 @@ app.use(bodyParser.json());
 
 app.use("/api/users", users);
 app.use('/api/videos', videos);
+app.use('/api/reviews', reviews)
 
 app.use(passport.initialize())
 require('./config/passport')(passport);
