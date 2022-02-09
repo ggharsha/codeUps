@@ -17,18 +17,15 @@ class NavBar extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
-            <div>
-                <Link to={'/tweets'}>All Tweets</Link>
-                <Link to={'/profile'}>Profile</Link>
-                <Link to={'/new_tweet'}>Write a Tweet</Link>
+            <div className="nav-bar-links">
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
         );
       } else {
         return (
-            <div>
-                <Link to={'/signup'}>Signup</Link>
-                <Link to={'/login'}>Login</Link>
+            <div className="nav-bar-links">
+                <Link className="session-buttons signup" to={'/signup'}>Sign Up</Link>
+                <Link className="session-buttons" to={'/login'}>Login</Link>
             </div>
         );
       }
@@ -36,9 +33,13 @@ class NavBar extends React.Component {
 
   render() {
       return (
-        <div>
-            <h1>Code Ups</h1>
-            { this.getLinks() }
+        <div className="nav-bar-container">
+          <div className="nav-bar-wrapper">
+              <Link to={'/'}>
+                <img className="logo" src={require('../../images/logo.jpg')}/>
+              </Link>
+              { this.getLinks() }
+          </div>
         </div>
       );
   }
