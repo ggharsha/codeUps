@@ -8,6 +8,8 @@ class LoginForm extends React.Component {
       password: '',
       errors: {}
     }
+
+    this.loginDemoStudent = this.loginDemoStudent.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -38,6 +40,41 @@ class LoginForm extends React.Component {
     );
   }
 
+  loginDemoStudent(e) {
+    e.preventDefault();
+    this.handleDemoStudentUsername();
+  }
+
+  handleDemoStudentUsername() {
+    let demoUsername = "DemoStudent".split("");
+    let nextLetters = "";
+    const demoUsernameType = setInterval(() => {
+        if ("DemoStudent" !== this.state.username) {
+            nextLetters += demoUsername.shift();
+            this.setState({username: nextLetters})
+        } else {
+            clearInterval(demoUsernameType);
+            this.handleDemoStudentPassword();
+        }
+    }, 100)
+}
+
+  handleDemoStudentPassword() {
+    let demoPassword = "password".split("");
+    let nextLetters = "";
+    const demoPasswordType = setInterval(() => {
+        if ("password" !== this.state.password) {
+            nextLetters += demoPassword.shift();
+            this.setState({password: nextLetters})
+        } else {
+            clearInterval(demoPasswordType);
+            const demoUser = {username: "DemoStudent", password: "password"};
+            this.props.login(demoUser);
+        }
+    }, 100)
+  }
+
+
 
   render() {
     return (
@@ -54,6 +91,7 @@ class LoginForm extends React.Component {
         </div>
         <button className='login-btn' type='submit'>Login</button>
         </form>
+        <button className='demo-btn' type='submit' onClick={this.loginDemoStudent}>Demo Student</button>
         {this.renderErrors()}
       </div>
     )
