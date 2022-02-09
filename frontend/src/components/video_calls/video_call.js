@@ -4,8 +4,16 @@ import Peer from "simple-peer";
 import { io } from "socket.io-client";
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
-const socket = io.connect('http://localhost:9000') // consider refactoring for prod
+// const socket = io.connect('http://localhost:9000') // consider refactoring for prod
 // const socket = io.connect('https://codeups.herokuapp.com:53154/socket.io/');
+
+let socket;
+const port = process.env.PORT || 9000;
+if (process.env.NODE_ENV === 'production') {
+    socket = io.connect(`https://codeups.herokuapp.com:${port}/socket.io/`)
+} else {
+    socket = io.connect('http://localhost:9000')
+};
 
 function VideoCall() {
     const [ me, setMe ] = useState("");
