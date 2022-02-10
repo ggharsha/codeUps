@@ -1,5 +1,6 @@
 import React from 'react';
-import UserDisplay from './UserDisplay'
+import UserDisplay from './UserDisplay';
+import ReviewContainer from '../reviews/ReviewContainer';
 
 class UserPage extends React.Component {
 
@@ -16,7 +17,7 @@ class UserPage extends React.Component {
           user={user}
           openModal={this.props.openModal}
         />
-        {/* add review here */}
+        <ReviewContainer match={this.props.match} />
       </div>
     )
   }

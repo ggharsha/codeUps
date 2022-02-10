@@ -13,7 +13,7 @@
     width: 225px;
     height: 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     color: $off-white;
     background-color: $medium-purple;
     margin-bottom: 10px;
@@ -48,10 +48,12 @@
     display: flex;
     flex-direction: role;
     justify-content: space-between;
+    color: $darkGray;
 
     div.username {
       font-weight: bold;
       font-size: 1.1rem;
+      color: $darkestGray;
     }
   }
 
@@ -67,7 +69,8 @@
       margin-left: 5px;
       padding: 3px 7px;
       background: $lighest-purple;
-      border-radius: 3px;;
+      border-radius: 3px;
+      color: $darkestGray;
     }
   }
 
