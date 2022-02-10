@@ -15,6 +15,7 @@ class UserPage extends React.Component {
       <div className='user-page-content'>
         <UserDisplay 
           user={user}
+          openModal={this.props.openModal}
         />
         <ReviewContainer match={this.props.match} />
       </div>
