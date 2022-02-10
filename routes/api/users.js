@@ -118,4 +118,15 @@ router.post('/login', (req, res) => {
         })
 })
 
+router.patch('/edit', (req, res)=>{
+    User.findOneAndReplace({ _id: req.body.id }, req.body, { returnDocument: "after" }, (err, docs) => {
+        if (err) {
+            return res.json(err)
+        } else {
+            return res.json(docs)
+          
+        }
+    })
+})
+
 module.exports = router;
