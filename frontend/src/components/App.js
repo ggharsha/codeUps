@@ -10,9 +10,11 @@ import VideoCall from './video_calls/video_call';
 import LoginPage from './session_form/LoginPage';
 import SignupPage from './session_form/SignupPage';
 import UserPageContainer from './user/UserPageContainer';
+import ModalContainer from "./modal/modal";
 
 const App = () => (
   <div className="main-content">
+    <Route path="/" component={ModalContainer} />
     {/* <Route path="/" component={NavBarContainer} /> */}
     {/* <ProtectedRoute path="/" component={NavBarContainer} /> */}
     {/* <header><NavBarContainer/></header> */}
