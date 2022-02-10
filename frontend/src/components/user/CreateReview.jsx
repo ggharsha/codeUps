@@ -34,17 +34,17 @@ export default class CreateReview extends React.Component {
     render() {
         return (
             <div className="create-review-container">
-                <h3>Write a review</h3>
+                <h2 className="review-title">Write a review</h2>
                 <form onSubmit={e => this.handleSubmit(e)}>
-                    <StarRating 
-                        updateStars={this.handleRating}
-                    />
+                    <h3 className="rating-title">Rate your tutor</h3>
+                    <StarRating updateStars={this.handleRating}/>
+                    <h3 className="review-body-title">Write a review</h3>
                     <textarea
                         className="review-textarea"
                         onChange={this.update("text")}
                         value={this.state.text}
                     />
-                    <button type="submit">Submit</button>
+                    <button className="submit-button" type="submit">Submit</button>
                 </form>
             </div>
         )
