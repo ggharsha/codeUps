@@ -1,12 +1,14 @@
 import React from 'react';
 import UserInfo from './UserInfo';
-import UserAbout from './UserAbout';
+import TutorAbout from './TutorAbout';
+import StudentAbout from './StudentAbout';
 import NavBarContainer from '../navbar/NavbarContainer';
 
 class UserDisplay extends React.Component {
 
   render() {
     const {user, openModal} = this.props;
+    const isTutor = user.role === 'tutor'
 
     return (
       <>
@@ -21,9 +23,7 @@ class UserDisplay extends React.Component {
             user={user}
             openModal={openModal}
           />
-          <UserAbout
-            user={user}
-          />
+          {isTutor ? <TutorAbout user={user} /> : <StudentAbout user={user} />}
         </div>
       </div>
       </> 

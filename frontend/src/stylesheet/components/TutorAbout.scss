@@ -1,0 +1,43 @@
+.about-container {
+  height: 100%;
+  
+  div.about-content {
+    box-sizing: border-box;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    h1.about-header {
+      font-size: 1.5rem;
+    }
+  }
+
+  div.feature-video-content {
+    height: calc(100% - 200px);
+    box-sizing: border-box;
+    padding: 10px;
+    
+
+    h2.feature-video-title {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    div.video-container {
+      width: 500px;
+      height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: lightblue;
+
+      div.video {
+        width: 150px;
+        height: 150px;
+        background: burlywood;
+      }
+    }
+  }
+
+
+}
