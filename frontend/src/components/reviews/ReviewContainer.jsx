@@ -8,7 +8,8 @@ const mapStateToProps = (state, ownProps) => {
 
     return {
         userId: userId, 
-        user: state.user.profileUser[userId]
+        user: state.user.profileUser[userId],
+        reviews: Object.values(state.reviews)
     }
 }
 
