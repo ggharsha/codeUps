@@ -11,8 +11,11 @@ class Reviews extends React.Component {
 
     render() {
         return (
-            <div>Hi
-                {this.props.userId}
+            <div className="reviews-container">
+                <h3>Reviews</h3>
+                <ul>
+                    
+                </ul>
             </div>
         )
     }
