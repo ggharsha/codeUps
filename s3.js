@@ -1,6 +1,6 @@
 const S3 = require('aws-sdk/clients/s3');
 const fs = require('fs');
-const keys = require('./config/keys');
+const keys = require('./config/keys_dev');
 
 
 const bucketName = keys.AWS_BUCKET_NAME;
