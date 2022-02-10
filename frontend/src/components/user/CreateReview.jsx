@@ -9,7 +9,7 @@ export default class CreateReview extends React.Component {
             tutorId: this.props.profileUser._id,
             text: "",
             rating: null,
-            errors: []
+            errors: {}
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleRating = this.handleRating.bind(this);
@@ -28,7 +28,27 @@ export default class CreateReview extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createReview(this.state)
-        .then(() => this.props.closeModal())
+        .then(() => {
+            if (!this.state.errors) {
+                this.props.closeModal()
+            } else {
+                console.log(this.state.errors)
+            }
+        })
+    }
+
+    renderErrors() {
+        return(
+            <ul className="errors-list">
+                {Object.keys(this.props.errors).map((error, index) => {
+                    return (
+                        <li className="error-item" key={index}>
+                            {this.props.errors[error]}
+                        </li>
+                    )
+                })}
+            </ul>
+        )
     }
 
     render() {
@@ -44,6 +64,7 @@ export default class CreateReview extends React.Component {
                         onChange={this.update("text")}
                         value={this.state.text}
                     />
+                    {this.renderErrors()}
                     <button className="submit-button" type="submit">Submit</button>
                 </form>
             </div>

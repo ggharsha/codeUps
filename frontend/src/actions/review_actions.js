@@ -5,6 +5,7 @@ export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 // export const UPDATE_REVIEW = 'UPDATE_REVIEW';
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW"
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
+export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
 
 const receiveReviews = reviews =>{
     return{
@@ -27,6 +28,12 @@ const removeReview = reviewId =>{
     }
 }
 
+const receiveReviewErrors = (errors) => {
+    return {
+        type: RECEIVE_REVIEW_ERRORS,
+        errors
+    }
+}
 
 export const getReviews = (id)=> dispatch =>{
     return ReviewApiUtil.getReviews(id)
@@ -36,12 +43,20 @@ export const getReviews = (id)=> dispatch =>{
 
 export const createReview = (review) => dispatch => {
     return ReviewApiUtil.createReview(review)
-        .then(review => dispatch(receiveReview(review)))
+        .then((review) => {
+            dispatch(receiveReview(review))
+        }, (errors) => {
+            dispatch(receiveReviewErrors(errors.response.data))
+        })
 }
 
 export const updateReview = (review) => dispatch => {
     return ReviewApiUtil.editReview(review)
-        .then(review => dispatch(receiveReview(review)))
+        .then((review) => {
+            dispatch(receiveReview(review))
+        }, (errors) => {
+            dispatch(receiveReviewErrors(errors.response.data))
+        })
 }
 
 export const deleteReview = (reviewId) => dispatch => {
