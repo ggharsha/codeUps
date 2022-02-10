@@ -13,7 +13,7 @@ import UserPageContainer from './user/UserPageContainer';
 const App = () => (
   <div className="main-content">
     {/* <ProtectedRoute path="/" component={NavBarContainer} /> */}
-    <header><NavBarContainer/></header>
+    {/* <header><NavBarContainer/></header> */}
     <Switch>
         <Route exact path="/" component={MainPage} />
         <AuthRoute exact path="/login" component={LoginPage} />

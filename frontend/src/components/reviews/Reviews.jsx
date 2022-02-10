@@ -7,7 +7,9 @@ class Reviews extends React.Component {
 
     render() {
         return (
-            <div>Hi</div>
+            <div>Hi
+                {this.props.userId}
+            </div>
         )
     }
 }
