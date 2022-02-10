@@ -5,8 +5,12 @@ module.exports = function validateReviewInput(data){
     let errors = {};
     data.text = validText(data.text) ? data.text : '';
 
+    if (!data.rating) {
+        errors.rating = 'Please enter a rating';
+    }
+
     if (Validator.isEmpty(data.text)) {
-        errors.text = "review field can't be empty"
+        errors.text = "Please enter a review"
     }
 
     return {
