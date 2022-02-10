@@ -8,6 +8,7 @@ class UserInfo extends React.Component {
     return (
       <div className='user-info'>
         <button className='message-user'>Message</button>
+        {user.role === 'tutor' && <button className='review-user'>Write a Review</button>}
         <div className='username-container'>
           <div className='tag' >Username: </div>
           <div className='username'>{user.username}</div>
