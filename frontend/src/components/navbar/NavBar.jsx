@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import SearchBarContainer from './SearchBarContainer.jsx';
+import SearchBarContainer from './search/SearchBarContainer';
 
 class NavBar extends React.Component {
   constructor(props) {
