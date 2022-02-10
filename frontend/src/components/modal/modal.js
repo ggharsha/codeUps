@@ -1,6 +1,7 @@
 import React from "react";
 import { closeModal } from "../../actions/modal_actions";
 import { connect } from "react-redux";
+import CreateReviewContainer from "../user/CreateReviewContainer";
 
 // createReview
 // createMessage
@@ -10,9 +11,9 @@ function Modal({ modal, closeModal, history }) {
     if (!modal) return null;
     let component;
     switch (modal) {
-        // case 'createReview':
-        //     component = <CreateReviewContainer history={history} />
-        //     break;
+        case 'createReview':
+            component = <CreateReviewContainer history={history} />
+            break;
         // case 'createMessage':
         //     component = <CreateMessageContainer history={history} />
         //     break;
@@ -32,7 +33,8 @@ function Modal({ modal, closeModal, history }) {
 }
 
 const mSTP = state => ({
-    modal: state.modal
+    modal: state.modal,
+    profileUser: state.user.profileUser
 });
 
 const mDTP = dispatch => ({
