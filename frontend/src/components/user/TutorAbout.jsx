@@ -26,8 +26,8 @@ class TutorAbout extends React.Component {
     return (
       <div className='about-container'>
         <div className='tabs-container'>
-          <button className='about-tab' onClick={(e) => this.handleAboutTab(e)}>About</button>
-          <button className='video-tab' onClick={(e) => this.handleVideoTab(e)}>Video</button>
+          <button className={this.state.onAboutPage ? 'about-tab active' : 'about-tab'} onClick={(e) => this.handleAboutTab(e)}>About</button>
+          <button className={!this.state.onAboutPage ? 'video-tab active' : 'video-tab'} onClick={(e) => this.handleVideoTab(e)}>Video</button>
         </div>
         {this.state.onAboutPage ? 
           <TutorAboutContent user={user} /> : <TutorVideoContent user={user} />}
