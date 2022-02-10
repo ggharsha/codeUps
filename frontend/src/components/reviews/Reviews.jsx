@@ -5,6 +5,10 @@ class Reviews extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.getReviews(this.props.userId);
+    }
+
     render() {
         return (
             <div>Hi
