@@ -14,7 +14,8 @@ import CreateReview from "./CreateReview";
 
 const mSTP = (state, ownProps) => ({
     profileUser: ownProps.profileUser,
-    currentUser: state.session.user
+    currentUser: state.session.user,
+    errors: Object.values(state.errors.review)
 })
 
 const mDTP = dispatch => ({

@@ -3,6 +3,7 @@ import IndexTutorItem from "./index_tutor_item";
 import IndexStudentItem from "./index_student_item";
 import IndexVideoItem from "./index_video_item";
 import NavbarContainer from "../navbar/NavbarContainer";
+import { Link } from "react-router-dom";
 
 export default class Index extends React.Component {
     componentDidMount() {
@@ -32,11 +33,13 @@ export default class Index extends React.Component {
                     <h3>Tutors</h3>
                     <ul className="carousel">
                         {this.props.tutors.map((tutor, idx) => (
-                            <IndexTutorItem 
-                                key={tutor._id}
-                                tutor={tutor}
-                                fetchUser={this.props.fetchUser}
-                            />
+                            <Link to={`/user/${tutor._id}`}>
+                                <IndexTutorItem 
+                                    key={tutor._id}
+                                    tutor={tutor}
+                                    fetchUser={this.props.fetchUser}
+                                />
+                            </Link>
                         ))}
                     </ul>
                 </div>
@@ -44,11 +47,13 @@ export default class Index extends React.Component {
                     <h3>Students</h3>
                     <ul className="carousel">
                         {this.props.students.map((student, idx) => (
-                            <IndexStudentItem 
-                                key={student._id}
-                                student={student}
-                                fetchUser={this.props.fetchUser}
-                            />
+                            <Link to={`/user/${student._id}`}>
+                                <IndexStudentItem 
+                                    key={student._id}
+                                    student={student}
+                                    fetchUser={this.props.fetchUser}
+                                />
+                            </Link>
                         ))}
                     </ul>
                 </div>

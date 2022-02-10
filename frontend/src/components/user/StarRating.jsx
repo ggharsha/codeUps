@@ -19,10 +19,10 @@ const StarRating = ({ updateStars }) => {
                         <input type='radio' name='rating' value={ratingValue}
                             onClick={() => updateRating(ratingValue)}
                         />
-                        <i className="fa-solid fa-star"
+                        <i className={ratingValue <= (hover || rating) ? "fa-solid fa-star active" : "fa-solid fa-star"}
                             onMouseEnter={() => setHover(ratingValue)}
                             onMouseLeave={() => setHover(null)}
-                            color={ratingValue <= (hover || rating) ? "#fea41d" : "rgb(234,237,237)"} />
+                            />
                     </label>
                 )
 
