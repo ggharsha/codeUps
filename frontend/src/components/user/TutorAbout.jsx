@@ -1,6 +1,6 @@
 import React from 'react';
 
-class UserAbout extends React.Component {
+class TutorAbout extends React.Component {
 
   render() {
     const { user } = this.props;
@@ -27,4 +27,4 @@ class UserAbout extends React.Component {
   }
 }
 
-export default UserAbout;
+export default TutorAbout;
