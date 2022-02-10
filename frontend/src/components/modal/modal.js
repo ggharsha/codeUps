@@ -1,18 +1,19 @@
 import React from "react";
 import { closeModal } from "../../actions/modal_actions";
 import { connect } from "react-redux";
+import CreateReviewContainer from "../user/CreateReviewContainer";
 
 // createReview
 // createMessage
 // openVideo
 
-function Modal({ modal, closeModal, history }) {
+function Modal({ modal, closeModal, history, profileUser }) {
     if (!modal) return null;
     let component;
     switch (modal) {
-        // case 'createReview':
-        //     component = <CreateReviewContainer history={history} />
-        //     break;
+        case 'createReview':
+            component = <CreateReviewContainer history={history} profileUser={profileUser} />
+            break;
         // case 'createMessage':
         //     component = <CreateMessageContainer history={history} />
         //     break;
@@ -32,7 +33,8 @@ function Modal({ modal, closeModal, history }) {
 }
 
 const mSTP = state => ({
-    modal: state.modal
+    modal: state.modal,
+    profileUser: Object.values(state.user.profileUser)[0]
 });
 
 const mDTP = dispatch => ({

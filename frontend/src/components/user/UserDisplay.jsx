@@ -6,7 +6,7 @@ import NavBarContainer from '../navbar/NavbarContainer';
 class UserDisplay extends React.Component {
 
   render() {
-    const {user} = this.props;
+    const {user, openModal} = this.props;
 
     return (
       <>
@@ -19,6 +19,7 @@ class UserDisplay extends React.Component {
         <div className='user-display-info'>
           <UserInfo 
             user={user}
+            openModal={openModal}
           />
           <UserAbout
             user={user}

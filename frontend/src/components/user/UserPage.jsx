@@ -9,13 +9,13 @@ class UserPage extends React.Component {
   }
 
   render() {
-    const { user } = this.props;
+    const { user, openModal } = this.props;
     if (!user) {return null}
     return(
       <div className='user-page-content'>
         <UserDisplay 
           user={user}
-          openModal={this.props.openModal}
+          openModal={openModal}
         />
         <ReviewContainer match={this.props.match} />
       </div>
