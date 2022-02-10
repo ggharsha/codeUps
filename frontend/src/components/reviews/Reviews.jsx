@@ -4,6 +4,7 @@ import ReviewItem from './ReviewItem';
 class Reviews extends React.Component {
     constructor(props) {
         super(props)
+        this.findStudent = this.findStudent.bind(this)
     }
 
     componentDidMount() {
@@ -17,7 +18,7 @@ class Reviews extends React.Component {
     }
 
     render() {
-        if (!this.props.reviews) return null;
+        if (!this.props.reviews || !this.props.students) return null;
 
         return (
             <div className="reviews-container">
@@ -26,7 +27,7 @@ class Reviews extends React.Component {
                     {this.props.reviews.map((review, idx) => <ReviewItem 
                         key={idx} 
                         review={review} 
-                        username={this.findStudent(review.studentId)}
+                        username={()=>this.findStudent(review.studentId)}
                         />)}
                 </ul>
             </div>
