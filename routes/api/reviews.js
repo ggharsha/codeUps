@@ -31,21 +31,10 @@ const tutorReviews = (req, res, next) => {
 }
 
 router.get('/:id', studentReviews, tutorReviews, (req, res)=>{
-   
+   res.send("No reviews yet")
 })
 
-// router.get('/:studentId',((req, res)=>{
-    
-//     Review.find({ studentId: req.params.studentId })
-//         .then(reviews => { res.json(reviews) })
-//         .catch(err => res.status(404).json({ noreviewsfound: "No reviews found" }))
-// }))
 
-// router.get('/:tutorId', ((req, res) => {
-//     Review.find({ tutorId: req.params.tutorId })
-//         .then(reviews => { res.json(reviews) })
-//         .catch(err => res.status(404).json({ noreviewsfound: "No reviews found" }))
-// }))
 
 
 const createReview = (req, res, next)=> {
