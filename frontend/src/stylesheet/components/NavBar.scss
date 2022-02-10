@@ -113,8 +113,16 @@
     padding: 10px 13px;
     border-radius: 6px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .session-buttons:hover {
     background-color: hsl(242, 84%, 64%);
+}
+
+.logout {
+    font-family: inherit;
+    border: none;
+    font-size: 16px;
+    margin-top: 5px;
 }
