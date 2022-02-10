@@ -29,6 +29,10 @@
   }
 
   div.user-display-info {
+    width: 800px;
+    height: 550px;
+    box-sizing: border-box;
+    border: 1px solid $darkestGray;
     display: flex;
     flex-direction: row;
   }

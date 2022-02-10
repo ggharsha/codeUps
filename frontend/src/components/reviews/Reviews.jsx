@@ -13,7 +13,6 @@ class Reviews extends React.Component {
 
     render() {
         if (!this.props.getReviews) return null;
-
         return (
             <div className="reviews-container">
                 <h3>Reviews</h3>
