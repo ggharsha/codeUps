@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchStudents, fetchTutors } from "../../actions/user_actions";
+import { fetchStudents, fetchTutors, fetchUser } from "../../actions/user_actions";
 import Index from "./index";
 
 const mSTP = state => ({
@@ -11,7 +11,9 @@ const mSTP = state => ({
 const mDTP = dispatch => ({
     fetchStudents: () => dispatch(fetchStudents()),
     fetchTutors: () => dispatch(fetchTutors()),
-    // fetchVideos: () => dispatch(fetchVideos())
+    fetchUser: userId => dispatch(fetchUser(userId))
+    // fetchVideos: () => dispatch(fetchVideos()),
+    // fetchVideo: videoId => dispatch(fetchVideo(videoId))
 });
 
 export default connect(mSTP, mDTP)(Index);
