@@ -20,7 +20,19 @@ class SearchBar extends React.Component {
         let array 
      
         if (this.state.filter === "Search") {
-                
+            array = []
+            const tutorUsernameMatch = this.props.tutors.filter(tutor=>{
+                return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+            })
+
+            const tutorLanguagesMatch = this.props.tutors.filter(tutor => {
+                return tutor.languages.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+            })
+
+            array.concat(tutorUsernameMatch, tutorLanguagesMatch)
+            
+
+
         } else if(this.state.filter === 'Username'){
           array = this.props.tutors.filter(tutor=>{
             //   debugger
