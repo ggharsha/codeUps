@@ -16,7 +16,7 @@ class UserPage extends React.Component {
         <UserDisplay 
           user={user}
         />
-        <ReviewContainer />
+        <ReviewContainer match={this.props.match} />
       </div>
     )
   }
