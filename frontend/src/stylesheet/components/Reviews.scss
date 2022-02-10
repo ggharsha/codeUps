@@ -2,10 +2,21 @@
     border: 1px solid red;
     width: 800px;
     margin: 30px auto;
+    color: $darkGray;
 }
 
 .reviews-container h3 {
     font-size: 24px;
     color: $darkestGray;
     font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.review-item {
+    margin-bottom: 15px;
+}
+
+.review-username {
+    font-weight: 500;
+    margin-bottom: 5px;
 }

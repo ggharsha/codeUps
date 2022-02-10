@@ -7,8 +7,9 @@ class ReviewItem extends React.Component {
 
     render() {
         return (
-            <li>
-                <p>{this.props.user.username}</p>
+            <li className="review-item">
+                <p className="review-username">{this.props.user.username}</p>
+                <p>Stars</p>
                 <p>{this.props.review.text}</p>
             </li>
         )
