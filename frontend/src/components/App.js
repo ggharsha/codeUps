@@ -27,6 +27,7 @@ const App = () => (
     </Switch>
     <Footer />
     <Route exact path="/video" component={VideoCall} />
+    {/* <img src="/images/michelle.png"/> */}
 
   </div>
 );
