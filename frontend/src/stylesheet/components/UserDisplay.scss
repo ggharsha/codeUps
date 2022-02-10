@@ -4,12 +4,14 @@
   .image-container {
     width:100%;
     position: relative;
+    height: 200px;
 
     img.banner {
       width: 800px;
-      height: 200px;
-      object-fit: cover;
-      overflow: hidden;
+      height: 100%;
+      object-fit: fill;
+      box-sizing: border-box;
+      // overflow: hidden;
     }
 
     img.profile-pic {
@@ -21,7 +23,7 @@
       border: 5px solid black;
       position: absolute;
       bottom: -75px;
-      left: 40px;
+      left: 55px;
     }
   }
 }
