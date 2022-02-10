@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import SearchBarContainer from './SearchBarContainer.jsx';
+import SearchBarContainer from './search/SearchBarContainer';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -18,12 +18,14 @@ class NavBar extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
+          
             <div className="nav-bar-links">
-                <SearchBarContainer/>
+                
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
         );
       } else {
+        
         return (
             <div className="nav-bar-links">
                 <Link className="session-buttons signup" to={'/signup'}>Sign Up</Link>
@@ -40,7 +42,10 @@ class NavBar extends React.Component {
               <Link to={'/index'}>
                 <img className="logo" src={require('../../images/logo.jpg')}/>
               </Link>
-              { this.getLinks() }
+             
+            {this.props.loggedIn && <SearchBarContainer />}
+            {this.getLinks()}
+            
           </div>
         </div>
       );
