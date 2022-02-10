@@ -19,8 +19,10 @@ class SearchBar extends React.Component {
         this.setState({keyword: e.currentTarget.value})
         let array 
      
-      if(this.state.filter === 'Username'){
-          array= this.props.tutors.filter(tutor=>{
+        if (this.state.filter === "Search") {
+                
+        } else if(this.state.filter === 'Username'){
+          array = this.props.tutors.filter(tutor=>{
             //   debugger
             return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
             })
@@ -28,7 +30,7 @@ class SearchBar extends React.Component {
           array = this.props.tutors.filter(tutor => {
               return tutor.languages.toLowerCase().includes(e.currentTarget.value.toLowerCase())
           })
-      }
+      } 
     //    debugger
        this.setState({result: array})
    
@@ -52,7 +54,7 @@ class SearchBar extends React.Component {
                 
                 <div className='searchbar-center'>
                     <input className='searchinput' type="text" onChange={this.handleSearchInput} />
-                    {result.length >= 1 && <Dropdown filter={this.handlefilter} options={result} />} 
+                    {this.state.result.length >= 1 && <Dropdown filter={this.handlefilter} options={result} />} 
                 </div>               
                 <div className='magnifying-glass'>
                     <i className="fa-solid fa-magnifying-glass fa-1x"></i>
