@@ -30,13 +30,12 @@
 .dropdown{
     display: flex;
     background: #CAC9F2;
-    width: 110px;
-    padding: 4px;
+    width: 120px;
+    padding: 4px 0 4px 0;
     align-items: center;
     border-radius: 6px 0 0 6px;
     flex-direction: column;
     height: 100%;
-    // padding: 6px;
     cursor: pointer;
     color: $darkestGray;
 }
@@ -79,6 +78,15 @@
     width: 300px;
     box-sizing: border-box;
     height: 100%;
+    border: none;
+    padding: 7px;
+}
+
+.searchinput:focus {
+    outline: none;
+    font-size: 15px;
+    color: $darkGray;
+    line-height: 15px;
 }
 
 .magnifying-glass{
@@ -90,6 +98,11 @@
     border-radius: 0 6px 6px 0;
     cursor: pointer;
 }
+
+.fa-magnifying-glass:before {
+    color: $darkestGray;
+}
+
 .signup {
     margin-right: 40px;
 }
