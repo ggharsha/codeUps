@@ -1,0 +1,27 @@
+.user-display{
+  width: 100%;
+
+  .image-container {
+    width:100%;
+    position: relative;
+
+    img.banner {
+      width: 800px;
+      height: 200px;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    img.profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 5px solid black;
+      position: absolute;
+      bottom: -75px;
+      left: 40px;
+    }
+  }
+}
