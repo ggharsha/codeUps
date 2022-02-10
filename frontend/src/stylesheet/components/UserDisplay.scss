@@ -26,4 +26,9 @@
       left: 55px;
     }
   }
+
+  div.user-display-info {
+    display: flex;
+    flex-direction: row;
+  }
 }

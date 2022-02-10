@@ -124,7 +124,6 @@ router.patch('/edit', (req, res)=>{
             return res.json(err)
         } else {
             return res.json(docs)
-          
         }
     })
 })
