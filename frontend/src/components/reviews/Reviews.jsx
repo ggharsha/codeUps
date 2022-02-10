@@ -27,7 +27,7 @@ class Reviews extends React.Component {
                     {this.props.reviews.map((review, idx) => <ReviewItem 
                         key={idx} 
                         review={review} 
-                        username={()=>this.findStudent(review.studentId)}
+                        username={this.findStudent}
                         />)}
                 </ul>
             </div>
