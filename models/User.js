@@ -32,6 +32,10 @@ const UserSchema = new Schema({
         type: Array,
         required: false
     },
+    about: {
+        type: String,
+        required: false
+    },
     photoUrl:{
         type: String,
         required: false
