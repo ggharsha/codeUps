@@ -11,7 +11,6 @@
       width: 800px;
       height: 100%;
       object-fit: fill;
-      box-sizing: border-box;
       // overflow: hidden;
     }
 
@@ -29,9 +28,9 @@
   }
 
   div.user-display-info {
-    width: 800px;
+    width: 799px;
     height: 550px;
-    box-sizing: border-box;
+    box-sizing: content-box;
     border: 1px solid $darkestGray;
     display: flex;
     flex-direction: row;

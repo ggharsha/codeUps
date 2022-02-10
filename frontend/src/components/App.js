@@ -26,8 +26,8 @@ const App = () => (
         <Route exact path='/user/:userId' component={UserPageContainer} />
     </Switch>
     <Footer />
-    <Route exact path="/video" component={VideoCall} />
-    {/* <img src="/images/michelle.png"/> */}
+
+    {/* <Route exact path="/video" component={VideoCall} /> */}
 
   </div>
 );
