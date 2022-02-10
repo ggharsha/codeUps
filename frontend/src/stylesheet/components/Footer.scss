@@ -10,7 +10,7 @@
     max-width: 100%;
     position: absolute;
     bottom: -100px;
-    border: 1px solid black;
+    background: $lighest-purple;
 }
 
 .footer-wrapper {
@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 0px 100px 20px 100px;
+    margin: 10px 100px 20px 100px;
 }
 
 .developers {
@@ -26,6 +26,8 @@
     font-weight: 600;
     font-size: 18px;
     color: $darkGray;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .name-container {
