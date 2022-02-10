@@ -23,4 +23,4 @@ const mDTP = dispatch => ({
     closeModal: () => dispatch(closeModal())
 });
 
-export default connect(null, mDTP)(CreateReview);
+export default connect(mSTP, mDTP)(CreateReview);

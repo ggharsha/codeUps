@@ -7,12 +7,12 @@ import CreateReviewContainer from "../user/CreateReviewContainer";
 // createMessage
 // openVideo
 
-function Modal({ modal, closeModal, history }) {
+function Modal({ modal, closeModal, history, profileUser }) {
     if (!modal) return null;
     let component;
     switch (modal) {
         case 'createReview':
-            component = <CreateReviewContainer history={history} />
+            component = <CreateReviewContainer history={history} profileUser={profileUser} />
             break;
         // case 'createMessage':
         //     component = <CreateMessageContainer history={history} />
@@ -34,7 +34,7 @@ function Modal({ modal, closeModal, history }) {
 
 const mSTP = state => ({
     modal: state.modal,
-    profileUser: state.user.profileUser
+    profileUser: Object.values(state.user.profileUser)[0]
 });
 
 const mDTP = dispatch => ({
