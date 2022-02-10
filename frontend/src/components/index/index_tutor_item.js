@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const IndexTutorItem = ({ tutor, fetchUser }) => (
     <li className="tutor-index-item">
         <img className="index-item-image" src="#" />
-        <Link to={`/user/${tutor._id}`}>{tutor.username}</Link>
+        <h2>{tutor.username}</h2>
         <ul className="tutor-languages">
             {tutor.languages.map((lang, idx) => (
                 <li key={idx}>
