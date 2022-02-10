@@ -40,7 +40,7 @@ class SearchBar extends React.Component {
     }
 
     render(){
-        const filterOptions = ["All", "Username", "Languages", "Videos"];
+        const filterOptions = ["Username", "Languages", "Videos"];
         const result = this.state.result
         return (
             <div className='searchbar-container'>
