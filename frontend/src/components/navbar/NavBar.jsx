@@ -28,7 +28,7 @@ class NavBar extends React.Component {
         return (
             <div className="nav-bar-links">
                 <Link className="session-buttons signup" to={'/signup'}>Sign Up</Link>
-                <Link className="session-buttons" to={'/login'}>Login</Link>
+                <Link id="login" className="session-buttons" to={'/login'}>Login</Link>
             </div>
         );
       }

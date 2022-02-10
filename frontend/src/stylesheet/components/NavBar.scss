@@ -116,6 +116,19 @@
     cursor: pointer;
 }
 
+#login {
+    background-color: white;
+    border: 1.5px solid $darkest-purple;
+    padding: 8.5px 13px;
+    color: $darkest-purple;
+}
+
+#login:hover {
+    color: hsl(242, 84%, 64%);
+    border-color: hsl(242, 84%, 64%);
+    // background-color: #d9d9f5;
+}
+
 .session-buttons:hover {
     background-color: hsl(242, 84%, 64%);
 }
