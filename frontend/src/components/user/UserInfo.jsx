@@ -3,13 +3,13 @@ import React from 'react';
 class UserInfo extends React.Component {
 
   render() {
-    const {user} = this.props;
+    const {user, openModal} = this.props;
     console.log(user)
     return (
       <div className='user-info'>
         <button className='message-user'>Message</button>
         {user.role === 'tutor' && 
-          <button className='review-user'>
+          <button className='review-user' onClick={() => openModal('createReview')}>
             Write a Review
           </button>}
         <div className='username-container'>

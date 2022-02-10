@@ -5,17 +5,18 @@ import ReviewContainer from '../reviews/ReviewContainer';
 class UserPage extends React.Component {
 
   componentDidMount() {
-    this.props.fetchUser(this.props.match.params.userId);
+    this.props.fetchUser(this.props.match.params.userId)
+    // this.props.getReviews(this.props.match.params.userId)
   }
 
   render() {
-    const { user } = this.props;
+    const { user, openModal } = this.props;
     if (!user) {return null}
     return(
       <div className='user-page-content'>
         <UserDisplay 
           user={user}
-          openModal={this.props.openModal}
+          openModal={openModal}
         />
         <ReviewContainer match={this.props.match} />
       </div>

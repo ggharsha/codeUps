@@ -11,20 +11,19 @@ const studentReviews = (req, res, next)=>{
             if(reviews.length < 1) {
                 next()
             }else{
-                console.log(reviews)
+                // console.log(reviews)
                 return res.json(reviews)
             }
         })
         
 }
 const tutorReviews = (req, res, next) => {
-
     Review.find({ tutorId: req.params.id })
         .then(reviews => {
             if (reviews.length < 1) {
                 next()
             } else {
-                console.log("tutor")
+                console.log(reviews)
                 return res.json(reviews)
             }
         })
