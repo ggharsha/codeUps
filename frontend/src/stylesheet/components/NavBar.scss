@@ -51,7 +51,6 @@
 }
 .dropdown-options{
     box-sizing: border-box;
-    // padding: 10px;
     width: 100%;
     position: relative;
     margin-top: 11px;
@@ -77,12 +76,11 @@
 .searchinput{
     width: 300px;
     box-sizing: border-box;
-    // height: 100%;
     border: none;
     padding: 7px;
     font-size: 14px;
-
     height: 40px;
+    position: relative;
 }
 
 .searchinput:focus {
@@ -110,6 +108,34 @@
 
 .signup {
     margin-right: 40px;
+}
+
+.searchResult-container {
+    background-color: yellow;
+    margin-top: 5px;
+    width: 300px;
+    height: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+    position: absolute;
+}
+
+.searchResult-container:after {
+    position: absolute;
+    transform: rotate(45deg);
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid blue;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-left: 1px solid blue;
+    top: -17px;
+    right: 175px;
+    margin-top: 11px;
+    content: '';
+    box-shadow: -1px -2px 2px 0px rgb(219, 219, 219);
+    background-color: blue;
 }
 
 .session-buttons {

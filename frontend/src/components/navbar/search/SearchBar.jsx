@@ -66,11 +66,8 @@ class SearchBar extends React.Component {
                 
                 <div className='searchbar-center'>
                     <input className='searchinput' type="text" placeholder="Search for tutors, videos, and more..." onChange={this.handleSearchInput} />
-                    <div>
-                        {result.length >= 1 && <SearchResult search={result} />} 
-                    </div>
+                    {result.length >= 1 && <SearchResult search={result} />} 
                 </div>  
-    
                 <div className='magnifying-glass'>
                     <i className="fa-solid fa-magnifying-glass fa-1x"></i>
                 </div>
