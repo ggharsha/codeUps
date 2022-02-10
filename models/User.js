@@ -21,7 +21,7 @@ const UserSchema = new Schema({
         required: false
     },
     role: {
-        type: Array,
+        type: String,
         required: true
     },
     languages:{
@@ -30,6 +30,10 @@ const UserSchema = new Schema({
     },
     availabilities:{
         type: Array,
+        required: false
+    },
+    about: {
+        type: String,
         required: false
     },
     photoUrl:{
