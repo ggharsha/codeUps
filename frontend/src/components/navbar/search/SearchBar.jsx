@@ -5,8 +5,7 @@ import SearchResult from './SearchResult'
 class SearchBar extends React.Component {
     constructor(props){
         super(props)
-        this.state = {filter:"Search", keyword:"", 
-        result:[]}
+        this.state = { filter:"Search", keyword:"", result:[] }
         this.handlefilter = this.handlefilter.bind(this)
         this.handleSearchInput = this.handleSearchInput.bind(this)
     }
@@ -63,16 +62,15 @@ class SearchBar extends React.Component {
         const result = this.state.result
         return (
             <div className='searchbar-container'>
-                {/* <div className='filter-box'> */}
-                    {/* <span>{this.state.filter}</span> */}
-                    
-                    <Dropdown value={this.state.filter}filter={this.handlefilter} options={filterOptions} /> 
-                {/* </div> */}
+                <Dropdown value={this.state.filter} filter={this.handlefilter} options={filterOptions} /> 
                 
                 <div className='searchbar-center'>
                     <input className='searchinput' type="text" placeholder="Search for tutors, videos, and more..." onChange={this.handleSearchInput} />
-                    {result.length >= 1 && <SearchResult search={result} />} 
-                </div>               
+                    <div>
+                        {result.length >= 1 && <SearchResult search={result} />} 
+                    </div>
+                </div>  
+    
                 <div className='magnifying-glass'>
                     <i className="fa-solid fa-magnifying-glass fa-1x"></i>
                 </div>
