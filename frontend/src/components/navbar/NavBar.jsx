@@ -37,7 +37,7 @@ class NavBar extends React.Component {
       return (
         <div className="nav-bar-container">
           <div className="nav-bar-wrapper">
-              <Link to={'/'}>
+              <Link to={'/index'}>
                 <img className="logo" src={require('../../images/logo.jpg')}/>
               </Link>
               { this.getLinks() }
