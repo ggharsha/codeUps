@@ -1,5 +1,6 @@
 import React from 'react'
 import Dropdown from './dropdown'
+import SearchResult from './SearchResult'
 
 class SearchBar extends React.Component {
     constructor(props){
@@ -21,29 +22,37 @@ class SearchBar extends React.Component {
      
         if (this.state.filter === "Search") {
             array = []
+            
             const tutorUsernameMatch = this.props.tutors.filter(tutor=>{
                 return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
             })
 
             const tutorLanguagesMatch = this.props.tutors.filter(tutor => {
-                return tutor.languages.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+                const languages = tutor.languages.join(',').toLowerCase()
+                return languages.includes(e.currentTarget.value.toLowerCase())
             })
 
-            array.concat(tutorUsernameMatch, tutorLanguagesMatch)
-            
-
+            const temp = array.concat(tutorUsernameMatch, tutorLanguagesMatch)
+            temp.forEach(result=> {
+                if(!array.includes(result)){
+                    array.push(result)
+                }
+            })
+           
 
         } else if(this.state.filter === 'Username'){
           array = this.props.tutors.filter(tutor=>{
             //   debugger
             return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
             })
-      } else if (this.state.filter === "Languages"){
+        } else if (this.state.filter === "Languages"){
           array = this.props.tutors.filter(tutor => {
-              return tutor.languages.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+              const languages = tutor.languages.join(',').toLowerCase()
+              return languages.includes(e.currentTarget.value.toLowerCase())
           })
-      } 
+    } 
     //    debugger
+        console.log(array)
        this.setState({result: array})
    
     }
@@ -66,7 +75,7 @@ class SearchBar extends React.Component {
                 
                 <div className='searchbar-center'>
                     <input className='searchinput' type="text" onChange={this.handleSearchInput} />
-                    {this.state.result.length >= 1 && <Dropdown filter={this.handlefilter} options={result} />} 
+                    {result.length >= 1 && <SearchResult search={result} />} 
                 </div>               
                 <div className='magnifying-glass'>
                     <i className="fa-solid fa-magnifying-glass fa-1x"></i>
