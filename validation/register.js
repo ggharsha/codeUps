@@ -9,7 +9,7 @@ module.exports = function validateRegisterInput(data) {
     data.password = validText(data.password) ? data.password : '';
     data.password2 = validText(data.password2) ? data.password2 : '';
     data.role = validText(data.role) ? data.role : "";
-    data.languages = validText(data.languages) ? data.languages : [];
+    // data.languages = validText(data.languages) ? data.languages : [];
 
     if(Validator.isEmpty(data.role)){
         errors.role = 'Please select a role'

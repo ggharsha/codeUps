@@ -67,7 +67,7 @@ class SignupForm extends React.Component {
       languages: language
     }
 
-    console.log('hello')
+    console.log(language)
     this.props.signup(user)
   }
 
@@ -111,16 +111,16 @@ class SignupForm extends React.Component {
               <label>
                 <input 
                   type='radio'
-                  value='Student'
-                  checked={this.state.role === 'Student'}
+                  value='student'
+                  checked={this.state.role === 'student'}
                   onChange={this.update('role')}
                 />Student
               </label>
               <label>
                 <input 
                   type='radio'
-                  value='Tutor'
-                  checked={this.state.role === 'Tutor'}
+                  value='tutor'
+                  checked={this.state.role === 'tutor'}
                   onChange={this.update('role')}
                 />Teacher
               </label>
