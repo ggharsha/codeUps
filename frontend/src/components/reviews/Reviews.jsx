@@ -7,6 +7,7 @@ class Reviews extends React.Component {
 
     componentDidMount() {
         this.props.getReviews(this.props.userId);
+        this.props.fetchUser(this.props.userId);
     }
 
     render() {
@@ -14,7 +15,7 @@ class Reviews extends React.Component {
             <div className="reviews-container">
                 <h3>Reviews</h3>
                 <ul>
-                    
+
                 </ul>
             </div>
         )
