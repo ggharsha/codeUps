@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import SearchBar_container from './SearchBar_container';
+import SearchBarContainer from './SearchBarContainer.jsx';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class NavBar extends React.Component {
       if (this.props.loggedIn) {
         return (
             <div className="nav-bar-links">
-                <SearchBar_container/>
+                <SearchBarContainer/>
                 <button onClick={this.logoutUser}>Logout</button>
             </div>
         );
