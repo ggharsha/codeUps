@@ -4,7 +4,7 @@ import Dropdown from './dropdown'
 class SearchBar extends React.Component {
     constructor(props){
         super(props)
-        this.state = {filter:"All", keyword:"", 
+        this.state = {filter:"Search", keyword:"", 
         result:[]}
         this.handlefilter = this.handlefilter.bind(this)
         this.handleSearchInput = this.handleSearchInput.bind(this)
@@ -40,20 +40,23 @@ class SearchBar extends React.Component {
     }
 
     render(){
-        const filterOptions = ["Username", "Languages", "Videos"];
+        const filterOptions = ["All", "Username", "Languages", "Videos"];
         const result = this.state.result
         return (
             <div className='searchbar-container'>
-                {this.state.filter}
-                <Dropdown filter={this.handlefilter} options={filterOptions}/>   
-                 
+                {/* <div className='filter-box'> */}
+                    {/* <span>{this.state.filter}</span> */}
+                    
+                    <Dropdown value={this.state.filter}filter={this.handlefilter} options={filterOptions} /> 
+                {/* </div> */}
+                
                 <div className='searchbar-center'>
                     <input className='searchinput' type="text" onChange={this.handleSearchInput} />
                     {result.length >= 1 && <Dropdown filter={this.handlefilter} options={result} />} 
                 </div>               
-               
-                <i className="fa-solid fa-magnifying-glass fa-1x"></i>
-
+                <div className='magnifying-glass'>
+                    <i className="fa-solid fa-magnifying-glass fa-1x"></i>
+                </div>
             </div>
         )
     }

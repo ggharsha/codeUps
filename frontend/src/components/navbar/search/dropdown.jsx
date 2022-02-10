@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const Dropdown = ({filter, options}) => {
+const Dropdown = ({value,filter, options}) => {
     const [isActive, setIsActive] = useState(false);
     
 
@@ -14,7 +14,7 @@ const Dropdown = ({filter, options}) => {
         <div className="dropdown">
             <div className="dropdown-btn" onClick={(e) => (
                 setIsActive(!isActive))}>
-               
+                <span>{value}</span>
                 <div className="dropdown-icon">
                     <i className="fa-solid fa-caret-down"></i>
                 </div>
