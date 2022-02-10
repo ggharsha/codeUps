@@ -1,5 +1,6 @@
 import React from 'react';
 import UserInfo from './UserInfo';
+import UserAbout from './UserAbout';
 import NavBarContainer from '../navbar/NavbarContainer';
 
 class UserDisplay extends React.Component {
@@ -19,14 +20,10 @@ class UserDisplay extends React.Component {
           <UserInfo 
             user={user}
           />
-          <div className='temp-about'>
-
-          </div>
-          {/* <UserAbout
-
-          /> */}
+          <UserAbout
+            user={user}
+          />
         </div>
-
       </div>
       </> 
     )
