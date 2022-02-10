@@ -1,0 +1,15 @@
+.about-container {
+  height: 100%;
+  
+  div.about-content {
+    box-sizing: border-box;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 15px;
+
+    h1.about-header {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  }
+}

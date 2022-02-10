@@ -1,27 +1,36 @@
 import React from 'react';
+import TutorAboutContent from './TutorAboutContent';
+import TutorVideoContent from './TutorVideoContent';
 
 class TutorAbout extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      onAboutPage: true
+    }
+  }
+
+  handleAboutTab(e) {
+    e.preventDefault();
+    this.setState({onAboutPage: true});
+  }
+
+  handleVideoTab(e) {
+    e.preventDefault();
+    this.setState({onAboutPage: false})
+  }
 
   render() {
     const { user } = this.props;
+
     return (
       <div className='about-container'>
-        <div className='about-content'>
-          <h1 className='about-header'>
-            About <span>{user.username}</span>
-          </h1>
-          <p>
-            {user.about}
-          </p>
+        <div className='tabs-container'>
+          <button className='about-tab' onClick={(e) => this.handleAboutTab(e)}>About</button>
+          <button className='video-tab' onClick={(e) => this.handleVideoTab(e)}>Video</button>
         </div>
-        <div className='feature-video-content'>
-          <h2 className='feature-video-title'>Featured Video</h2>
-          <div className='video-container'>
-            <div className='video'>
-              
-            </div>
-          </div>
-        </div>
+        {this.state.onAboutPage ? 
+          <TutorAboutContent user={user} /> : <TutorVideoContent user={user} />}
       </div>
     )
   }
