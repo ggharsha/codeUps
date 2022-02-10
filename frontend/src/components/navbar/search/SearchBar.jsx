@@ -15,12 +15,11 @@ class SearchBar extends React.Component {
     }
 
     handleSearchInput(e){
-        
         e.preventDefault();
         this.setState({keyword: e.currentTarget.value})
         let array 
-     
-        if (this.state.filter === "Search") {
+    
+        if (this.state.filter === "Search" || this.state.filter === "All Fields") {
             array = []
             
             const tutorUsernameMatch = this.props.tutors.filter(tutor=>{
@@ -38,7 +37,6 @@ class SearchBar extends React.Component {
                     array.push(result)
                 }
             })
-           
 
         } else if(this.state.filter === 'Username'){
           array = this.props.tutors.filter(tutor=>{
@@ -51,19 +49,17 @@ class SearchBar extends React.Component {
               return languages.includes(e.currentTarget.value.toLowerCase())
           })
     } 
-    //    debugger
         console.log(array)
        this.setState({result: array})
    
     }
 
     handlefilter(option){
-
        this.setState({filter: option})
     }
 
     render(){
-        const filterOptions = ["Username", "Languages", "Videos"];
+        const filterOptions = ["All Fields", "Username", "Languages", "Videos"];
         const result = this.state.result
         return (
             <div className='searchbar-container'>
@@ -74,7 +70,7 @@ class SearchBar extends React.Component {
                 {/* </div> */}
                 
                 <div className='searchbar-center'>
-                    <input className='searchinput' type="text" onChange={this.handleSearchInput} />
+                    <input className='searchinput' type="text" placeholder="Search for tutors, videos, and more..." onChange={this.handleSearchInput} />
                     {result.length >= 1 && <SearchResult search={result} />} 
                 </div>               
                 <div className='magnifying-glass'>

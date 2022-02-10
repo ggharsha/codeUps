@@ -80,13 +80,14 @@
     height: 100%;
     border: none;
     padding: 7px;
+    font-size: 14px;
 }
 
 .searchinput:focus {
     outline: none;
-    font-size: 15px;
+    font-size: 14px;
     color: $darkGray;
-    line-height: 15px;
+    line-height: 14px;
 }
 
 .magnifying-glass{
