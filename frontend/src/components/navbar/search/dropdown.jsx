@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 const Dropdown = ({value,filter, options}) => {
     const [isActive, setIsActive] = useState(false);
-    
-
-    // document.addEventListener("click", (e) => {
-
-    //     if (e.target.className !== "dropdown-btn") { setIsActive(false) }
-
-    // })
 
     return (
 
