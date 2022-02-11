@@ -3,11 +3,12 @@ import React from 'react';
 class TutorAboutContent extends React.Component {
 
   render() {
-    const { user } = this.props;
+    const { user, openModal, onCurrentUserPage } = this.props;
 
     return (
       <div>
         <div className='about-content'>
+          {onCurrentUserPage && <button onClick={() => openModal('aboutMe') } className='add-about'>Edit About</button>}
           <h1 className='about-header'>
             About <span>{user.username}</span>
           </h1>
