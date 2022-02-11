@@ -13,5 +13,5 @@ export const fetchStudents = () => {
 }
 
 export const updateUser = user => {
-  return axios.patch(`api/users/${user.id}`, user);
+  return axios.patch(`api/users/edit`, user);
 }
