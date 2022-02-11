@@ -17,6 +17,7 @@
     background-color: $medium-purple;
     margin-bottom: 10px;
     cursor: pointer;
+    font-family: inherit;
 
     &:hover {
       background: $darkest-purple;
@@ -32,6 +33,7 @@
     background-color: hsl(33, 87%, 62%);
     margin-bottom: 40px;
     cursor: pointer;
+    font-family: inherit;
 
     &:hover {
       background: hsl(33, 87%, 55%);
