@@ -26,7 +26,14 @@ const App = () => (
         <Route exact path='/user/:userId' component={UserPageContainer} />
     </Switch>
     <Footer />
+    
+    {/* <video width="400" controls>
+      <source src="/images/trimming1.mp4" type="video/mp4"/>
+      <source src="/images/trimming1.mp4" type="video/ogg"/>
+      Your browser does not support HTML video.
+    </video> */}
 
+    
     {/* <Route exact path="/video" component={VideoCall} /> */}
 
   </div>
