@@ -10,7 +10,7 @@ class UserPage extends React.Component {
   }
 
   render() {
-    const { user, openModal, reviews, currUser } = this.props;
+    const { user, openModal, videos, reviews, currUser } = this.props;
     if (!user) {return null}
 
     let hasReview = false;
@@ -23,6 +23,7 @@ class UserPage extends React.Component {
           user={user}
           openModal={openModal}
           hasReview={hasReview}
+          videos={videos}
         />
         <ReviewContainer match={this.props.match} />
       </div>
