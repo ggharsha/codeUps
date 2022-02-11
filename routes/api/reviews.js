@@ -51,36 +51,25 @@ const createReview = (req, res, next)=> {
     })
     review.save()
     req.review = review
-    next()
+    return res.json(review)
 }
 
-const findStudent = async(req, res, next)=>{
+// const findStudent = async(req, res, next)=>{
    
-  req.student =  await User.findById(req.review.studentId)
-        .then(user => {return user.username} )
+//   req.student =  await User.findById(req.review.studentId)
+//         .then(user => {return user.username} )
    
-    next()
-}
-const findTutor = async (req, res, next) => {
-    req.tutor = await User.findById(req.review.tutorId)
-        .then(user => { return user.username })
+//     next()
+// }
+// const findTutor = async (req, res, next) => {
+//     req.tutor = await User.findById(req.review.tutorId)
+//         .then(user => { return user.username })
 
-    next()
-}
-router.post('/new', createReview, findStudent, findTutor, (req, res)=>{
+//     next()
+// }
+router.post('/new', createReview, (req, res)=>{
 
-    
-    const newReview = {
-        id: req.review.id,
-        student: req.student,
-        tutor: req.tutor,
-        text: req.review.text,
-        rating: req.review.rating,
-        createdAt: req.review.createdAt
-        // updatedAt: req.review.updatedAt
-    }
-
-    return res.json(newReview)
+    // return res.json(newReview)
 })
 
 const update = (req, res, next)=>{
@@ -91,25 +80,25 @@ const update = (req, res, next)=>{
         } else {
           
             req.review = docs;
-            next()
+            return res.json(docs)
         }
     })
 }
 
-router.patch('/edit', update, findStudent, findTutor,(req, res)=>{
+router.patch('/edit', update, (req, res)=>{
     
 
-    const updatedReview = {
-        id: req.review.id,
-        student: req.student,
-        tutor: req.tutor,
-        text: req.review.text,
-        rating: req.review.rating,
-        // createdAt: req.review.createdAt
-        updatedAt: req.review.updatedAt
-    }
+    // const updatedReview = {
+    //     id: req.review.id,
+    //     student: req.student,
+    //     tutor: req.tutor,
+    //     text: req.review.text,
+    //     rating: req.review.rating,
+    //     // createdAt: req.review.createdAt
+    //     updatedAt: req.review.updatedAt
+    // }
 
-    return res.json(updatedReview)
+    // return res.json(updatedReview)
 })
 
 router.delete('/delete/:id',(req, res)=>{
