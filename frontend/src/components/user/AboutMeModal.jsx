@@ -20,7 +20,7 @@ export default class AboutMe extends React.Component {
     render() {
         return (
             <div className="about-me-form-container">
-                <h3>Tell us about yourself</h3>
+                <h3>Tell the world who you are</h3>
                 <form onSubmit={e => this.handleSubmit(e)}>
                     <textarea 
                         value={this.state.about}
