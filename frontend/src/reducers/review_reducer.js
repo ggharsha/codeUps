@@ -9,7 +9,12 @@ const reviewReducer = (state={}, action)=>{
     let nextState = Object.assign({}, state)
     switch(action.type){
         case RECEIVE_REVIEWS:
-            return action.reviews.data
+            const reviewsObj = {};
+            action.reviews.data.forEach((review) => {
+                reviewsObj[review.studentId] = review
+            })
+            return reviewsObj;
+
         case RECEIVE_REVIEW:
             nextState[action.review.data.id] = action.review.data
             return nextState
