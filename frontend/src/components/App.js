@@ -32,7 +32,6 @@ const App = () => (
       <source src="/images/trimming1.mp4" type="video/ogg"/>
       Your browser does not support HTML video.
     </video> */}
-
     
     {/* <Route exact path="/video" component={VideoCall} /> */}
 

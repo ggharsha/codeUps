@@ -8,7 +8,7 @@ export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
 
 const receiveReviews = reviews =>{
-    
+
     return{
         type: RECEIVE_REVIEWS,
         reviews

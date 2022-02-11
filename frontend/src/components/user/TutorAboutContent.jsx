@@ -3,15 +3,19 @@ import React from 'react';
 class TutorAboutContent extends React.Component {
 
   render() {
-    const { user, videos } = this.props;
+
+    const { user, videos, openModal, onCurrentUserPage} = this.props;
     let featured 
      videos.map(video=>{
        console.log(video)
        if(video.featured) featured = video
      })
+
+
     return (
       <div>
         <div className='about-content'>
+          {onCurrentUserPage && <button onClick={() => openModal('aboutMe') } className='add-about'>Edit About</button>}
           <h1 className='about-header'>
             About <span>{user.username}</span>
           </h1>

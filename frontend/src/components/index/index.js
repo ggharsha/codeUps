@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 export default class Index extends React.Component {
     componentDidMount() {
+        window.scrollTo(0,0);
         this.props.fetchStudents();
         this.props.fetchTutors();
         //this.props.fetchVideos();

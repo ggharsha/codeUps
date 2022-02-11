@@ -7,7 +7,7 @@ import NavBarContainer from '../navbar/NavbarContainer';
 class UserDisplay extends React.Component {
 
   render() {
-    const {user, openModal, hasReview, videos} = this.props;
+    const {user, openModal, hasReview, videos, onCurrentUserPage} = this.props;
     const isTutor = user.role === 'tutor'
 
     return (
@@ -24,7 +24,7 @@ class UserDisplay extends React.Component {
             openModal={openModal}
             hasReview={hasReview}
           />
-          {isTutor ? <TutorAbout user={user} videos={videos} /> : <StudentAbout user={user} />}
+          {isTutor ? <TutorAbout onCurrentUserPage={onCurrentUserPage} openModal={openModal} user={user} videos={videos} /> : <StudentAbout onCurrentUserPage={onCurrentUserPage} user={user} openModal={openModal} />}
         </div>
       </div>
       </> 

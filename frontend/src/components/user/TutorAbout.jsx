@@ -21,7 +21,7 @@ class TutorAbout extends React.Component {
   }
 
   render() {
-    const { user, videos } = this.props;
+    const { user, videos, openModal, onCurrentUserPage } = this.props;
 
     return (
       <div className='about-container'>
@@ -30,7 +30,9 @@ class TutorAbout extends React.Component {
           <button className={!this.state.onAboutPage ? 'video-tab active' : 'video-tab'} onClick={(e) => this.handleVideoTab(e)}>Video</button>
         </div>
         {this.state.onAboutPage ? 
-          <TutorAboutContent user={user} videos={videos}/> : <TutorVideoContent user={user} videos={videos} />}
+
+          <TutorAboutContent user={user} videos={videos} openModal={openModal} onCurrentUserPage={onCurrentUserPage}/> : <TutorVideoContent user={user} videos={videos} />}
+
       </div>
     )
   }

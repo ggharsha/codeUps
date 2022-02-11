@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const IndexStudentItem = ({ student, fetchUser }) => (
     <li className="student-index-item">
-        <img className="index-item-image" src="#"/>
+        <img className="index-item-image" src={student.photoUrl} />
         <h2>{student.username}</h2>
-        <ul className="student-languages">
+        <ul className="languages student-languages">
             {student.languages.map((lang, idx) => (
                 <li 
                     key={idx}
-                    className="language"
+                    className="student-language"
                 >{lang}</li>
             ))}
         </ul>

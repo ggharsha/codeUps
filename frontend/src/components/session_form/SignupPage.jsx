@@ -3,6 +3,10 @@ import SignupFormContainer from './SignupFormContainer';
 
 class SignupPage extends React.Component {
 
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
+  
   render() {
     return (
       <div className='signup-page'>
