@@ -40,5 +40,11 @@ router.get('/:authorId', (req, res) => {
         .catch(err => res.status(404).json({ notvideosfound: "No videos found" }))
 })
 
+router.get('/:id', (req, res) => {
+    Video.find({ id: req.params.id })
+        .then(video => { res.json(video) })
+        .catch(err => res.status(404).json({ notvideosfound: "No video found" }))
+})
+
 
 module.exports = router;
