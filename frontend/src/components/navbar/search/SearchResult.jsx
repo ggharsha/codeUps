@@ -6,13 +6,20 @@ import VideoSearchItem from "./VideoSearchItem";
 const SearchResult = ({search, fetchUser, getVideo})=>{
     const [isActive, setIsActive] = useState(true);
     const items = search.map(result => result)
-    console.log(items)
+    // console.log(items)
+    if (items.length === 0 && isActive) {
+        return ( 
+            <div className='searchResult-container'>
+                <p className="no-result"> No results found.</p>
+            </div>
+        )
+    }
 
     return( isActive && ( 
             <div className='searchResult-container'>
                 <ul>
                     {items.map((list, idx)=>{
-                        const name = list.username ? list.username : list.title
+                        // const name = list.username ? list.username : list.title
                         // return (
                         //     <Link to={`/user/${list._id}`} key={idx} >
                         //         <li key={idx} className="search-result-item">

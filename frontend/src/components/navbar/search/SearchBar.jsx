@@ -69,6 +69,7 @@ class SearchBar extends React.Component {
     render(){
         const filterOptions = ["All Fields", "Username", "Languages", "Videos"];
         const result = this.state.result
+        const key = this.state.keyword
 
         let noData;
         let searchIcon;
@@ -78,12 +79,7 @@ class SearchBar extends React.Component {
         } else {
             searchIcon = <i className="fa-solid fa-magnifying-glass fa-1x"></i>
         }
-
-        if (result.length === 0 && this.state.keyword.length !== 0) {
-            noData = <div className='searchResult-container'>
-                <p className="no-result"> No results found.</p>
-                </div>
-        }
+ 
 
         return (
             <div className='searchbar-container'>
@@ -92,7 +88,7 @@ class SearchBar extends React.Component {
                 <div className='searchbar-center'>  
                     <input className='searchinput' type="text" placeholder="Search for tutors, videos, and more..." onChange={this.handleSearchInput} />
                     {noData}
-                    {result.length >= 1 && <SearchResult search={result} getVideo={this.props.getVideo} fetchUser={this.props.fetchUser} />} 
+                    {key.length >= 1 && <SearchResult search={result} getVideo={this.props.getVideo} fetchUser={this.props.fetchUser} />} 
                 </div>               
                 <div className='magnifying-glass'>
                     {searchIcon}
