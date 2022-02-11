@@ -24,7 +24,7 @@ class UserDisplay extends React.Component {
             openModal={openModal}
             hasReview={hasReview}
           />
-          {isTutor ? <TutorAbout user={user} videos={videos} /> : <StudentAbout user={user} />}
+          {isTutor ? <TutorAbout openModal={openModal} user={user} videos={videos} /> : <StudentAbout user={user} openModal={openModal} />}
         </div>
       </div>
       </> 

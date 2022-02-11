@@ -3,6 +3,7 @@ import { closeModal } from "../../actions/modal_actions";
 import { connect } from "react-redux";
 import CreateReviewContainer from "../user/CreateReviewContainer";
 import EditReviewContainer from "../user/EditReviewContainer";
+import AboutMeModalContainer from "../user/AboutMeModalContainer";
 
 // createReview
 // createMessage
@@ -17,6 +18,9 @@ function Modal({ modal, closeModal, history, profileUser }) {
             break;
         case 'editReview':
             component = <EditReviewContainer profileUser={profileUser} />
+            break;
+        case 'aboutMe':
+            component = <AboutMeModalContainer profileUser={profileUser} />
             break;
         // case 'createMessage':
         //     component = <CreateMessageContainer history={history} />
