@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   position: relative;
+
   
   div.about-content {
     box-sizing: border-box;
@@ -12,7 +13,13 @@
     h1.about-header {
       font-size: 1.5rem;
       margin-bottom: 10px;
+      font-family: inherit;
+      color: $darkestGray;
     }
+  }
+
+  .about-content p {
+    color: $darkGray;
   }
 
   button.add-about {
@@ -23,6 +30,8 @@
     background-color: $medium-purple;
     border: none;
     border-radius: 3px;
+    font-family: inherit;
+    color: $darkestGray;
 
     &:hover {
       background-color: $darkest-purple;
