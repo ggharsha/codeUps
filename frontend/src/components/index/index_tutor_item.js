@@ -7,7 +7,7 @@ const IndexTutorItem = ({ tutor, fetchUser }) => (
         <h2>{tutor.username}</h2>
         <ul className="languages tutor-languages">
             {tutor.languages.map((lang, idx) => (
-                <li className='language' key={idx}>
+                <li className='tutor-language' key={idx}>
                     {lang}
                 </li>
             ))}

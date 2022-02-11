@@ -4,8 +4,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    overflow-x: none;
+    justify-content: center;
+    overflow-x: auto;
 }
 
 .video-carousel {
@@ -16,15 +16,15 @@
     font-size: 40px;
     padding-top: 20px;
     margin-left: 30px;
+    color: $darkestGray;
 }
 
 .student-index-item,
 .tutor-index-item {
-    width: 250px;
-    min-width: 250px;
+    width: 220px;
+    min-width: 220px;
     height: 350px;
     position: relative;
-    border: 1px solid $darkestGray;
     border-radius: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -32,17 +32,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 
-.student-index-item:hover,
+.student-index-item h2,
+.tutor-index-item h2 {
+    color: $darkestGray;
+    margin-bottom: 10px;
+}
+
+.tutor-index-item {
+    box-shadow: 0px 0px 4px 4px rgba($darkest-purple, 30%);
+}
+
 .tutor-index-item:hover {
-    background: $lighest-purple;
+    transition: box-shadow .2s;
+    box-shadow: 0px 0px 5px 5px rgba(#8985F2, 70%);
 }
 
-.student-languages {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.student-index-item {
+    box-shadow: 0px 0px 5px 5px rgba($yellow, 20%);
+}
+
+.student-index-item:hover {
+    transition: box-shadow .2s;
+    box-shadow: 0px 0px 5px 5px rgba($yellow, 70%);
+}
+
+.student-languages li, .tutor-languages li {
+    padding: 0 10px;
 }
 
 .index-item-image {
@@ -61,7 +79,7 @@
     flex-wrap: wrap;
 }
 
-.language {
+.tutor-language {
     margin-top: 5px;
     margin-left: 5px;
     padding: 3px 7px;
@@ -69,3 +87,13 @@
     border-radius: 3px;
     color: $darkestGray;
 }
+
+.student-language {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 3px 7px;
+    background: #F5D679;
+    border-radius: 3px;
+    color: $darkestGray;
+}
+
