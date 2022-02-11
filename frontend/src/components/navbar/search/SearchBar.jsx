@@ -19,7 +19,7 @@ class SearchBar extends React.Component {
         e.preventDefault();
         this.setState({keyword: e.currentTarget.value})
         let array 
-     
+    
         if (this.state.filter === "Search") {
             array = []
             
@@ -75,7 +75,7 @@ class SearchBar extends React.Component {
                 
                 <div className='searchbar-center'>
                     <input className='searchinput' type="text" onChange={this.handleSearchInput} />
-                    {result.length >= 1 && <SearchResult search={result} />} 
+                    {result.length >= 1 && <SearchResult search={result} getVideo={this.props.getVideo} fetchUser={this.props.fetchUser} />} 
                 </div>               
                 <div className='magnifying-glass'>
                     <i className="fa-solid fa-magnifying-glass fa-1x"></i>
