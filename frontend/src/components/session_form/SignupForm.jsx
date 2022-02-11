@@ -22,6 +22,9 @@ class SignupForm extends React.Component {
       },
       errors: {}
     }
+
+    this.loginDemoStudent = this.loginDemoStudent.bind(this);
+    this.loginDemoTutor = this.loginDemoTutor.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -81,6 +84,74 @@ class SignupForm extends React.Component {
         ))}
       </ul>
     );
+  }
+
+  loginDemoStudent(e) {
+    e.preventDefault();
+    this.handleDemoStudentUsername();
+  }
+
+  handleDemoStudentUsername() {
+    let demoUsername = "DemoStudent".split("");
+    let nextLetters = "";
+    const demoUsernameType = setInterval(() => {
+        if ("DemoStudent" !== this.state.username) {
+            nextLetters += demoUsername.shift();
+            this.setState({username: nextLetters})
+        } else {
+            clearInterval(demoUsernameType);
+            this.handleDemoStudentPassword();
+        }
+    }, 100)
+}
+
+  handleDemoStudentPassword() {
+    let demoPassword = "password".split("");
+    let nextLetters = "";
+    const demoPasswordType = setInterval(() => {
+        if ("password" !== this.state.password) {
+            nextLetters += demoPassword.shift();
+            this.setState({password: nextLetters})
+        } else {
+            clearInterval(demoPasswordType);
+            const demoUser = {username: "DemoStudent", password: "password"};
+            this.props.login(demoUser);
+        }
+    }, 100)
+  }
+
+  loginDemoTutor(e) {
+    e.preventDefault();
+    this.handleDemoTutorUsername();
+  }
+
+  handleDemoTutorUsername() {
+    let demoUsername = "DemoTutor".split("");
+    let nextLetters = "";
+    const demoUsernameType = setInterval(() => {
+        if ("DemoTutor" !== this.state.username) {
+            nextLetters += demoUsername.shift();
+            this.setState({username: nextLetters})
+        } else {
+            clearInterval(demoUsernameType);
+            this.handleDemoTutorPassword();
+        }
+    }, 100)
+}
+
+  handleDemoTutorPassword() {
+    let demoPassword = "password".split("");
+    let nextLetters = "";
+    const demoPasswordType = setInterval(() => {
+        if ("password" !== this.state.password) {
+            nextLetters += demoPassword.shift();
+            this.setState({password: nextLetters})
+        } else {
+            clearInterval(demoPasswordType);
+            const demoUser = {username: "DemoTutor", password: "password"};
+            this.props.login(demoUser);
+        }
+    }, 100)
   }
 
   render() {
