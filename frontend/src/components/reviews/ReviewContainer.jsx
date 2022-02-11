@@ -3,18 +3,13 @@ import { getReviews, createReview, updateReview, deleteReview } from '../../acti
 import { fetchUser, fetchStudents } from '../../actions/user_actions';
 import Reviews from './Reviews';
 
-//
-
-//
-
 const mapStateToProps = (state, ownProps) => {
     const userId = ownProps.match.params.userId;
-
     return {
         userId: userId, 
         user: state.user.profileUser[userId],
         reviews: Object.values(state.reviews),
-        students: Object.values(state.user.students)
+        students: Object.values(state.user.students),
     }
 }
 
