@@ -29,10 +29,10 @@ export default class CreateReview extends React.Component {
         e.preventDefault();
         this.props.createReview(this.state)
         .then(() => {
-            if (!this.state.errors) {
+            if (Object.keys(this.props.errors).length === 0) {
                 this.props.closeModal()
             } else {
-                console.log(this.state.errors)
+                console.log(this.props.errors)
             }
         })
     }

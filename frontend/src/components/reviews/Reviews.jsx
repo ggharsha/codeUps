@@ -20,6 +20,7 @@ class Reviews extends React.Component {
     render() {
         if (!this.props.reviews || !this.props.students) return null;
 
+        console.log(this.props.reviews)
         return (
             <div className="reviews-container">
                 <h3>Reviews</h3>
