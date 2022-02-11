@@ -12,7 +12,7 @@ const SearchResult = ({search})=>{
                         const name = list.username ? list.username : list.title
                         return (
                             <Link to={`/user/${list._id}`} key={idx} >
-                                <li className="search-result-item">
+                                <li key={idx} className="search-result-item">
                                     <p>{name}</p>
                                 </li>
                             </Link>

@@ -50,7 +50,8 @@ class SearchBar extends React.Component {
           })
     } 
 
-            
+
+
         this.setState({result: array})
    
     }
@@ -72,7 +73,7 @@ class SearchBar extends React.Component {
         let searchIcon;
 
         if (this.state.keyword.length >=1) {
-            searchIcon = <i class="fa-solid fa-x" onClick={this.clearInput}></i>
+            searchIcon = <i className="fa-solid fa-x" onClick={this.clearInput}></i>
         } else {
             searchIcon = <i className="fa-solid fa-magnifying-glass fa-1x"></i>
         }
