@@ -3,15 +3,21 @@ import React from 'react';
 class UserInfo extends React.Component {
 
   render() {
-    const {user, openModal} = this.props;
+    const {user, openModal, hasReview} = this.props;
     console.log(user)
     return (
       <div className='user-info'>
         <button className='message-user'>Message</button>
         {user.role === 'tutor' && 
-          <button className='review-user' onClick={() => openModal('createReview')}>
-            Write a Review
-          </button>}
+          <div>
+            {!hasReview ? 
+            <button className='review-user' onClick={() => openModal('createReview')}>
+              Write a Review
+            </button> :
+            <button className='edit-review' onClick={() => openModal('editReview')}>Edit Review</button>
+            }
+          </div>
+        }
         <div className='username-container'>
           <div className='tag' >Username: </div>
           <div className='username'>{user.username}</div>

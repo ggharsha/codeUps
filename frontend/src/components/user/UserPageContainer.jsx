@@ -7,9 +7,13 @@ import { getReviews } from '../../actions/review_actions';
 const mapStateToProps = (state, ownProps) => {
   const userId = ownProps.match.params.userId;
   const user = state.user.profileUser[userId];
+  const reviews = state.reviews;
+
   return {
     userId,
     user,
+    reviews,
+    currUser: state.session.user
   }
 }
 
