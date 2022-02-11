@@ -51,7 +51,7 @@ class SearchBar extends React.Component {
     } 
 
 
-
+        
         this.setState({result: array})
    
     }
@@ -70,6 +70,7 @@ class SearchBar extends React.Component {
         const filterOptions = ["All Fields", "Username", "Languages", "Videos"];
         const result = this.state.result
 
+        let noData;
         let searchIcon;
 
         if (this.state.keyword.length >=1) {
@@ -78,12 +79,19 @@ class SearchBar extends React.Component {
             searchIcon = <i className="fa-solid fa-magnifying-glass fa-1x"></i>
         }
 
+        if (result.length === 0 && this.state.keyword.length !== 0) {
+            noData = <div className='searchResult-container'>
+                <p className="no-result"> No results found.</p>
+                </div>
+        }
+
         return (
             <div className='searchbar-container'>
                 <Dropdown value={this.state.filter} filter={this.handlefilter} options={filterOptions} /> 
                 
                 <div className='searchbar-center'>
                     <input className='searchinput' type="text" placeholder="Search for tutors, videos, and more..." onChange={this.handleSearchInput} />
+                    {noData}
                     {result.length >= 1 && <SearchResult search={result} />} 
                 </div>  
                 <div className='magnifying-glass'>

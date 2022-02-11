@@ -119,6 +119,8 @@
     position: absolute;
     border-radius: 6px;
     z-index: 3;
+    display: flex;
+    flex-direction: column;
 }
 
 .searchResult-container:after {
@@ -149,6 +151,11 @@
 
 .search-result-item:hover {
     background-color: #F5D679;
+}
+
+.no-result {
+    margin: auto auto;
+    color: $darkGray;
 }
 
 .search-result-item p {
