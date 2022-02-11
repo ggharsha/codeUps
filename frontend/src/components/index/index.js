@@ -33,9 +33,11 @@ export default class Index extends React.Component {
                     <h3>Tutors</h3>
                     <ul className="carousel">
                         {this.props.tutors.map((tutor, idx) => (
-                            <Link to={`/user/${tutor._id}`}>
+                            <Link 
+                                key={tutor._id}
+                                to={`/user/${tutor._id}`}>
                                 <IndexTutorItem 
-                                    key={tutor._id}
+                                    
                                     tutor={tutor}
                                     fetchUser={this.props.fetchUser}
                                 />
@@ -47,9 +49,10 @@ export default class Index extends React.Component {
                     <h3>Students</h3>
                     <ul className="carousel">
                         {this.props.students.map((student, idx) => (
-                            <Link to={`/user/${student._id}`}>
+                            <Link 
+                                key={student._id}
+                                to={`/user/${student._id}`}>
                                 <IndexStudentItem 
-                                    key={student._id}
                                     student={student}
                                     fetchUser={this.props.fetchUser}
                                 />
