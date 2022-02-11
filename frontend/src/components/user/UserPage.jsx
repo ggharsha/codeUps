@@ -5,6 +5,7 @@ import ReviewContainer from '../reviews/ReviewContainer';
 class UserPage extends React.Component {
 
   componentDidMount() {
+    window.scrollTo(0,0);
     this.props.fetchUser(this.props.match.params.userId)
     this.props.getReviews(this.props.match.params.userId)
   }
