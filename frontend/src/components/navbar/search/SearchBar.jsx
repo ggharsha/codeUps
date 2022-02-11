@@ -47,7 +47,9 @@ class SearchBar extends React.Component {
               return languages.includes(e.currentTarget.value.toLowerCase())
           })
     } 
-       this.setState({result: array})
+
+            
+        this.setState({result: array})
    
     }
 
@@ -58,6 +60,15 @@ class SearchBar extends React.Component {
     render(){
         const filterOptions = ["All Fields", "Username", "Languages", "Videos"];
         const result = this.state.result
+
+        let searchIcon;
+
+        if (this.state.keyword.length >=1) {
+            searchIcon = <i class="fa-solid fa-x"></i>
+        } else {
+            searchIcon = <i className="fa-solid fa-magnifying-glass fa-1x"></i>
+        }
+
         return (
             <div className='searchbar-container'>
                 <Dropdown value={this.state.filter} filter={this.handlefilter} options={filterOptions} /> 
@@ -67,7 +78,7 @@ class SearchBar extends React.Component {
                     {result.length >= 1 && <SearchResult search={result} />} 
                 </div>  
                 <div className='magnifying-glass'>
-                    <i className="fa-solid fa-magnifying-glass fa-1x"></i>
+                    {searchIcon}
                 </div>
             </div>
         )
