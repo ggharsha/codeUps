@@ -6,7 +6,9 @@ const VideoSearchItem = ({ video, getVideo }) => (
         to={`/user/${video.authorId}`}
         onClick={() => getVideo(video._id)}
     >
-        <li >{video.title}</li>
+        <li className="search-result-item">
+            <p>{video.title}</p>
+        </li>
     </Link>
 )    
 

@@ -20,8 +20,7 @@ class NavBar extends React.Component {
         return (
           
             <div className="nav-bar-links">
-                
-                <button onClick={this.logoutUser}>Logout</button>
+                <button className="session-buttons logout" onClick={this.logoutUser}>Logout</button>
             </div>
         );
       } else {
@@ -29,7 +28,7 @@ class NavBar extends React.Component {
         return (
             <div className="nav-bar-links">
                 <Link className="session-buttons signup" to={'/signup'}>Sign Up</Link>
-                <Link className="session-buttons" to={'/login'}>Login</Link>
+                <Link id="login" className="session-buttons" to={'/login'}>Login</Link>
             </div>
         );
       }
@@ -42,7 +41,7 @@ class NavBar extends React.Component {
               <Link to={'/index'}>
                 <img className="logo" src={require('../../images/logo.jpg')}/>
               </Link>
-             
+          
             {this.props.loggedIn && <SearchBarContainer />}
             {this.getLinks()}
             

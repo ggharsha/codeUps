@@ -13,6 +13,13 @@ const SearchResult = ({search, fetchUser, getVideo})=>{
                 <ul>
                     {items.map((list, idx)=>{
                         const name = list.username ? list.username : list.title
+                        // return (
+                        //     <Link to={`/user/${list._id}`} key={idx} >
+                        //         <li key={idx} className="search-result-item">
+                        //             <p>{name}</p>
+                        //         </li>
+                        //     </Link>
+                        // )    
                         return list.username ? 
                         <TutorSearchItem 
                             tutor={list}

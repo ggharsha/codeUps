@@ -6,7 +6,9 @@ const TutorSearchItem = ({ tutor, fetchUser }) => (
         to={`/user/${tutor._id}`}
         onClick={() => fetchUser(tutor._id)}
     >
-        <li >{tutor.username}</li>
+        <li className="search-result-item">
+            <p>{tutor.username}</p>
+        </li>
     </Link>
 )    
 
