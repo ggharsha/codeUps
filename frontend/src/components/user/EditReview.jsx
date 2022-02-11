@@ -21,6 +21,7 @@ export default class EditReview extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     this.props.updateReview(this.state)
     .then(() => {
         if (Object.keys(this.props.errors).length === 0) {
@@ -48,7 +49,21 @@ export default class EditReview extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div>this is edit</div>
+      <div className='edit-review-container'>
+        <h2 className='review-title'>Edit Review</h2>
+        <form onSubmit={e => this.handleSubmit(e)}>
+          <h3 className='rating-title'>Rate your tutor</h3>
+          <StartRating startingStarts={this.state.rating} updateStars={this.handleRating} />
+          <textarea
+              className="review-textarea"
+              onChange={this.update("text")}
+              value={this.state.text}
+          />
+          {this.renderErrors()}
+          <button className="submit-button" type="submit">Submit</button>
+
+        </form>
+      </div>
     )
   }
 }
