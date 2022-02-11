@@ -16,6 +16,7 @@
     font-size: 40px;
     padding-top: 20px;
     margin-left: 30px;
+    color: $darkestGray;
 }
 
 .student-index-item,
@@ -24,7 +25,6 @@
     min-width: 250px;
     height: 350px;
     position: relative;
-    border: 1px solid $darkestGray;
     border-radius: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -32,17 +32,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 
-.student-index-item:hover,
+.student-index-item h2,
+.tutor-index-item h2 {
+    color: $darkestGray;
+    margin-bottom: 10px;
+}
+
+.tutor-index-item {
+    box-shadow: 0px 0px 4px 4px rgba($darkest-purple, 30%);
+    // background: linear-gradient(45deg, white 35%, $lighest-purple);
+}
+
 .tutor-index-item:hover {
-    background: $lighest-purple;
+    transition: box-shadow .2s;
+    box-shadow: 0px 0px 5px 5px rgba(#8985F2, 70%);
 }
 
-.student-languages {
+.student-index-item {
+    box-shadow: 0px 0px 5px 5px rgba($yellow, 20%);
+    // background: linear-gradient(45deg, white 35%, #F5D679);
+}
+
+.student-index-item:hover {
+    transition: box-shadow .2s;
+    box-shadow: 0px 0px 5px 5px rgba($yellow, 70%);
+}
+
+.student-languages, .tutor-languages {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: fit-content;
+    // max-width: 200px;
+    flex-wrap: wrap;
+    line-height: 20px;
+}
+
+.student-languages li, .tutor-languages li {
+    padding: 0 10px;
 }
 
 .index-item-image {
