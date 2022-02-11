@@ -4,14 +4,6 @@ import { createReview } from "../../actions/review_actions";
 import { fetchUser } from "../../actions/user_actions";
 import CreateReview from "./CreateReview";
 
-// selector
-
-// const reviewSelector = (state, history) => {
-    
-// }
-
-// end selector
-
 const mSTP = (state, ownProps) => ({
     profileUser: ownProps.profileUser,
     currentUser: state.session.user,
