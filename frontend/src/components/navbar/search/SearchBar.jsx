@@ -89,15 +89,16 @@ class SearchBar extends React.Component {
             <div className='searchbar-container'>
                 <Dropdown value={this.state.filter} filter={this.handlefilter} options={filterOptions} /> 
                 
-                <div className='searchbar-center'>
+                <div className='searchbar-center'>  
                     <input className='searchinput' type="text" placeholder="Search for tutors, videos, and more..." onChange={this.handleSearchInput} />
                     {noData}
-                    {result.length >= 1 && <SearchResult search={result} />} 
-                </div>  
+                    {result.length >= 1 && <SearchResult search={result} getVideo={this.props.getVideo} fetchUser={this.props.fetchUser} />} 
+                </div>               
                 <div className='magnifying-glass'>
                     {searchIcon}
                 </div>
             </div>
+    
         )
     }
     
