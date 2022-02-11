@@ -81,3 +81,21 @@
     margin-top: -50px;
     margin-bottom: 20px;
 }
+
+.languages {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 175px;
+    flex-wrap: wrap;
+}
+
+.language {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 3px 7px;
+    background: $lighest-purple;
+    border-radius: 3px;
+    color: $darkestGray;
+}

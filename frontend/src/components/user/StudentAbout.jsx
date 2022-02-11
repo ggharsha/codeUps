@@ -8,6 +8,7 @@ class StudentAbout extends React.Component {
     return (
       <div className='about-container'>
         <div className='about-content'>
+          <button className='add-about'>Edit About</button>
           <h1 className='about-header'>
             About <span>{user.username}</span>
           </h1>

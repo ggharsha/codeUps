@@ -6,19 +6,23 @@ class UserPage extends React.Component {
 
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.userId)
-    // debugger
-    this.props.getVideos()
-    // this.props.getReviews(this.props.match.params.userId)
+    this.props.getReviews(this.props.match.params.userId)
   }
 
   render() {
-    const { user, openModal, videos } = this.props;
+    const { user, openModal, videos, reviews, currUser } = this.props;
     if (!user) {return null}
+
+    let hasReview = false;
+    (currUser && reviews[currUser.id]) ? hasReview = true : hasReview = false;
+
+    console.log(reviews)
     return(
       <div className='user-page-content'>
         <UserDisplay 
           user={user}
           openModal={openModal}
+          hasReview={hasReview}
           videos={videos}
         />
         <ReviewContainer match={this.props.match} />

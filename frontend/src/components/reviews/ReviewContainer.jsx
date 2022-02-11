@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
         userId: userId, 
         user: state.user.profileUser[userId],
         reviews: Object.values(state.reviews),
-        students: Object.values(state.user.students),
+        students: state.user.students,
     }
 }
 

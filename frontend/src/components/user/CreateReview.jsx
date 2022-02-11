@@ -9,7 +9,6 @@ export default class CreateReview extends React.Component {
             tutorId: this.props.profileUser._id,
             text: "",
             rating: null,
-            errors: {}
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleRating = this.handleRating.bind(this);

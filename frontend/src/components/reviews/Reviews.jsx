@@ -4,21 +4,22 @@ import ReviewItem from './ReviewItem';
 class Reviews extends React.Component {
     constructor(props) {
         super(props)
-        this.findStudent = this.findStudent.bind(this)
+        // this.findStudent = this.findStudent.bind(this)
     }
 
     componentDidMount() {
         this.props.getReviews(this.props.userId);
-        this.props.fetchUser(this.props.userId);
         this.props.fetchStudents();
+        this.props.fetchUser(this.props.userId);
     }
 
-    findStudent(studentId) {
-        return this.props.students.filter(student => student._id === studentId)[0].username
-    }
+    // findStudent(studentId) {
+    //     return this.props.students.filter(student => student._id === studentId)[0].username
+    // }
 
+    
     render() {
-        if (!this.props.reviews || !this.props.students) return null;
+        if (!this.props.reviews || !Object.keys(this.props.students).length) return null;
 
         console.log(this.props.reviews)
         return (
@@ -28,7 +29,7 @@ class Reviews extends React.Component {
                     {this.props.reviews.map((review, idx) => <ReviewItem 
                         key={idx} 
                         review={review} 
-                        username={this.findStudent}
+                        student={this.props.students[review.studentId]}
                         />)}
                 </ul>
             </div>
