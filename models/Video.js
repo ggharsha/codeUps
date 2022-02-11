@@ -20,10 +20,10 @@ const VideoSchema = new Schema({
         type: Boolean,
         required:true
     },
-    languages: {
-        type: Array,
-        required: true
-    },
+    // languages: {
+    //     type: Array,
+    //     required: true
+    // },
     }, {
     timestamps: true
 })

@@ -42,7 +42,7 @@ const {getFiles} = require('./s3')
 app.get('/images/:key', (req, res)=>{
     
     const key = req.params.key
-    console.log(key)
+    
     const readStream = getFiles(key)
     readStream.pipe(res)
 })
