@@ -5,9 +5,9 @@ const IndexTutorItem = ({ tutor, fetchUser }) => (
     <li className="tutor-index-item">
         <img className="index-item-image" src="#" />
         <h2>{tutor.username}</h2>
-        <ul className="tutor-languages">
+        <ul className="languages tutor-languages">
             {tutor.languages.map((lang, idx) => (
-                <li key={idx}>
+                <li className='language' key={idx}>
                     {lang}
                 </li>
             ))}
