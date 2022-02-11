@@ -23,7 +23,7 @@ const tutorReviews = (req, res, next) => {
             if (reviews.length < 1) {
                 next()
             } else {
-                console.log(reviews)
+                // console.log(reviews)
                 return res.json(reviews)
             }
         })
@@ -73,7 +73,7 @@ router.post('/new', createReview, (req, res)=>{
 })
 
 const update = (req, res, next)=>{
-    Review.findOneAndReplace({ _id: req.body.id }, req.body, { returnDocument: "after" }, (err, docs) => {
+    Review.findOneAndReplace({ _id: req.body._id }, req.body, { returnDocument: "after" }, (err, docs) => {
         if (err) {
             return res.json(err)
             
