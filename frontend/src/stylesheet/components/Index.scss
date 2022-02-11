@@ -43,7 +43,6 @@
 
 .tutor-index-item {
     box-shadow: 0px 0px 4px 4px rgba($darkest-purple, 30%);
-    // background: linear-gradient(45deg, white 35%, $lighest-purple);
 }
 
 .tutor-index-item:hover {
@@ -53,22 +52,11 @@
 
 .student-index-item {
     box-shadow: 0px 0px 5px 5px rgba($yellow, 20%);
-    // background: linear-gradient(45deg, white 35%, #F5D679);
 }
 
 .student-index-item:hover {
     transition: box-shadow .2s;
     box-shadow: 0px 0px 5px 5px rgba($yellow, 70%);
-}
-
-.student-languages, .tutor-languages {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: fit-content;
-    // max-width: 200px;
-    flex-wrap: wrap;
-    line-height: 20px;
 }
 
 .student-languages li, .tutor-languages li {
@@ -91,7 +79,7 @@
     flex-wrap: wrap;
 }
 
-.language {
+.tutor-language {
     margin-top: 5px;
     margin-left: 5px;
     padding: 3px 7px;
@@ -99,3 +87,13 @@
     border-radius: 3px;
     color: $darkestGray;
 }
+
+.student-language {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 3px 7px;
+    background: #F5D679;
+    border-radius: 3px;
+    color: $darkestGray;
+}
+

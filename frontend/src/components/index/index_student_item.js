@@ -9,7 +9,7 @@ const IndexStudentItem = ({ student, fetchUser }) => (
             {student.languages.map((lang, idx) => (
                 <li 
                     key={idx}
-                    className="language"
+                    className="student-language"
                 >{lang}</li>
             ))}
         </ul>
