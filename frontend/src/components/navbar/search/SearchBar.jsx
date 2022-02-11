@@ -8,7 +8,9 @@ class SearchBar extends React.Component {
         this.state = { filter:"Search", keyword:"", result:[] }
         this.handlefilter = this.handlefilter.bind(this)
         this.handleSearchInput = this.handleSearchInput.bind(this)
+        this.clearInput = this.clearInput.bind(this);
     }
+
     componentDidMount(){
         this.props.fetchTutors()
     }
@@ -57,6 +59,12 @@ class SearchBar extends React.Component {
        this.setState({filter: option})
     }
 
+    clearInput() {
+        this.setState({result: []});
+        this.setState({keyword: ""});
+        document.getElementsByClassName("searchinput")[0].value = "";
+    }
+
     render(){
         const filterOptions = ["All Fields", "Username", "Languages", "Videos"];
         const result = this.state.result
@@ -64,7 +72,7 @@ class SearchBar extends React.Component {
         let searchIcon;
 
         if (this.state.keyword.length >=1) {
-            searchIcon = <i class="fa-solid fa-x"></i>
+            searchIcon = <i class="fa-solid fa-x" onClick={this.clearInput}></i>
         } else {
             searchIcon = <i className="fa-solid fa-magnifying-glass fa-1x"></i>
         }
