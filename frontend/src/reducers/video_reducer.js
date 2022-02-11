@@ -7,7 +7,7 @@ const VideoReducer = (state={}, action)=>{
     Object.freeze(state)
     switch(action.type){
         case RECEIVE_VIDEOS:
-            return action.videos
+            return action.videos.data
         case RECEIVE_VIDEO: 
             return action.video
         default:

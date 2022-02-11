@@ -9,6 +9,7 @@ const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 
 router.get('/students', (req, res)=>{
+    console.log()
     User.find({role: "student"}, ((err, students)=>{
         res.json(students)
     }))
@@ -33,7 +34,8 @@ router.get('/:id', (req, res)=>{
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
     res.json({id: req.user.id, 
                 username: req.user.username,
-                role: req.user.role});
+                role: req.user.role,
+                });
 })
 
 

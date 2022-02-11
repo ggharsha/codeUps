@@ -1,4 +1,4 @@
-import { fetchVideos, fetchVideo } from '../util/video_api_util'
+import { fetchVideos, fetchVideo, fetchTutorVideos  } from '../util/video_api_util'
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS'
 export const RECEIVE_VIDEO = 'RECEIVE_VIDEO'
 
@@ -20,4 +20,8 @@ export const getVideos = () => dispatch=>{
 
 export const getVideo = videoId => dispatch => {
     return fetchVideo(videoId).then(video => dispatch(receiveVideo(video)))
+}
+
+export const getTutorVideos = authorId => dispatch =>{
+    return fetchTutorVideos(authorId).then(videos => dispatch(receiveVideos(videos)))
 }

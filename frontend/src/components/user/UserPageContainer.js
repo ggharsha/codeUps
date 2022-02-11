@@ -3,7 +3,7 @@ import { fetchUser } from '../../actions/user_actions';
 import UserPage from './UserPage';
 import { openModal } from '../../actions/modal_actions';
 import { getReviews } from '../../actions/review_actions';
-import { getVideos, getVideo } from '../../actions/video_actions';
+import { getVideos, getVideo, getTutorVideos } from '../../actions/video_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const userId = ownProps.match.params.userId;
@@ -24,8 +24,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchUser: (userId) => dispatch(fetchUser(userId)),
     openModal: modal => dispatch(openModal(modal)),
     getReviews: userId => dispatch(getReviews(userId)),
-    getVideo: videoId => dispatch(getVideo(videoId)),
-    getVideos: () => dispatch(getVideos())
+    getTutorVideos: authorId => dispatch(getTutorVideos(authorId)),
   }
 }
 

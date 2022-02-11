@@ -77,140 +77,140 @@ const reviewSeed = [
 const videoSeed = [
     {
         title:"Hello World!",
-        authorId: "6205d4145dfdc70dd8c7f9b4",
+        authorId: "6205e032e43cd88a7e60a857",
         videoUrl:"/images/trimming1.mp4",
         featured:   true,
 
     },
     {
         title: "Junior Programmer",
-        authorId: "6205d4145dfdc70dd8c7f9b4",
+        authorId: "6205e032e43cd88a7e60a857",
         videoUrl: "/images/trimming2.mp4",
         featured: false,
         
     },
     {
         title: "React Redux",
-        authorId: "6205d4145dfdc70dd8c7f9b4",
+        authorId: "6205e032e43cd88a7e60a857",
         videoUrl: "/images/trimming3.mp4",
         featured: false,
      
     },
     {
         title: "Recursion",
-        authorId: "6205d4145dfdc70dd8c7f9b4",
+        authorId: "6205e032e43cd88a7e60a857",
         videoUrl: "/images/trimming4.mp4",
         featured: false,
         
     },
     {
         title: "BubbleSort",
-        authorId: "6205d4145dfdc70dd8c7f9b5",
+        authorId: "6205e0b0e43cd88a7e60a863",
         videoUrl: "/images/trimming5.mp4",
         featured: true,
      
     },
     {
         title: "Advance Ruby",
-        authorId: '6205d4145dfdc70dd8c7f9b5',
+        authorId: '6205e0b0e43cd88a7e60a863',
         videoUrl: "/images/trimming6.mp4",
         featured: false,
         
     },
     {
         title: "Tow Sum",
-        authorId: '6205d4145dfdc70dd8c7f9b5',
+        authorId: '6205e0b0e43cd88a7e60a863',
         videoUrl: "/images/trimming7.mp4",
         featured: false,
        
     },
     {
         title: "Fibonacci Sequence",
-        authorId: '6205d4145dfdc70dd8c7f9b5',
+        authorId: '6205e0b0e43cd88a7e60a863',
         videoUrl: "/images/trimming8.mp4",
         featured: false,
       
     },
     {
         title: "Factorial",
-        authorId: '6205d4145dfdc70dd8c7f9b6',
+        authorId: '6205e0c7e43cd88a7e60a866',
         videoUrl: "/images/trimming9.mp4",
         featured: true,
       
     },
     {
         title: "Merge Sort",
-        authorId: '6205d4145dfdc70dd8c7f9b6',
+        authorId: '6205e0c7e43cd88a7e60a866',
         videoUrl: "/images/trimming10.mp4",
         featured: false,
       
     },
     {
         title: "Rails",
-        authorId: '6205d4145dfdc70dd8c7f9b6',
+        authorId: '6205e0c7e43cd88a7e60a866',
         videoUrl: "/images/trimming11.mp4",
         featured: false,
 
     },
     {
         title: "Flexbox",
-        authorId: '6205d4145dfdc70dd8c7f9b6',
+        authorId: '6205e0c7e43cd88a7e60a866',
         videoUrl: "/images/trimming12.mp4",
         featured: false,
 
     },
     {
         title: "CSS Grid",
-        authorId: '6205d4145dfdc70dd8c7f9b7',
+        authorId: '6205e0e9e43cd88a7e60a869',
         videoUrl: "/images/trimming13.mp4",
         featured: true,
 
     },
     {
         title: "HTML Elements",
-        authorId: '6205d4145dfdc70dd8c7f9b7',
+        authorId: '6205e0e9e43cd88a7e60a869',
         videoUrl: "/images/trimming14.mp4",
         featured: false,
 
     },
     {
         title: "DOM Manupilation",
-        authorId: '6205d4145dfdc70dd8c7f9b7',
+        authorId: '6205e0e9e43cd88a7e60a869',
         videoUrl: "/images/trimming15.mp4",
         featured: false,
 
     },
     {
         title: "Javascript",
-        authorId: '6205d4145dfdc70dd8c7f9b7',
+        authorId: '6205e0e9e43cd88a7e60a869',
         videoUrl: "/images/trimming16.mp4",
         featured: false,
 
     },
     {
         title: "Promise, Async, Await",
-        authorId: '6205d4145dfdc70dd8c7f9b8',
+        authorId: '6205e10ae43cd88a7e60a86d',
         videoUrl: "/images/trimming17.mp4",
         featured: true,
 
     },
     {
         title: "MongoDB",
-        authorId: '6205d4145dfdc70dd8c7f9b8',
+        authorId: '6205e10ae43cd88a7e60a86d',
         videoUrl: "/images/trimming18.mp4",
         featured: false,
 
     },
     {
         title: "Binary Search",
-        authorId: '6205d4145dfdc70dd8c7f9b8',
+        authorId: '6205e10ae43cd88a7e60a86d',
         videoUrl: "/images/trimming19.mp4",
         featured: false,
 
     },
     {
         title: "MERN Stack",
-        authorId: '6205d4145dfdc70dd8c7f9b8',
+        authorId: '6205e10ae43cd88a7e60a86d',
         videoUrl: "/images/trimming20.mp4",
         featured: false,
 

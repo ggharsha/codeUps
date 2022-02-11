@@ -30,7 +30,7 @@ class TutorAbout extends React.Component {
           <button className={!this.state.onAboutPage ? 'video-tab active' : 'video-tab'} onClick={(e) => this.handleVideoTab(e)}>Video</button>
         </div>
         {this.state.onAboutPage ? 
-          <TutorAboutContent user={user} /> : <TutorVideoContent user={user} videos={videos} />}
+          <TutorAboutContent user={user} videos={videos}/> : <TutorVideoContent user={user} videos={videos} />}
       </div>
     )
   }

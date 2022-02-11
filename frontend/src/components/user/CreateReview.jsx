@@ -31,7 +31,7 @@ export default class CreateReview extends React.Component {
             if (Object.keys(this.props.errors).length === 0) {
                 this.props.closeModal()
             } else {
-                console.log(this.props.errors)
+            //   this.props.errors
             }
         })
     }
