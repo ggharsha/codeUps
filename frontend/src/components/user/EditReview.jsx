@@ -21,13 +21,13 @@ export default class EditReview extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
+  
     this.props.updateReview(this.state)
     .then(() => {
         if (Object.keys(this.props.errors).length === 0) {
             this.props.closeModal()
         } else {
-            console.log(this.props.errors)
+            // this.props.errors
         }
     })
   }
@@ -47,7 +47,7 @@ export default class EditReview extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className='edit-review-container'>
         <h2 className='review-title'>Edit Review</h2>

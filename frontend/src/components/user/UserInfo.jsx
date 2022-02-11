@@ -4,7 +4,7 @@ class UserInfo extends React.Component {
 
   render() {
     const {user, openModal, hasReview} = this.props;
-    console.log(user)
+    // console.log(user)
     return (
       <div className='user-info'>
         <button className='message-user'>Message</button>

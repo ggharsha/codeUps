@@ -3,7 +3,14 @@ import React from 'react';
 class TutorAboutContent extends React.Component {
 
   render() {
-    const { user, openModal, onCurrentUserPage } = this.props;
+
+    const { user, videos, openModal, onCurrentUserPage} = this.props;
+    let featured 
+     videos.map(video=>{
+       console.log(video)
+       if(video.featured) featured = video
+     })
+
 
     return (
       <div>
@@ -20,6 +27,11 @@ class TutorAboutContent extends React.Component {
           <h2 className='feature-video-title'>Featured Video</h2>
           <div className='video-container'>
             <div className='video'>
+              <video width="400" controls>
+                <source src={featured.videoUrl} type="video/mp4" />
+                <source src={featured.videoUrl} type="video/ogg" />
+                Your browser does not support HTML video.
+              </video>
               
             </div>
           </div>

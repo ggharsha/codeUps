@@ -70,7 +70,7 @@ class SignupForm extends React.Component {
       languages: language
     }
 
-    console.log(language)
+    
     this.props.signup(user)
   }
 
