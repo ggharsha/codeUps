@@ -40,3 +40,8 @@ export const fetchStudents = () => (dispatch) => {
   return UserApiUtil.fetchStudents()
     .then((students) => dispatch(receiveAllStudents(students)));
 }
+
+export const updateUser = user => dispatch => {
+  return UserApiUtil.updateUser(user)
+  .then(user => dispatch(receiveUser(user)))
+}
