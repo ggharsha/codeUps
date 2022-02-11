@@ -23,7 +23,7 @@ const tutorReviews = (req, res, next) => {
             if (reviews.length < 1) {
                 next()
             } else {
-                console.log(reviews)
+                // console.log(reviews)
                 return res.json(reviews)
             }
         })
