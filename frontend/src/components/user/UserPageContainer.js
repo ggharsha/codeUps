@@ -8,15 +8,14 @@ import { getVideos, getVideo } from '../../actions/video_actions';
 const mapStateToProps = (state, ownProps) => {
   const userId = ownProps.match.params.userId;
   const user = state.user.profileUser[userId];
-  // let videos;
-  // Object.values(state.videos).length ? 
-  //   Object.values(state.videos).filter(video => video.authorId === ownProps.match.params.userId)
-  //   : []
+  const reviews = state.reviews;
   const videos = Object.values(state.videos)
   return {
     userId,
     user,
-    videos
+    videos,
+    reviews,
+    currUser: state.session.user
   }
 }
 
