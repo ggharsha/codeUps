@@ -39,7 +39,6 @@ class SearchBar extends React.Component {
 
         } else if(this.state.filter === 'Username'){
           array = this.props.tutors.filter(tutor=>{
-            //   debugger
             return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
             })
         } else if (this.state.filter === "Languages"){
@@ -48,7 +47,6 @@ class SearchBar extends React.Component {
               return languages.includes(e.currentTarget.value.toLowerCase())
           })
     } 
-        console.log(array)
        this.setState({result: array})
    
     }
