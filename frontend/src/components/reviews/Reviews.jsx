@@ -21,10 +21,9 @@ class Reviews extends React.Component {
     render() {
         if (!this.props.reviews || !Object.keys(this.props.students).length) return null;
 
-        
         return (
             <div className="reviews-container">
-                <h3>Reviews</h3>
+                <h2 className='review-title'>Reviews</h2>
                 <ul>
                     {this.props.reviews.map((review, idx) => <ReviewItem 
                         key={idx} 

@@ -1,5 +1,5 @@
 import React from 'react';
-import StartRating from './StarRating';
+import StarRating from './StarRating';
 
 export default class EditReview extends React.Component {
   constructor(props) {
@@ -53,7 +53,7 @@ export default class EditReview extends React.Component {
         <h2 className='review-title'>Edit Review</h2>
         <form onSubmit={e => this.handleSubmit(e)}>
           <h3 className='rating-title'>Rate your tutor</h3>
-          <StartRating startingStarts={this.state.rating} updateStars={this.handleRating} />
+          <StarRating numStars={this.state.rating} updateStars={this.handleRating} />
           <textarea
               className="review-textarea"
               onChange={this.update("text")}

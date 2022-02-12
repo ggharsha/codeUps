@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
 
-const StarRating = ({ updateStars }) => {
+const StarRating = ({ updateStars, numStars }) => {
 
-    const [rating, setRating] = useState(0)
+    const [rating, setRating] = useState(numStars)
     const [hover, setHover] = useState(null)
     const updateRating = (ratingValue) => {
         setRating(ratingValue);

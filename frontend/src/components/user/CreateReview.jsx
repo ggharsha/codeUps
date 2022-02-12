@@ -56,7 +56,7 @@ export default class CreateReview extends React.Component {
                 <h2 className="review-title">Write a review</h2>
                 <form onSubmit={e => this.handleSubmit(e)}>
                     <h3 className="rating-title">Rate your tutor</h3>
-                    <StarRating updateStars={this.handleRating}/>
+                    <StarRating updateStars={this.handleRating} numStars={0}/>
                     <h3 className="review-body-title">Write a review</h3>
                     <textarea
                         className="review-textarea"
