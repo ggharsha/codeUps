@@ -24,7 +24,7 @@ class TutorAbout extends React.Component {
     const { user, videos, openModal, onCurrentUserPage } = this.props;
 
     return (
-      <div className='about-container'>
+      <div className='tutor-about-container'>
         <div className='tabs-container'>
           <button className={this.state.onAboutPage ? 'tab about-tab active' : 'tab about-tab'} onClick={(e) => this.handleAboutTab(e)}>About</button>
           <button className={!this.state.onAboutPage ? 'tab video-tab active' : 'tab video-tab'} onClick={(e) => this.handleVideoTab(e)}>Video</button>
