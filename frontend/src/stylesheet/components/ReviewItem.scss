@@ -5,6 +5,8 @@ li.review-item {
   margin-bottom: 20px;
   padding: 15px;
   border: 1px solid #a3a3a3;
+  box-sizing: border-box;
+
 
   &:hover {
     border: 1px solid #535353
