@@ -32,8 +32,20 @@ class UserPage extends React.Component {
     const { user, openModal, videos, reviews, currUser, userId } = this.props;
     if (!user) {return null}
     if (user.role === 'tutor' && !videos.length ) return null
-    let hasReview = false;
-    (currUser && reviews[currUser.id]) ? hasReview = true : hasReview = false;
+    let ownReview = null;
+
+
+
+    // (currUser && reviews[currUser.id]) ? hasReview = true : hasReview = false;
+
+    if (Boolean(currUser)) {
+      reviews.forEach(review => {
+        if (review.studentId === currUser.id) {
+          ownReview = review
+        }
+      })
+    }
+    console.log(ownReview);
 
     let onCurrentUserPage = Boolean(userId === currUser.id);
 
@@ -43,7 +55,7 @@ class UserPage extends React.Component {
         <UserDisplay 
           user={user}
           openModal={openModal}
-          hasReview={hasReview}
+          ownReview={ownReview}
           videos={videos}
           onCurrentUserPage={onCurrentUserPage}
           avgReview={this.calculateAvgReview()}

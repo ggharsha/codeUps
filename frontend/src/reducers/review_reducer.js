@@ -11,7 +11,7 @@ const reviewReducer = (state={}, action)=>{
         case RECEIVE_REVIEWS:
             const reviewsObj = {};
             action.reviews.data.forEach((review) => {
-                reviewsObj[review.studentId] = review
+                reviewsObj[review._id] = review
             })
             return reviewsObj;
 
