@@ -1,15 +1,16 @@
 div.video-carousel {
   margin-top: 30px;
+  position: relative;
+  height: fit-content;
 
   div.carousel-item-container {
     width: 400px;
-    height: 250px;
     margin: 0 auto;
   }
 
   div.carousel-buttons {
     width: 400px;
-    margin: 10px auto;
+    margin: 7px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;;
@@ -39,5 +40,25 @@ div.video-carousel {
     }
   }
 
+  div.carousel-tab {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(4, 15px);
+    
+    .tab {
+      background: #c3c3c3;
+      height: 10px;
+      width: 10px;
+      border-radius: 2px;
+
+      &.active {
+        background: #555555;
+      }
+    }
+
+  }
 
 }

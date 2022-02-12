@@ -1,12 +1,12 @@
 div.carousel-video-container {
   width: 400px;
-  height: 300px;
-
-  h2.carousel-video-title {
-    margin: 10px 0;
-  }
-
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
   video.carousel-video {
     width: 400px;
+    height: 225px;
   }
 }

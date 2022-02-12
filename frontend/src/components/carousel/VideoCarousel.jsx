@@ -61,6 +61,18 @@ class VideoCarousel extends React.Component {
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>
+
+        <div className="carousel-tab" >
+          {[ ...Array(videos.length).keys()].map( (ele, ind) => {
+            return (
+            <div 
+              key={ind}
+              className={ind === this.state.currPos ? 'tab active' : 'tab'}
+              onClick={(e) => this.updatePos(e, ele)}>
+            </div>
+            )
+          })}
+        </div>
       </div>
     )
 
