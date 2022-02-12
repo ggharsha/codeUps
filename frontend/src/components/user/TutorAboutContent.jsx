@@ -6,10 +6,9 @@ class TutorAboutContent extends React.Component {
 
     const { user, videos, openModal, onCurrentUserPage} = this.props;
     let featured 
-     videos.map(video=>{
-       console.log(video)
-       if(video.featured) featured = video
-     })
+    videos.map(video=>{
+      if(video.featured) featured = video
+    })
 
 
     return (
@@ -26,12 +25,13 @@ class TutorAboutContent extends React.Component {
         <div className='feature-video-content'>
           <h2 className='feature-video-title'>Featured Video</h2>
           <div className='video-container'>
-            <div className='video'>
-              <video width="400" controls>
+            <div className='feature-video'>
+              <video controls>
                 <source src={featured.videoUrl} type="video/mp4" />
                 <source src={featured.videoUrl} type="video/ogg" />
                 Your browser does not support HTML video.
               </video>
+              <div className='video-credit'>Video was brought to you by <a target="_blank" href='https://www.youtube.com/channel/UCilIG8V10ZGXaLHxvEa_UfA'>Alvin the Programmer</a></div>
               
             </div>
           </div>

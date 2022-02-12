@@ -29,7 +29,8 @@
 
   div.user-display-info {
     width: 799px;
-    height: 550px;
+    min-height: 550px;
+    height: fit-content;
     box-sizing: content-box;
     border: 1px solid $darkestGray;
     display: flex;

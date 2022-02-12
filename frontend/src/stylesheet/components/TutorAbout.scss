@@ -2,6 +2,7 @@ div.about-container {
   height: 100%;
   width: 100%;
   box-sizing: content-box;
+  border-left: 1px solid $darkestGray;
 
   div.tabs-container {
     width: 100%;
