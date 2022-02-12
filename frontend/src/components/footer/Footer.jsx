@@ -12,11 +12,11 @@ class Footer extends React.Component {
                         <div className="name-links">
                             <p>HARSHA BANDI</p>
                             <div className="prof-links">
-                                <a href="https://www.linkedin.com/in/ggharsha/" target="_blank">
+                                <a rel="noreferrer" href="https://www.linkedin.com/in/ggharsha/" target="_blank">
                                     <i className="fa-brands fa-linkedin"></i>
                                     <p>LinkedIn</p>
                                 </a>
-                                <a href="https://github.com/ggharsha" target="_blank">
+                                <a rel="noreferrer" href="https://github.com/ggharsha" target="_blank">
                                     <i className="fa-brands fa-github"></i>
                                     <p>GitHub</p>
                                 </a>
@@ -25,11 +25,11 @@ class Footer extends React.Component {
                         <div className="name-links">
                             <p>JING JING ZHANG</p>
                             <div className="prof-links">
-                                <a href="https://www.linkedin.com/in/jing-jing-zhang-888a05a5/" target="_blank">
+                                <a rel="noreferrer" href="https://www.linkedin.com/in/jing-jing-zhang-888a05a5/" target="_blank">
                                     <i className="fa-brands fa-linkedin"></i>
                                     <p>LinkedIn</p>
                                 </a>
-                                <a href="https://github.com/jjzhang329" target="_blank">
+                                <a rel="noreferrer" href="https://github.com/jjzhang329" target="_blank">
                                     <i className="fa-brands fa-github"></i>
                                     <p>GitHub</p>
                                 </a>
@@ -38,11 +38,11 @@ class Footer extends React.Component {
                         <div className="name-links">
                             <p>MICHELLE HUANG</p>
                             <div className="prof-links">
-                                <a href="https://www.linkedin.com/in/michelleahuang/" target="_blank">
+                                <a rel="noreferrer" href="https://www.linkedin.com/in/michelleahuang/" target="_blank">
                                     <i className="fa-brands fa-linkedin"></i>
                                     <p>LinkedIn</p>
                                 </a>
-                                <a href="https://github.com/michelleahuang" target="_blank">
+                                <a rel="noreferrer" href="https://github.com/michelleahuang" target="_blank">
                                     <i className="fa-brands fa-github"></i>
                                     <p>GitHub</p>
                                 </a>
@@ -51,11 +51,11 @@ class Footer extends React.Component {
                         <div className="name-links">
                             <p>PERRY XIE</p>
                             <div className="prof-links">
-                                <a href="https://www.linkedin.com/in/thepshay/" target="_blank">
+                                <a rel="noreferrer" href="https://www.linkedin.com/in/thepshay/" target="_blank">
                                     <i className="fa-brands fa-linkedin"></i>
                                     <p>LinkedIn</p>
                                 </a>
-                                <a href="https://github.com/thepshay" target="_blank">
+                                <a rel="noreferrer" href="https://github.com/thepshay" target="_blank">
                                     <i className="fa-brands fa-github"></i>
                                     <p>GitHub</p>
                                 </a>
