@@ -3,7 +3,7 @@ import React from 'react';
 class UserInfo extends React.Component {
 
   render() {
-    const {user, openModal, hasReview} = this.props;
+    const {user, openModal, hasReview, avgReview} = this.props;
     // console.log(user)
     return (
       <div className='user-info'>
@@ -26,6 +26,11 @@ class UserInfo extends React.Component {
           <div className='tag' >Role: </div>
           <div className='role'>{user.role}</div>
         </div>
+        {user.role === 'tutor' && 
+        <div className='avg-review-container'>
+          <div className='tag'>Average Review:</div>
+          <div className='review'>{`${avgReview}/5`}</div>
+        </div>}
         <ul className='language-list'>
           {user.languages.map((language, index) => {
             return (

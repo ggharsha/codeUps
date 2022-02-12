@@ -15,21 +15,23 @@
     }
 
     img.profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 125px;
+      height: 125px;
       object-fit: cover;
       overflow: hidden;
       border-radius: 50%;
       border: 5px solid black;
+      background: black;
       position: absolute;
-      bottom: -75px;
-      left: 45px;
+      bottom: -65px;
+      left: 55px;
     }
   }
 
   div.user-display-info {
     width: 799px;
-    height: 550px;
+    min-height: 550px;
+    height: fit-content;
     box-sizing: content-box;
     border: 1px solid $darkestGray;
     display: flex;

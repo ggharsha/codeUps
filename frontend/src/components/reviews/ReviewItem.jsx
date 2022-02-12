@@ -8,8 +8,8 @@ class ReviewItem extends React.Component {
     }
 
     render() {
-        const { student, review } = this.props;
-        console.log(student)
+        const { student, review, onStudentPage, tutor } = this.props;
+
         return (
             <li className="review-item">
                 <div className='rating-header'>
@@ -19,11 +19,18 @@ class ReviewItem extends React.Component {
                     </Link>
                     <ul className='stars'>
                         {[...Array(review.rating)].map((_, index) => {
-                            return <i className='fa-solid fa-star star' />
+                            return <i key={index} className='fa-solid fa-star star' />
                         })}
                     </ul>
                 </div>
-                <p className='review-body'>{this.props.review.text}</p>
+                <div className='review-body-container'>
+                    <h3 className='review-relation-title'>
+                        <span>{student.username}</span>'s review on {onStudentPage ? 
+                            <Link to={`/user/${tutor._id}`}>{tutor.username}</Link> : 
+                            <span>{tutor.username}</span>}
+                    </h3>
+                    <p className='review-body'>{this.props.review.text}</p>
+                </div>
             </li>
         )
     }

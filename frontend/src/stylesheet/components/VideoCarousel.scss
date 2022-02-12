@@ -1,0 +1,64 @@
+div.video-carousel {
+  margin-top: 30px;
+  position: relative;
+  height: fit-content;
+
+  div.carousel-item-container {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  div.carousel-buttons {
+    width: 400px;
+    margin: 7px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+
+    button.arrow {
+      width: 125px;
+      border: none;
+      height: 25px;
+      cursor: pointer;
+      border-radius: 3px;
+
+      &.left-btn {
+        background:hsl(33, 87%, 62%);
+
+        &:hover {
+          background: hsl(33, 87%, 55%);
+        }
+      }
+
+      &.right-btn {
+        background: 	hsl(242, 81%, 74%);
+
+        &:hover {
+          background: hsl(242, 81%, 67%);
+        }
+      }
+    }
+  }
+
+  div.carousel-tab {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(4, 15px);
+    
+    .tab {
+      background: #c3c3c3;
+      height: 10px;
+      width: 10px;
+      border-radius: 2px;
+
+      &.active {
+        background: #555555;
+      }
+    }
+
+  }
+
+}

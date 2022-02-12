@@ -5,6 +5,8 @@ li.review-item {
   margin-bottom: 20px;
   padding: 15px;
   border: 1px solid #a3a3a3;
+  box-sizing: border-box;
+
 
   &:hover {
     border: 1px solid #535353
@@ -33,6 +35,20 @@ li.review-item {
       color: #fea41d;
       font-size: .85rem;
       margin-top: 5px;
+    }
+  }
+
+  div.review-body-container {
+
+    h3.review-relation-title {
+      color: #838383;
+      font-size: .7rem;
+      margin-bottom: 10px;
+
+      a:hover{
+        text-decoration: underline;
+        color: $yellow;
+      }
     }
   }
 }
