@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const fetchAllMessages = (userId)=>{
+export const fetchAllInboxes = (userId)=>{
     return axios.get(`/api/inbox/`, userId)
 }
 
