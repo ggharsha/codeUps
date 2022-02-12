@@ -9,7 +9,7 @@
 }
 
 .video-carousel {
-    height: 250px;
+    height: 260px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -24,11 +24,6 @@
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
-
-
-// .index-tutor-item:hover {
-//     transform: scale(1.1);
-// }
 
 .index-container h3 {
     font-size: 40px;
