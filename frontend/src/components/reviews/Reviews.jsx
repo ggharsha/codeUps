@@ -23,7 +23,7 @@ class Reviews extends React.Component {
 
         return (
             <div className="reviews-container">
-                <h3 className='review-title'>Reviews</h3>
+                <h2 className='review-title'>Reviews</h2>
                 <ul>
                     {this.props.reviews.map((review, idx) => <ReviewItem 
                         key={idx} 
