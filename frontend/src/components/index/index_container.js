@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { fetchStudents, fetchTutors, fetchUser} from "../../actions/user_actions";
-import { getVideos } from "../../actions/video_actions";
+import { getVideo, getVideos } from "../../actions/video_actions";
 import Index from "./index";
 
 // selector
@@ -20,15 +20,15 @@ function shuffleArray(array) {
 const mSTP = state => ({
     tutors: shuffleArray(Object.values(state.user.tutors)).slice(0, 5),
     students: shuffleArray(Object.values(state.user.students)).slice(0, 5),
-    videos: Object.values(state.videos)
+    videos: shuffleArray(Object.values(state.videos)).slice(0, 3)
 });
 
 const mDTP = dispatch => ({
     fetchStudents: () => dispatch(fetchStudents()),
     fetchTutors: () => dispatch(fetchTutors()),
     fetchUser: userId => dispatch(fetchUser(userId)),
-    fetchVideos: () => dispatch(getVideos()),
-    // fetchVideo: videoId => dispatch(fetchVideo(videoId))
+    getVideos: () => dispatch(getVideos()),
+    getVideo: videoId => dispatch(getVideo(videoId))
 });
 
 export default connect(mSTP, mDTP)(Index);

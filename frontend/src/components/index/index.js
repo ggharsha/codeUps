@@ -10,24 +10,24 @@ export default class Index extends React.Component {
         window.scrollTo(0,0);
         this.props.fetchStudents();
         this.props.fetchTutors();
-        //this.props.fetchVideos();
+        this.props.getVideos();
     }
 
     render() {
-        if (!this.props.tutors || !this.props.students) return null;
+        if (!this.props.tutors || !this.props.students || !this.props.videos) return null;
         return (
             <div className="index-container">
                 <NavbarContainer />
                 <div className="index-video-container">
                     <h3>Videos</h3>
                     <ul className="video-carousel">
-                        {/* this.props.videos.map(video => (
+                        {this.props.videos.map(video => (
                             <IndexVideoItem 
                                 video={video}
-                                key={video.id}
+                                key={video._id}
                                 fetchVideo={this.props.fetchVideo}
                             />
-                        )) */}
+                        ))}
                     </ul>
                 </div>
                 <div className="index-tutor-container">
