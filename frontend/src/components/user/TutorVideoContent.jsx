@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoCarousel from '../carousel/VideoCarousel'
 
 class TutorVideoContent extends React.Component {
 
@@ -6,14 +7,9 @@ class TutorVideoContent extends React.Component {
     const {user, videos} = this.props;
 
     return(
-      <div>this is video page
-        {videos.map(video => (
-          <video width="400" key={video._id} controls>
-            <source src={video.videoUrl} type="video/mp4"/>
-            <source src={video.videoUrl} type="video/ogg"/>
-            Your browser does not support HTML video.
-          </video>
-        ))}
+      <div className='tutor-video-content'>
+        <h1 className='video-header'>{`More Videos from ${user.username}`}</h1>
+        <VideoCarousel videos={videos} />
       </div>
     )
   }

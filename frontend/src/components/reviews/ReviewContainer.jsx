@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { getReviews, createReview, updateReview, deleteReview } from '../../actions/review_actions';
-import { fetchUser, fetchStudents } from '../../actions/user_actions';
+import { fetchUser, fetchStudents,fetchTutors } from '../../actions/user_actions';
 import Reviews from './Reviews';
 
 const mapStateToProps = (state, ownProps) => {
@@ -10,6 +10,8 @@ const mapStateToProps = (state, ownProps) => {
         user: state.user.profileUser[userId],
         reviews: Object.values(state.reviews),
         students: state.user.students,
+        tutors: state.user.tutors,
+        onStudentPage: ownProps.onStudentPage,
     }
 }
 
@@ -20,7 +22,8 @@ const mapDispatchToProps = (dispatch) => {
         updateReview: (review) => dispatch(updateReview(review)),
         deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
         fetchUser: (id) => dispatch(fetchUser(id)),
-        fetchStudents: () => dispatch(fetchStudents())
+        fetchStudents: () => dispatch(fetchStudents()),
+        fetchTutors: () => dispatch(fetchTutors())
     }
 }
 

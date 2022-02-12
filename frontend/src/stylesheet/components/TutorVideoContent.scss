@@ -1,0 +1,15 @@
+div.tutor-video-content {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 15px;
+
+  h1.video-header {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: inherit;
+    color: $darkestGray;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d3d3d3;
+    margin-bottom: 15px;
+  }
+}
