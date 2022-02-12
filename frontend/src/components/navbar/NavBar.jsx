@@ -20,9 +20,9 @@ class NavBar extends React.Component {
         return (
             <div className="nav-bar-links">
               <div className="user-logout-container">
-                <div className="user-profile-container">
+                <Link className="user-profile-container">
                   <i class="fa-solid fa-user"></i>
-                </div>
+                </Link>
                 <button className="session-buttons logout" onClick={this.logoutUser}>Logout</button>
               </div>
             </div>
