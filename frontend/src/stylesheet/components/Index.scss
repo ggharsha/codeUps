@@ -16,6 +16,20 @@
     align-items: center;
 }
 
+.video-index-item:hover {
+    transform: scale(1.1);
+}
+
+.video-index-item {
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+
+// .index-tutor-item:hover {
+//     transform: scale(1.1);
+// }
+
 .index-container h3 {
     font-size: 40px;
     padding-top: 20px;
@@ -37,6 +51,7 @@
     align-items: center;
     justify-content: center;
     background-color: white;
+    transition: all .2s ease-in-out;
 }
 
 .student-index-item h2,
@@ -52,6 +67,7 @@
 .tutor-index-item:hover {
     transition: box-shadow .2s;
     box-shadow: 0px 0px 5px 5px rgba(#8985F2, 70%);
+    transform: scale(1.08);
 }
 
 .student-index-item {
@@ -61,6 +77,7 @@
 .student-index-item:hover {
     transition: box-shadow .2s;
     box-shadow: 0px 0px 5px 5px rgba($yellow, 70%);
+    transform: scale(1.08);
 }
 
 .student-languages li, .tutor-languages li {
