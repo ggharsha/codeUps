@@ -26,6 +26,7 @@ class TutorAboutContent extends React.Component {
           <h2 className='feature-video-title'>Featured Video</h2>
           <div className='video-container'>
             <div className='feature-video'>
+              <h3 className='video-title'>{featured.title}</h3>
               <video controls>
                 <source src={featured.videoUrl} type="video/mp4" />
                 <source src={featured.videoUrl} type="video/ogg" />

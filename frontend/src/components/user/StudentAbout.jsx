@@ -6,7 +6,7 @@ class StudentAbout extends React.Component {
     const { user, openModal, onCurrentUserPage } = this.props;
 
     return (
-      <div className='about-container'>
+      <div className='student-about-container'>
         <div className='about-content'>
           {onCurrentUserPage && <button onClick={() => openModal('aboutMe') } className='add-about'>Edit About</button>}
           <h1 className='about-header'>

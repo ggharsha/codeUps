@@ -23,6 +23,7 @@ div.feature-video-content {
   height: 300px;
   box-sizing: border-box;
   padding: 10px;
+  margin-bottom: 20px;
   
   h2.feature-video-title {
     font-size: 1.25rem;
@@ -39,6 +40,9 @@ div.feature-video-content {
     align-items: center;
 
     div.feature-video {
+      h3 {
+        margin: 5px 0;
+      }
 
       video {
         width: 400px;
