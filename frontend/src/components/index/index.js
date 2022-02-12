@@ -38,7 +38,6 @@ export default class Index extends React.Component {
                                 key={tutor._id}
                                 to={`/user/${tutor._id}`}>
                                 <IndexTutorItem 
-                                    
                                     tutor={tutor}
                                     fetchUser={this.props.fetchUser}
                                 />
