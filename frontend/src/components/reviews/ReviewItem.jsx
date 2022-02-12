@@ -1,4 +1,5 @@
 import React from 'react';
+import StarRating from '../user/StarRating';
 
 class ReviewItem extends React.Component {
     super(props) {
