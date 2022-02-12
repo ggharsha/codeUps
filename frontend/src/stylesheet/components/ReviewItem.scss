@@ -35,4 +35,18 @@ li.review-item {
       margin-top: 5px;
     }
   }
+
+  div.review-body-container {
+
+    h3.review-relation-title {
+      color: #838383;
+      font-size: .7rem;
+      margin-bottom: 10px;
+
+      a:hover{
+        text-decoration: underline;
+        color: $yellow;
+      }
+    }
+  }
 }

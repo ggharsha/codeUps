@@ -16,7 +16,7 @@ class UserDisplay extends React.Component {
       <div className='user-display'>
         <div className='image-container'>
           <img className='banner' src="https://wallpaperaccess.com/full/36361.jpg" />
-          <img className='profile-pic' src={require('../../images/logo.jpg')}/>
+          <img className='profile-pic' src={user.photoUrl}/>
         </div >
         <div className='user-display-info'>
           <UserInfo 

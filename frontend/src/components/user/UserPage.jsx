@@ -25,7 +25,7 @@ class UserPage extends React.Component {
     Object.values(this.props.reviews).forEach(review => {
       sum+=review.rating
     })
-    return (sum/5).toFixed(1);
+    return (sum/Object.values(this.props.reviews).length).toFixed(1);
   }
 
   render() {
@@ -48,7 +48,7 @@ class UserPage extends React.Component {
           onCurrentUserPage={onCurrentUserPage}
           avgReview={this.calculateAvgReview()}
         />
-        <ReviewContainer match={this.props.match} />
+        <ReviewContainer match={this.props.match} onStudentPage={user.role === 'student'}/>
       </div>
     )
   }
