@@ -20,6 +20,14 @@ class UserPage extends React.Component {
     }
   }
 
+  calculateAvgReview() {
+    let sum = 0;
+    Object.values(this.props.reviews).forEach(review => {
+      sum+=review.rating
+    })
+    return (sum/5).toFixed(1);
+  }
+
   render() {
     const { user, openModal, videos, reviews, currUser, userId } = this.props;
     if (!user) {return null}
@@ -27,10 +35,9 @@ class UserPage extends React.Component {
     let hasReview = false;
     (currUser && reviews[currUser.id]) ? hasReview = true : hasReview = false;
 
-
-
     let onCurrentUserPage = Boolean(userId === currUser.id);
 
+    this.calculateAvgReview()
     return(
       <div className='user-page-content'>
         <UserDisplay 
@@ -39,6 +46,7 @@ class UserPage extends React.Component {
           hasReview={hasReview}
           videos={videos}
           onCurrentUserPage={onCurrentUserPage}
+          avgReview={this.calculateAvgReview()}
         />
         <ReviewContainer match={this.props.match} />
       </div>
