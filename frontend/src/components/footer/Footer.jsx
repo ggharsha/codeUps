@@ -12,7 +12,7 @@ class Footer extends React.Component {
                         <div className="name-links">
                             <p>HARSHA BANDI</p>
                             <div className="prof-links">
-                                <a href="https://www.linkedin.com/in/harsha-bandi-57b260225/" target="_blank">
+                                <a href="https://www.linkedin.com/in/ggharsha/" target="_blank">
                                     <i className="fa-brands fa-linkedin"></i>
                                     <p>LinkedIn</p>
                                 </a>
