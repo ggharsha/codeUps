@@ -18,9 +18,13 @@ class NavBar extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
-          
             <div className="nav-bar-links">
+              <div className="user-logout-container">
+                <div className="user-profile-container">
+                  <i class="fa-solid fa-user"></i>
+                </div>
                 <button className="session-buttons logout" onClick={this.logoutUser}>Logout</button>
+              </div>
             </div>
         );
       } else {
@@ -44,7 +48,6 @@ class NavBar extends React.Component {
           
             {this.props.loggedIn && <SearchBarContainer />}
             {this.getLinks()}
-            
           </div>
         </div>
       );

@@ -195,3 +195,20 @@
     font-size: 16px;
     margin-top: 9px;
 }
+
+.user-logout-container {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile-container {
+    border: 1px solid red;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-top: 9px;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
