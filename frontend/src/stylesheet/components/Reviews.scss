@@ -1,22 +1,15 @@
 .reviews-container {
-    border: 1px solid red;
     width: 800px;
-    margin: 30px auto;
+    margin: 50px auto;
     color: $darkGray;
+    padding-bottom: 30px;
+
+    h2.review-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-bottom: 1px solid #d3d3d3;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+    }
 }
 
-.reviews-container h3 {
-    font-size: 24px;
-    color: $darkestGray;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.review-item {
-    margin-bottom: 15px;
-}
-
-.review-username {
-    font-weight: 500;
-    margin-bottom: 5px;
-}
