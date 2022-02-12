@@ -7,7 +7,8 @@ class TutorVideoContent extends React.Component {
     const {user, videos} = this.props;
 
     return(
-      <div>this is video page
+      <div className='tutor-video-content'>
+        <h1 className='video-header'>{`More Videos from ${user.username}`}</h1>
         <VideoCarousel videos={videos} />
       </div>
     )

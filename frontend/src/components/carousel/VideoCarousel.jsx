@@ -12,7 +12,7 @@ class VideoCarousel extends React.Component {
   nextSlide(e) {
     e.preventDefault();
     let newPos;
-    if (this.state.currPos === this.props.displayGameId.length-1) {
+    if (this.state.currPos === this.props.videos.length-1) {
       newPos = 0;
     } else {
       newPos = this.state.currPos + 1;
@@ -24,7 +24,7 @@ class VideoCarousel extends React.Component {
     e.preventDefault();
     let newPos;
     if (this.state.currPos === 0) {
-      newPos = this.props.displayGameId.length-1;
+      newPos = this.props.videos.length-1;
     } else {
       newPos = this.state.currPos - 1
     }
@@ -43,16 +43,24 @@ class VideoCarousel extends React.Component {
         <div className='carousel-item-container'>
           {videos.map((video, index) => {
             return (
-              <VideoCarouselItem video={video} key={index} />
+              <div className='carousel-item'>
+                {index === this.state.currPos && <VideoCarouselItem video={video} key={index} />}
+              </div>
+              // <div key={index} className={index === this.state.currPos ? `carousel-item active` : `carousel-item`}>
+              //   <VideoCarouselItem video={video} key={index} />
+              // </div>
             )
           })}
         </div>
-        <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>
-          <i class="fas fa-chevron-left"></i>  
-        </button>
-        <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>
-          <i class="fas fa-chevron-right"></i>
-        </button>
+
+        <div className='carousel-buttons'>
+          <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>
+            <i class="fas fa-chevron-left"></i>  
+          </button>
+          <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
     )
 

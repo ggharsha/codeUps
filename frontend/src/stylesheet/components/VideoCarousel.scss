@@ -1,0 +1,43 @@
+div.video-carousel {
+  margin-top: 30px;
+
+  div.carousel-item-container {
+    width: 400px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  div.carousel-buttons {
+    width: 400px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+
+    button.arrow {
+      width: 125px;
+      border: none;
+      height: 25px;
+      cursor: pointer;
+      border-radius: 3px;
+
+      &.left-btn {
+        background:hsl(33, 87%, 62%);
+
+        &:hover {
+          background: hsl(33, 87%, 55%);
+        }
+      }
+
+      &.right-btn {
+        background: 	hsl(242, 81%, 74%);
+
+        &:hover {
+          background: hsl(242, 81%, 67%);
+        }
+      }
+    }
+  }
+
+
+}
