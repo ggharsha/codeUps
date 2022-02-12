@@ -6,7 +6,7 @@ export default class InboxModal extends React.Component {
             <div className="inbox-modal-container">
                 <div className="message-list-container">
                     <ul className="message-list">
-
+                        
                     </ul>
                 </div>
             </div>
