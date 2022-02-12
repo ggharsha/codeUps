@@ -1,6 +1,4 @@
-const { json } = require("body-parser");
 const express = require("express");
-const { db } = require("../../models/Review");
 const router = express.Router();
 const Review = require('../../models/Review')
 const validateReviewInput = require('../../validation/review')
@@ -54,19 +52,7 @@ const createReview = (req, res, next)=> {
     return res.json(review)
 }
 
-// const findStudent = async(req, res, next)=>{
-   
-//   req.student =  await User.findById(req.review.studentId)
-//         .then(user => {return user.username} )
-   
-//     next()
-// }
-// const findTutor = async (req, res, next) => {
-//     req.tutor = await User.findById(req.review.tutorId)
-//         .then(user => { return user.username })
 
-//     next()
-// }
 router.post('/new', createReview, (req, res)=>{
 
     // return res.json(newReview)
@@ -86,17 +72,6 @@ const update = (req, res, next)=>{
 router.patch('/edit', update, (req, res)=>{
     
 
-    // const updatedReview = {
-    //     id: req.review.id,
-    //     student: req.student,
-    //     tutor: req.tutor,
-    //     text: req.review.text,
-    //     rating: req.review.rating,
-    //     // createdAt: req.review.createdAt
-    //     updatedAt: req.review.updatedAt
-    // }
-
-    // return res.json(updatedReview)
 })
 
 router.delete('/delete/:id',(req, res)=>{
