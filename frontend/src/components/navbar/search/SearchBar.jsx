@@ -40,14 +40,14 @@ class SearchBar extends React.Component {
             })
 
         } else if(this.state.filter === 'Username'){
-          array = this.props.tutors.filter(tutor=>{
-            return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+            array = this.props.tutors.filter(tutor=>{
+                return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
             })
         } else if (this.state.filter === "Languages"){
-          array = this.props.tutors.filter(tutor => {
-              const languages = tutor.languages.join(',').toLowerCase()
-              return languages.includes(e.currentTarget.value.toLowerCase())
-          })
+            array = this.props.tutors.filter(tutor => {
+                const languages = tutor.languages.join(',').toLowerCase()
+                return languages.includes(e.currentTarget.value.toLowerCase())
+            })
     } 
 
 
