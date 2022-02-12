@@ -202,7 +202,7 @@
 }
 
 .user-profile-container {
-    border: 2px solid $lighest-purple;
+    border: 2px solid $medium-purple;
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -216,9 +216,31 @@
 }
 
 .fa-user {
-    color: $medium-purple;
+    color: $darkGray;
 }
 
 .user-profile-container:hover {
     border: 2px solid hsl(242, 84%, 64%);
+}
+
+.fa-inbox {
+    color: $darkest-purple;
+}
+
+.fa-inbox:hover {
+    color: hsl(242, 84%, 64%);
+}
+
+.inbox-container {
+    // border: 2px solid $lighest-purple;
+    // width: 38px;
+    // height: 38px;
+    // border-radius: 50%;
+    margin-top: 9px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: white;
+    cursor: pointer;
 }
