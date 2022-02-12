@@ -20,8 +20,8 @@ class NavBar extends React.Component {
         return (
             <div className="nav-bar-links">
               <div className="user-logout-container">
-                <Link className="user-profile-container">
-                  <i class="fa-solid fa-user"></i>
+                <Link to={`/user/${this.props.currentUser.id}`} className="user-profile-container">
+                  <i className="fa-solid fa-user"></i>
                 </Link>
                 <button className="session-buttons logout" onClick={this.logoutUser}>Logout</button>
               </div>
