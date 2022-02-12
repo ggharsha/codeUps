@@ -13,8 +13,10 @@ class ReviewItem extends React.Component {
         return (
             <li className="review-item">
                 <div className='rating-header'>
+                    <Link to={`/user/${student._id}`}>
                         <img className='user-pfp' src={student.photoUrl}/>
                         <p className="review-username">{this.props.student.username}</p>
+                    </Link>
                     <ul className='stars'>
                         {[...Array(review.rating)].map((_, index) => {
                             return <i className='fa-solid fa-star star' />

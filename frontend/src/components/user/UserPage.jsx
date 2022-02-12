@@ -11,6 +11,15 @@ class UserPage extends React.Component {
     this.props.getTutorVideos(this.props.match.params.userId)
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.userId !== this.props.userId) {
+      window.scrollTo(0,0);
+      this.props.fetchUser(this.props.match.params.userId)
+      this.props.getReviews(this.props.match.params.userId)
+      this.props.getTutorVideos(this.props.match.params.userId)
+    }
+  }
+
   render() {
     const { user, openModal, videos, reviews, currUser, userId } = this.props;
     if (!user) {return null}
