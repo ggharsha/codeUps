@@ -4,7 +4,9 @@ import InboxModal from "./InboxModal";
 
 const mSTP = state => ({
     currentUserId: state.session.user.id,
-    inbox: state.inbox,
+    messages: Object.values(state.inbox),
+    // sentMessages: Object.values(state.inbox).filter(senderId => senderId === currentUserId),
+    // receivedMessages: Object.values(state.inbox).filter(receiverId => receiverId === currentUserId)
 });
 
 const mDTP = dispatch => ({
