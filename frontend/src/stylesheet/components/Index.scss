@@ -9,7 +9,11 @@
 }
 
 .video-carousel {
-    height: 200px;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .index-container h3 {
