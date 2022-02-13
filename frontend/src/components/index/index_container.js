@@ -17,11 +17,25 @@ function shuffleArray(array) {
 
 // end selector
 
-const mSTP = state => ({
+const mSTP = state => {
+    const realPeople = ['6205dff6e43cd88a7e60a851', 
+    '6205e08ee43cd88a7e60a860', 
+    '6205e05ee43cd88a7e60a85a', 
+    '6205e079e43cd88a7e60a85d', 
+    '6205e012e43cd88a7e60a854']
+
+    const students = realPeople.map(id => {
+        return state.user.students[id]
+    })
+
+    // console.log(students);
+    // console.log(shuffleArray(Object.values(state.user.students)).slice(0, 5))
+
+    return {
     tutors: shuffleArray(Object.values(state.user.tutors)).slice(0, 5),
-    students: shuffleArray(Object.values(state.user.students)).slice(0, 5),
+    students,
     videos: shuffleArray(Object.values(state.videos)).slice(0, 3)
-});
+}};
 
 const mDTP = dispatch => ({
     fetchStudents: () => dispatch(fetchStudents()),
