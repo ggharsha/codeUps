@@ -9,7 +9,7 @@ const selectInbox = (inboxes, currentUserId, profileUserId) => {
         conversation.receiverId === profileUserId
     ));
 
-    return findInbox.length === 1 ? findInbox : null;
+    return findInbox.length === 1 ? findInbox : [];
 };
 // end select
 
@@ -17,8 +17,8 @@ const mSTP = (state, ownProps) => ({
     profileUser: ownProps.profileUser,
     currentUser: state.session.user,
     currentInbox: selectInbox(
-        state.inboxes, 
-        state.session.user._id,
+        state.inbox, 
+        state.session.user.id,
         ownProps.profileUser._id)
 });
 
