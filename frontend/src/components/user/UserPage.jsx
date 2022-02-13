@@ -45,7 +45,6 @@ class UserPage extends React.Component {
         }
       })
     }
-    console.log(ownReview);
 
     let onCurrentUserPage = Boolean(userId === currUser.id);
 

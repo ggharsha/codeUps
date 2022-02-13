@@ -53,7 +53,6 @@ export default class EditReview extends React.Component {
   }
 
   render() {
-    console.log(this.props.review)
     return (
       <div className='edit-review-container'>
         <h2 className='review-title'>Edit Review</h2>

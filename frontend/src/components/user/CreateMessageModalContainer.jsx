@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { fetchAllInboxes, createInbox, updateInbox } from "../../actions/inbox_actions";
 import CreateMessageModal from "./CreateMessageModal";
+import { closeModal } from "../../actions/modal_actions";
 
 // select inbox
 const selectInbox = (inboxes, currentUserId, profileUserId) => {
@@ -9,7 +10,7 @@ const selectInbox = (inboxes, currentUserId, profileUserId) => {
         conversation.receiverId === profileUserId
     ));
 
-    return findInbox.length === 1 ? findInbox : [];
+    return findInbox.length === 1 ? findInbox.messages : [];
 };
 // end select
 
@@ -24,7 +25,8 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = dispatch => ({
     createInbox: message => dispatch(createInbox(message)),
-    updateInbox: message => dispatch(updateInbox(message))
+    updateInbox: message => dispatch(updateInbox(message)),
+    closeModal: () => dispatch(closeModal())
 });
 
 export default connect(mSTP, mDTP)(CreateMessageModal)
