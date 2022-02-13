@@ -19,7 +19,6 @@ export default class CreateMessageModal extends React.Component {
         if (this.props.currentInbox.length > 0) action = this.props.updateInbox;
         else action = this.props.createInbox;
 
-        console.log(action)
         // let inbox;
         // inbox = this.state;
         // inbox.messages = this.props.currentInbox.concat(inbox.messages);

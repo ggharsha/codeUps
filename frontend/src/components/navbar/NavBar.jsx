@@ -10,7 +10,7 @@ class NavBar extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllInboxes(this.props.currentUser.id)
+    this.props.fetchAllInboxes({ userId: this.props.currentUser.id})
   }
 
   logoutUser(e) {
