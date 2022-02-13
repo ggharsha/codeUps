@@ -47,17 +47,24 @@ div.create-review-container {
     }
   }
 
-  button.submit-button {
-    border:none; 
-    margin-top: 10px;
-    padding: 8px 15px;
-    background: hsl(33, 87%, 62%);
-    cursor: pointer;
-    border-radius: 3px;
+  div.create-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 
-    &:hover {
-      background: hsl(33, 87%, 55%);
+    button.submit-button {
+      border:none; 
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: hsl(33, 87%, 62%);
+      cursor: pointer;
+      border-radius: 3px;
+  
+      &:hover {
+        background: hsl(33, 87%, 55%);
+      }
     }
   }
+
 
 }

@@ -67,7 +67,7 @@ export default class EditReview extends React.Component {
           />
           {this.renderErrors()}
 
-          <div className='button-container'>
+          <div className='edit-button-container'>
             <button className='delete-button' onClick={(e) => this.handleDelete(e)}>Delete Review</button>
             <button className="submit-button" type="submit">Submit</button>
           </div>
