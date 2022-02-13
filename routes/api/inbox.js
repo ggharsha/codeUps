@@ -5,9 +5,8 @@ const Inbox = require('../../models/Inbox');
 const res = require("express/lib/response");
 
 
-router.get('/:id', (req, res)=>{
-   console.log(req.params.id)
-  Inbox.find({$or: [{senderId: req.params.id}, {receiverId: req.params.id}]})
+router.get('/', (req, res)=>{
+  Inbox.find({$or: [{senderId: req.body.userId}, {receiverId: req.body.userId}]})
   .then((err, docs)=>{
      if(err){
         return res.json(err)
