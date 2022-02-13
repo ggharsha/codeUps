@@ -43,7 +43,7 @@ class VideoCarousel extends React.Component {
         <div className='carousel-item-container'>
           {videos.map((video, index) => {
             return (
-              <div className='carousel-item'>
+              <div key={index} className='carousel-item'>
                 {index === this.state.currPos && <VideoCarouselItem video={video} key={index} />}
               </div>
               // <div key={index} className={index === this.state.currPos ? `carousel-item active` : `carousel-item`}>
@@ -55,10 +55,10 @@ class VideoCarousel extends React.Component {
 
         <div className='carousel-buttons'>
           <button className="arrow left-btn" onClick={(e) => this.prevSlide(e)}>
-            <i class="fas fa-chevron-left"></i>  
+            <i className="fas fa-chevron-left"></i>  
           </button>
           <button className="arrow right-btn" onClick={(e) => this.nextSlide(e)}>
-            <i class="fas fa-chevron-right"></i>
+            <i className="fas fa-chevron-right"></i>
           </button>
         </div>
 
