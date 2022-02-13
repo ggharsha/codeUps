@@ -10,7 +10,7 @@ const selectInbox = (inboxes, currentUserId, profileUserId) => {
         conversation.receiverId === profileUserId
     ));
 
-    return findInbox.length === 1 ? findInbox.messages : [];
+    return findInbox.length && findInbox[0].messages.length > 0 ? findInbox[0].messages : [];
 };
 // end select
 

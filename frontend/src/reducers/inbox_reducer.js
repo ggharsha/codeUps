@@ -26,7 +26,9 @@ export default inboxReducer;
 
 /*
 
-["message1", "message3"] sender x, receiver y
-["message2", "message4"] sender y, receiver x
+a ["message1", "message3"] sender x, receiver y
+b ["message2", "message4"] sender y, receiver x
+
+a.concat(b).sort .createdAt
 
 */

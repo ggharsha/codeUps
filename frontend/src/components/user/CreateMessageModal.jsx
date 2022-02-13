@@ -6,29 +6,29 @@ export default class CreateMessageModal extends React.Component {
         this.state = {
             senderId: this.props.currentUser.id,
             receiverId: this.props.profileUser._id,
-            messages: [""]
+            messages: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(e) {
         e.preventDefault();
+        // console.log(this.props.currentInbox)
 
         let action;
         if (this.props.currentInbox.length > 0) action = this.props.updateInbox;
         else action = this.props.createInbox;
 
-        let inbox;
-        inbox = this.state;
-        inbox.messages = this.props.currentInbox.concat(inbox.messages);
-        
-        console.log(inbox)
         console.log(action)
-        action(inbox).then(() => this.props.closeModal());
+        // let inbox;
+        // inbox = this.state;
+        // inbox.messages = this.props.currentInbox.concat(inbox.messages);
+
+        action(this.state).then(() => this.props.closeModal());
     }
 
     update() {
-        return e => this.setState({ ["messages"]: [e.currentTarget.value] });
+        return e => this.setState({ ["messages"]: e.currentTarget.value });
     }
 
     render() {

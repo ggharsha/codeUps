@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export const fetchAllInboxes = (userId) => {
-    return axios.get(`/api/inbox/`, userId)
+export const fetchAllInboxes = (id) => {
+    return axios.get(`/api/inbox/${id}`)
 }
 
 export const createInbox = (inbox) => {
