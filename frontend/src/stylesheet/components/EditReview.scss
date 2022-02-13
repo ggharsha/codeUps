@@ -47,17 +47,40 @@ div.edit-review-container {
     }
   }
 
-  button.submit-button {
-    border:none; 
-    margin-top: 10px;
-    padding: 8px 15px;
-    background: hsl(33, 87%, 62%);
-    cursor: pointer;
-    border-radius: 3px;
+  div.edit-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 
-    &:hover {
-      background: hsl(33, 87%, 55%);
+    button.delete-button {
+      border:none; 
+      margin-top: 10px;
+      margin-right: 10px;
+      padding: 8px 15px;
+      background: #A3A3A3;
+      cursor: pointer;
+      border-radius: 3px;
+  
+      &:hover {
+        background: red;
+        color: $off-white;
+      }
+
+    }
+
+    button.submit-button {
+      border:none; 
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: hsl(33, 87%, 62%);
+      cursor: pointer;
+      border-radius: 3px;
+  
+      &:hover {
+        background: hsl(33, 87%, 55%);
+      }
     }
   }
+
 
 }

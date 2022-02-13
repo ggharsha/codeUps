@@ -9,7 +9,6 @@ const studentReviews = (req, res, next)=>{
             if(reviews.length < 1) {
                 next()
             }else{
-                // console.log(reviews)
                 return res.json(reviews)
             }
         })
@@ -21,7 +20,6 @@ const tutorReviews = (req, res, next) => {
             if (reviews.length < 1) {
                 next()
             } else {
-                // console.log(reviews)
                 return res.json(reviews)
             }
         })

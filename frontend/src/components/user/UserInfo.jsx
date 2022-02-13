@@ -3,14 +3,13 @@ import React from 'react';
 class UserInfo extends React.Component {
 
   render() {
-    const {user, openModal, hasReview, avgReview} = this.props;
-    // console.log(user)
+    const {user, openModal, ownReview, avgReview} = this.props;
     return (
       <div className='user-info'>
         <button className='message-user'>Message</button>
         {user.role === 'tutor' && 
           <div>
-            {!hasReview ? 
+            {!Boolean(ownReview) ? 
             <button className='review-user' onClick={() => openModal('createReview')}>
               Write a Review
             </button> :

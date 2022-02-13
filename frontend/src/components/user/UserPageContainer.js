@@ -8,7 +8,7 @@ import { getVideos, getVideo, getTutorVideos } from '../../actions/video_actions
 const mapStateToProps = (state, ownProps) => {
   const userId = ownProps.match.params.userId;
   const user = state.user.profileUser[userId];
-  const reviews = state.reviews;
+  const reviews = Object.values(state.reviews);
   const videos = Object.values(state.videos)
   return {
     userId,

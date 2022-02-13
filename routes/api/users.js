@@ -9,7 +9,6 @@ const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 
 router.get('/students', (req, res)=>{
-    console.log()
     User.find({role: "student"}, ((err, students)=>{
         res.json(students)
     }))

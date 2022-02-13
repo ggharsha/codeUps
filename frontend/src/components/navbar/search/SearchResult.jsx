@@ -6,7 +6,6 @@ import VideoSearchItem from "./VideoSearchItem";
 const SearchResult = ({search, fetchUser, getVideo})=>{
     const [isActive, setIsActive] = useState(true);
     const items = search.map(result => result)
-    // console.log(items)
     if (items.length === 0 && isActive) {
         return ( 
             <div className='searchResult-container'>
