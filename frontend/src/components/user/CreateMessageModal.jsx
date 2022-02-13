@@ -13,16 +13,18 @@ export default class CreateMessageModal extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+
         let action;
         if (this.props.currentInbox.length > 0) action = this.props.updateInbox;
         else action = this.props.createInbox;
+
         let inbox;
         inbox = this.state;
         inbox.messages = this.props.currentInbox.concat(inbox.messages);
+        
         console.log(inbox)
         console.log(action)
         action(inbox).then(() => this.props.closeModal());
-        // check if currentInbox empty, and add state.msg to currentInbox and then create/update
     }
 
     update() {
