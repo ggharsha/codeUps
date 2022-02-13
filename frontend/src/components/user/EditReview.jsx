@@ -32,6 +32,12 @@ export default class EditReview extends React.Component {
     })
   }
 
+  handleDelete(e) {
+    e.preventDefault();
+    this.props.deleteReview(this.props.review._id);
+    this.props.closeModal();
+  } 
+
   renderErrors() {
     return(
       <ul className="errors-list">
@@ -47,6 +53,7 @@ export default class EditReview extends React.Component {
   }
 
   render() {
+    console.log(this.props.review)
     return (
       <div className='edit-review-container'>
         <h2 className='review-title'>Edit Review</h2>
@@ -59,7 +66,11 @@ export default class EditReview extends React.Component {
               value={this.state.text}
           />
           {this.renderErrors()}
-          <button className="submit-button" type="submit">Submit</button>
+
+          <div className='button-container'>
+            <button className='delete-button' onClick={(e) => this.handleDelete(e)}>Delete Review</button>
+            <button className="submit-button" type="submit">Submit</button>
+          </div>
 
         </form>
       </div>

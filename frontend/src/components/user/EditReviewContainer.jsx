@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { closeModal } from "../../actions/modal_actions";
-import { updateReview } from '../../actions/review_actions';
+import { updateReview, deleteReview } from '../../actions/review_actions';
 import { fetchUser } from '../../actions/user_actions';
 import EditReview from './EditReview';
 
@@ -25,7 +25,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchUser: userId => dispatch(fetchUser(userId)),
     updateReview: review => dispatch(updateReview(review)),
-    closeModal: () => dispatch(closeModal())
+    closeModal: () => dispatch(closeModal()),
+    deleteReview: (reviewId) => dispatch(deleteReview(reviewId))
   }
 }
 

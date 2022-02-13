@@ -20,7 +20,7 @@ class Reviews extends React.Component {
 
     
     render() {
-        if (!this.props.reviews || !Object.keys(this.props.students).length) return null;
+        if (!this.props.reviews || !Object.keys(this.props.students).length || !Object.keys(this.props.tutors).length) return null;
 
         const { onStudentPage, tutors } = this.props;
 
