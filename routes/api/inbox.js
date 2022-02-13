@@ -5,8 +5,9 @@ const Inbox = require('../../models/Inbox');
 const res = require("express/lib/response");
 
 
-router.get('/', (req, res)=>{
-  Inbox.find({$or: [{senderId: req.body.id}, {receiverId: req.body.id}]})
+router.get('/:id', (req, res)=>{
+   console.log(req.params.id)
+  Inbox.find({$or: [{senderId: req.params.id}, {receiverId: req.params.id}]})
   .then((err, docs)=>{
      if(err){
         return res.json(err)
@@ -22,7 +23,7 @@ router.post('/new', (req, res)=>{
     const inbox = new Inbox({
        senderId: req.body.senderId,
        receiverId: req.body.receiverId,
-       messages: req.body.message
+       messages: req.body.messages
     })
    inbox.save()
    return res.json(inbox)
@@ -34,7 +35,7 @@ router.patch('/update', (req, res, next)=>{
       if(!inbox) {res.send('no related messages found, pls start a new chat')}
       else { 
          const history = inbox.messages
-       history.push(req.body.message)
+       history.push(req.body.messages)
        inbox.messages = history
         inbox.save()
       return res.json(inbox)}

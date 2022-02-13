@@ -6,7 +6,7 @@ class UserInfo extends React.Component {
     const {user, openModal, ownReview, avgReview} = this.props;
     return (
       <div className='user-info'>
-        <button className='message-user'>Message</button>
+        <button className='message-user' onClick={() => openModal("createMessage")}>Message</button>
         {user.role === 'tutor' && 
           <div>
             {!Boolean(ownReview) ? 

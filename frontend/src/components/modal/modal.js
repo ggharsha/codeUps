@@ -4,10 +4,10 @@ import { connect } from "react-redux";
 import CreateReviewContainer from "../user/CreateReviewContainer";
 import EditReviewContainer from "../user/EditReviewContainer";
 import AboutMeModalContainer from "../user/AboutMeModalContainer";
+import InboxModalContainer from "../navbar/inbox/InboxModalContainer";
+import CreateMessageModalContainer from "../user/CreateMessageModalContainer";
 
-// createReview
 // createMessage
-// openVideo
 
 function Modal({ modal, closeModal, history, profileUser }) {
     if (!modal) return null;
@@ -22,12 +22,12 @@ function Modal({ modal, closeModal, history, profileUser }) {
         case 'aboutMe':
             component = <AboutMeModalContainer profileUser={profileUser} />
             break;
-        // case 'createMessage':
-        //     component = <CreateMessageContainer history={history} />
-        //     break;
-        // case 'openVideo':
-        //     component = <OpenVideoContainer />
-        //     break;
+        case 'openInbox':
+            component = <InboxModalContainer />
+            break;
+        case 'createMessage':
+            component = <CreateMessageModalContainer profileUser={profileUser} />
+            break;
         default: 
             return null;
     }

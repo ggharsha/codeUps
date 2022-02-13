@@ -5,6 +5,7 @@ import UserReducer from './user_reducers';
 import reviewReducer from './review_reducer';
 import modalReducer from './modal_reducer';
 import VideoReducer from './video_reducer';
+import inboxReducer from './inbox_reducer';
 
 const RootReducer = combineReducers({
     user: UserReducer,
@@ -12,7 +13,8 @@ const RootReducer = combineReducers({
     videos: VideoReducer,
     session,
     errors,
-    modal: modalReducer 
+    modal: modalReducer,
+    inbox: inboxReducer
 });
 
 export default RootReducer;

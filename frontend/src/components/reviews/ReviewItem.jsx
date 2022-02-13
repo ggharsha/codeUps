@@ -10,7 +10,6 @@ class ReviewItem extends React.Component {
     render() {
         const { student, review, onStudentPage, tutor } = this.props;
 
-        console.log(this.props)
         return (
             <li className="review-item">
                 <div className='rating-header'>
