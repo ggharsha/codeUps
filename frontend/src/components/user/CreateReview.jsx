@@ -64,7 +64,9 @@ export default class CreateReview extends React.Component {
                         value={this.state.text}
                     />
                     {this.renderErrors()}
-                    <button className="submit-button" type="submit">Submit</button>
+                    <div className='create-button-container'>
+                        <button className="submit-button" type="submit">Submit</button>
+                    </div>
                 </form>
             </div>
         )

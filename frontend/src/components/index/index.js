@@ -14,7 +14,7 @@ export default class Index extends React.Component {
     }
 
     render() {
-        if (!this.props.tutors || !this.props.students || !this.props.videos) return null;
+        if (!this.props.tutors || !this.props.students[0] || !this.props.videos) return null;
         return (
             <div className="index-container">
                 <NavbarContainer />

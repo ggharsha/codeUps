@@ -20,11 +20,10 @@ class Reviews extends React.Component {
 
     
     render() {
-        if (!this.props.reviews || !Object.keys(this.props.students).length) return null;
+        if (!this.props.reviews || !Object.keys(this.props.students).length || !Object.keys(this.props.tutors).length) return null;
 
         const { onStudentPage, tutors } = this.props;
 
-        console.log('reviews', this.props.reviews)
         return (
             <div className="reviews-container">
                 <h2 className='review-title'>Reviews</h2>
