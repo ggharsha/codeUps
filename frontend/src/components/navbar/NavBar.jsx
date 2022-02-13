@@ -21,7 +21,7 @@ class NavBar extends React.Component {
             <div className="nav-bar-links">
               <div className="user-logout-container">
                 <div className="inbox-container">
-                  <i className="fas fa-inbox fa-2x"></i>              
+                  <i onClick={() => this.props.openModal("openInbox")} className="fas fa-inbox fa-2x"></i>              
                 </div>
                 <Link to={`/user/${this.props.currentUser.id}`} className="user-profile-container">
                   <i className="fa-solid fa-user"></i>
