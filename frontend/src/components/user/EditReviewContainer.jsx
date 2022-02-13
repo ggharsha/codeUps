@@ -5,8 +5,16 @@ import { fetchUser } from '../../actions/user_actions';
 import EditReview from './EditReview';
 
 const mapStateToProps = (state, ownProps) => {
+
+  let currReview = null;
+  Object.values(state.reviews).forEach(review => {
+    if (review.studentId === state.session.user.id) {
+      currReview = review
+    }
+  })
+
   return {
-    review: state.reviews[state.session.user.id],
+    review: currReview,
     profileUser: ownProps.profileUser,
     currentUser: state.session.user,
     errors: Object.values(state.errors.review)
