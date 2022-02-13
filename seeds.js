@@ -174,7 +174,7 @@ const videoSeed = [
 
     },
     {
-        title: "DOM Manupilation",
+        title: "DOM Manipulation",
         authorId: '6205e0e9e43cd88a7e60a869',
         videoUrl: "/images/trimming15.mp4",
         featured: false,
