@@ -45,9 +45,13 @@ li.review-item {
       font-size: .7rem;
       margin-bottom: 10px;
 
-      a:hover{
-        text-decoration: underline;
-        color: $yellow;
+      a {
+        color: $medium-purple;
+
+        &:hover{
+          text-decoration: underline;
+          color: $yellow;
+        }
       }
     }
   }
