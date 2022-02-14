@@ -6,7 +6,8 @@ const res = require("express/lib/response");
 
 
 router.get('/', (req, res)=>{
-  Inbox.find({$or: [{senderId: req.body.userId}, {receiverId: req.body.userId}]})
+   console.log(req)
+  Inbox.find({$or: [{senderId: req.query.userId}, {receiverId: req.query.userId}]})
   .then((err, docs)=>{
      if(err){
         return res.json(err)
