@@ -6,6 +6,7 @@ import EditReviewContainer from "../user/EditReviewContainer";
 import AboutMeModalContainer from "../user/AboutMeModalContainer";
 import InboxModalContainer from "../navbar/inbox/InboxModalContainer";
 import CreateMessageModalContainer from "../user/CreateMessageModalContainer";
+// import MessageShowContainer from ""
 
 // createMessage
 
@@ -28,6 +29,9 @@ function Modal({ modal, closeModal, history, profileUser }) {
         case 'createMessage':
             component = <CreateMessageModalContainer profileUser={profileUser} />
             break;
+        // case 'openMessage':
+        //      component = <MessageShowContainer />
+        //      break;
         default: 
             return null;
     }
