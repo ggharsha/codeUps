@@ -6,7 +6,6 @@ const res = require("express/lib/response");
 
 
 router.get('/', (req, res)=>{
-   console.log(req)
   Inbox.find({$or: [{senderId: req.query.userId}, {receiverId: req.query.userId}]})
   .then((err, docs)=>{
      if(err){
