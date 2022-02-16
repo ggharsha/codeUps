@@ -42,12 +42,16 @@ class SearchBar extends React.Component {
         } else if(this.state.filter === 'Username'){
             array = this.props.tutors.filter(tutor=>{
                 return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
-            })
+            }).slice(0, 5)
         } else if (this.state.filter === "Languages"){
             array = this.props.tutors.filter(tutor => {
                 const languages = tutor.languages.join(',').toLowerCase()
                 return languages.includes(e.currentTarget.value.toLowerCase())
-            })
+            }).slice(0, 5)
+        } else if (this.state.filter === "Videos") {
+            array = this.props.videos.filter(video => {
+                return video.title.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+            }).slice(0, 5)
     } 
 
 
@@ -79,6 +83,7 @@ class SearchBar extends React.Component {
         } else {
             searchIcon = <i className="fa-solid fa-magnifying-glass fa-1x"></i>
         }
+        console.log(result)
  
 
         return (
@@ -88,7 +93,7 @@ class SearchBar extends React.Component {
                 <div className='searchbar-center'>  
                     <input className='searchinput' type="text" placeholder="Search for tutors, videos, and more..." onChange={this.handleSearchInput} />
                     {noData}
-                    {key.length >= 1 && <SearchResult search={result} getVideo={this.props.getVideo} fetchUser={this.props.fetchUser} />} 
+                    {key.length >= 1 && result && <SearchResult openModal={this.props.openModal} search={result} getVideo={this.props.getVideo} fetchUser={this.props.fetchUser} />} 
                 </div>               
                 <div className='magnifying-glass'>
                     {searchIcon}

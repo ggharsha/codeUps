@@ -35,9 +35,12 @@ router.get('/:authorId', findVideo, (req, res) => {
   return res.json(req.videos)
 })
 
-router.get('/:id', (req, res) => {
+router.get('/video/:id', (req, res) => {
+    console.log("hello")
     Video.find({ id: req.params.id })
-        .then(video => { res.json(video) })
+        .then(video => { 
+            res.json(video) 
+        })
         .catch(err => res.status(404).json({ notvideosfound: "No video found" }))
 })
 

@@ -5,7 +5,7 @@ export const fetchVideos = () => {
 }
 
 export const fetchVideo = id => {
-    return axios.get(`/api/videos/${id}`);
+    return axios.get(`/api/videos/video/${id}`);
 }
 
 export const fetchTutorVideos = authorId => {

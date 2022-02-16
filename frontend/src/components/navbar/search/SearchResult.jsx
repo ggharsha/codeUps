@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import TutorSearchItem from "./TutorSearchItem";
 import VideoSearchItem from "./VideoSearchItem";
 
-const SearchResult = ({search, fetchUser, getVideo})=>{
+const SearchResult = ({search, fetchUser, getVideo, openModal})=>{
     const [isActive, setIsActive] = useState(true);
     const items = search.map(result => result)
     if (items.length === 0 && isActive) {
@@ -35,6 +35,7 @@ const SearchResult = ({search, fetchUser, getVideo})=>{
                             video={list}
                             key={idx}
                             getVideo={getVideo}
+                            openModal={openModal}
                         /> 
                     })}
                 </ul> 

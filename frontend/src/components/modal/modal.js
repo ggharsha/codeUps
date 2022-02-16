@@ -6,11 +6,12 @@ import EditReviewContainer from "../user/EditReviewContainer";
 import AboutMeModalContainer from "../user/AboutMeModalContainer";
 import InboxModalContainer from "../navbar/inbox/InboxModalContainer";
 import CreateMessageModalContainer from "../user/CreateMessageModalContainer";
+import VideoModal from "../navbar/search/VideoModal";
 // import MessageShowContainer from ""
 
 // createMessage
 
-function Modal({ modal, closeModal, history, profileUser }) {
+function Modal({ modal, closeModal, history, profileUser, video }) {
     if (!modal) return null;
     let component;
     switch (modal) {
@@ -29,6 +30,9 @@ function Modal({ modal, closeModal, history, profileUser }) {
         case 'createMessage':
             component = <CreateMessageModalContainer profileUser={profileUser} />
             break;
+        case 'openVideoRes': 
+            component = <VideoModal video={video} />
+            break;
         // case 'openMessage':
         //      component = <MessageShowContainer />
         //      break;
@@ -46,7 +50,8 @@ function Modal({ modal, closeModal, history, profileUser }) {
 
 const mSTP = state => ({
     modal: state.modal,
-    profileUser: Object.values(state.user.profileUser)[0]
+    profileUser: Object.values(state.user.profileUser)[0],
+    video: state.videos[0]
 });
 
 const mDTP = dispatch => ({
