@@ -9,7 +9,7 @@ const VideoReducer = (state={}, action)=>{
         case RECEIVE_VIDEOS:
             return action.videos.data
         case RECEIVE_VIDEO: 
-            return action.video
+            return action.video.data
         default:
             return state
     }
