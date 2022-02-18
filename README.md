@@ -26,6 +26,8 @@ codeUps is a code-mentorship platform built for tutors and students to connect w
 
 ### Code snippets
 
+![search.gif](https://raw.githubusercontent.com/ggharsha/codeUps/main/readme_assets/reviews.gif)
+
 ```js
    handleSearchInput(e){
         e.preventDefault();
@@ -68,6 +70,8 @@ codeUps is a code-mentorship platform built for tutors and students to connect w
 ```
 
 The `handleSearchInput()` function dynamically checks the filter inputted by the user and uses it to cater the search from the frontend. If not filter is present, then the function will return Tutors sorted by username and language. If a filter is present, the function will use that instead. The "All Fields" search category serves as a reset for the state, and can be used interchangably with no search filter in case the user wants to search by filter, but decides to change back to searching without a filter.
+
+![review.gif](https://raw.githubusercontent.com/ggharsha/codeUps/main/readme_assets/reviews.gif)
 
 ### Future plans
 * Potentially integrating video calling with socket.io into app
