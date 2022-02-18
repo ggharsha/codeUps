@@ -27,8 +27,47 @@ codeUps is a code-mentorship platform built for tutors and students to connect w
 ### Code snippets
 
 ```js
+   handleSearchInput(e){
+        e.preventDefault();
+        this.setState({keyword: e.currentTarget.value})
+        let array 
+    
+        if (this.state.filter === "Search" || this.state.filter === "All Fields") {
+            array = []
+            
+            const tutorUsernameMatch = this.props.tutors.filter(tutor=>{
+                return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+            })
 
+            const tutorLanguagesMatch = this.props.tutors.filter(tutor => {
+                const languages = tutor.languages.join(',').toLowerCase()
+                return languages.includes(e.currentTarget.value.toLowerCase())
+            })
+
+            const temp = array.concat(tutorUsernameMatch, tutorLanguagesMatch)
+            temp.forEach(result=> {
+                if(!array.includes(result)){
+                    array.push(result)
+                }
+            })
+
+        } else if(this.state.filter === 'Username'){
+            array = this.props.tutors.filter(tutor=>{
+                return tutor.username.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+            }).slice(0, 5)
+        } else if (this.state.filter === "Languages"){
+            array = this.props.tutors.filter(tutor => {
+                const languages = tutor.languages.join(',').toLowerCase()
+                return languages.includes(e.currentTarget.value.toLowerCase())
+            }).slice(0, 5)
+        } else if (this.state.filter === "Videos") {
+            array = this.props.videos.filter(video => {
+                return video.title.toLowerCase().includes(e.currentTarget.value.toLowerCase())
+            }).slice(0, 5)
+    } 
 ```
+
+The `handleSearchInput()` function dynamically checks the filter inputted by the user and uses it to cater the search from the frontend. If not filter is present, then the function will return Tutors sorted by username and language. If a filter is present, the function will use that instead. The "All Fields" search category serves as a reset for the state, and can be used interchangably with no search filter in case the user wants to search by filter, but decides to change back to searching without a filter.
 
 ### Future plans
 * Potentially integrating video calling with socket.io into app
