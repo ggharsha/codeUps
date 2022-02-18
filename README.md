@@ -26,7 +26,7 @@ codeUps is a code-mentorship platform built for tutors and students to connect w
 
 ### Code snippets
 
-![search.gif](https://raw.githubusercontent.com/ggharsha/codeUps/main/readme_assets/reviews.gif)
+![search.gif](https://raw.githubusercontent.com/ggharsha/codeUps/main/readme_assets/search.gif)
 
 ```js
    handleSearchInput(e){
