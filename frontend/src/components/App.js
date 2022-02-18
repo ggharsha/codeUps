@@ -23,7 +23,7 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginPage} />
         <AuthRoute exact path="/signup" component={SignupPage} />
         <ProtectedRoute exact path="/index" component={IndexContainer} />
-        <Route exact path='/user/:userId' component={UserPageContainer} />
+        <ProtectedRoute exact path='/user/:userId' component={UserPageContainer} />
     </Switch>
     <Footer />
     
