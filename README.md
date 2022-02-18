@@ -1,2 +1,35 @@
 # codeUps
-MERN Stack Project: codeUps
+
+**--> Live [here](https://codeups.herokuapp.com/) <--**
+
+![codeUps.gif](https://github.com/ggharsha/codeUps/blob/main/readme_assets/splash_page.gif)
+
+### Team members
+* Jing Jing Zhang: Backend Lead
+* Perry Xie: Frontend Lead
+* Michelle Huang: Design Lead and Flex
+* Harsha Bandi: Team Lead and Flex
+
+### Background
+codeUps is a code-mentorship platform built for tutors and students to connect with one another in a dedicated, code-driven setting. Users can register and search for the right tutor for them, as tutors advertise their services with examples of their work. The site features an animated splash page, different features for students and tutors, an interactive index page, and customizable profile pages. Additionally, the website contains a filtered search functionality, where users can search tutors and videos by name, title, or language depending on the applied filter. The website is structured with React best practices in mind, so components are broken down into their smallest possible pieces, allowing for fast rendering and response time.
+
+### Technologies used
+* MongoDB for building a database
+* Mongoose ODM for validations and managing data
+* Node.js / Express.js for backend
+* React.js / Redux.js for frontend
+* HTML5 for building out skeleton elements
+* CSS3 for styling the project
+* AWS for image and video hosting
+* Heroku for website hosting
+* Git / GitHub for cooperative workflow between team members
+
+### Code snippets
+
+```js
+
+```
+
+### Future plans
+* Potentially integrating video calling with socket.io into app
+* Adding inbox to within app rather than through email
