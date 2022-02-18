@@ -26,9 +26,9 @@ class NavBar extends React.Component {
         return (
             <div className="nav-bar-links">
               <div className="user-logout-container">
-                <div className="inbox-container">
+                {/* <div className="inbox-container">
                   <i onClick={() => this.props.openModal("openInbox")} className="fas fa-inbox fa-2x"></i>              
-                </div>
+                </div> */}
                 <Link to={`/user/${this.props.currentUser.id}`} className="user-profile-container">
                   <i className="fa-solid fa-user"></i>
                 </Link>
