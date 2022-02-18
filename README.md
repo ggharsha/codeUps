@@ -73,6 +73,40 @@ The `handleSearchInput()` function dynamically checks the filter inputted by the
 
 ![review.gif](https://raw.githubusercontent.com/ggharsha/codeUps/main/readme_assets/reviews.gif)
 
+```js
+const StarRating = ({ updateStars, numStars }) => {
+
+    const [rating, setRating] = useState(numStars)
+    const [hover, setHover] = useState(null)
+    const updateRating = (ratingValue) => {
+        setRating(ratingValue);
+        updateStars(ratingValue);
+    }
+
+    return (
+        <div className='rating-stars'>
+            {[...Array(5)].map((star, idx) => {
+                const ratingValue = idx + 1;
+                return (
+                    <label key={idx}>
+                        <input type='radio' name='rating' value={ratingValue}
+                            onClick={() => updateRating(ratingValue)}
+                        />
+                        <i className={ratingValue <= (hover || rating) ? "fa-solid fa-star active" : "fa-solid fa-star"}
+                            onMouseEnter={() => setHover(ratingValue)}
+                            onMouseLeave={() => setHover(null)}
+                            />
+                    </label>
+                )
+
+            })}
+        </div>
+    )
+}
+```
+
+The `StarRating` function uses React hooks to dynamically change the star rating of a tutor in a review that you've left. You can hover over the star rating you want to add and it will highlight all prior stars as well. Clicking allows you to set the rating so that when you stop hovering, the rating will remain. This code allows us to keep setting ratings DRY and utilizes React hooks to do so.
+
 ### Future plans
 * Potentially integrating video calling with socket.io into app
 * Adding inbox to within app rather than through email
