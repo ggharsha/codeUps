@@ -6,14 +6,24 @@ class UserInfo extends React.Component {
     const {user, openModal, ownReview, avgReview} = this.props;
     return (
       <div className='user-info'>
-        <button className='message-user' onClick={() => openModal("createMessage")}>Message</button>
+        {/* <button 
+          className='message-user' 
+          // onClick={() => openModal("createMessage")}
+        > */}
+        <a 
+          className='temp-email-user'
+          href={`mailto:${user.email}`}
+        >
+          <div>Email</div>
+        </a>
+        {/* </button> */}
         {user.role === 'tutor' && 
           <div>
             {!Boolean(ownReview) ? 
-            <button className='review-user' onClick={() => openModal('createReview')}>
+            <button className='review-user' onClick={() => openModal({type: 'createReview'})}>
               Write a Review
             </button> :
-            <button className='edit-review' onClick={() => openModal('editReview')}>Edit Review</button>
+            <button className='edit-review' onClick={() => openModal({type: 'editReview'})}>Edit Review</button>
             }
           </div>
         }

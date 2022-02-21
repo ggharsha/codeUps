@@ -12,6 +12,7 @@ class NavBar extends React.Component {
   componentDidMount() {
     if (this.props.currentUser) {
       this.props.fetchAllInboxes({ userId: this.props.currentUser.id})
+      this.props.getVideos()
     }
   }
 

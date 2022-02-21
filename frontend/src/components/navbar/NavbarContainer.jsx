@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import { fetchAllInboxes } from '../../actions/inbox_actions';
+import { getVideos } from '../../actions/video_actions';
 
 import NavBar from './NavBar';
 
@@ -17,7 +18,8 @@ const mapStateToProps = (state, ownProps) => ({
 const mDTP = dispatch => ({
   logout: () => dispatch(logout()),
   openModal: modal => dispatch(openModal(modal)),
-  fetchAllInboxes: userId => dispatch(fetchAllInboxes(userId))
+  fetchAllInboxes: userId => dispatch(fetchAllInboxes(userId)),
+  getVideos: () => dispatch(getVideos())
 })
 
 export default connect(

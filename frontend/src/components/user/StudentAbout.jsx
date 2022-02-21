@@ -8,7 +8,7 @@ class StudentAbout extends React.Component {
     return (
       <div className='student-about-container'>
         <div className='about-content'>
-          {onCurrentUserPage && <button onClick={() => openModal('aboutMe') } className='add-about'>Edit About</button>}
+          {onCurrentUserPage && <button onClick={() => openModal({type: 'aboutMe'}) } className='add-about'>Edit About</button>}
           <h1 className='about-header'>
             About <span>{user.username}</span>
           </h1>

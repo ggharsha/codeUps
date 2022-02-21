@@ -14,7 +14,7 @@ import VideoModal from "../navbar/search/VideoModal";
 function Modal({ modal, closeModal, history, profileUser, video }) {
     if (!modal) return null;
     let component;
-    switch (modal) {
+    switch (modal.type) {
         case 'createReview':
             component = <CreateReviewContainer history={history} profileUser={profileUser} />
             break;
@@ -24,14 +24,14 @@ function Modal({ modal, closeModal, history, profileUser, video }) {
         case 'aboutMe':
             component = <AboutMeModalContainer profileUser={profileUser} />
             break;
-        case 'openInbox':
-            component = <InboxModalContainer />
-            break;
-        case 'createMessage':
-            component = <CreateMessageModalContainer profileUser={profileUser} />
-            break;
+        // case 'openInbox':
+        //     component = <InboxModalContainer />
+        //     break;
+        // case 'createMessage':
+        //     component = <CreateMessageModalContainer profileUser={profileUser} />
+        //     break;
         case 'openVideoRes': 
-            component = <VideoModal video={video} />
+            component = <VideoModal videoId={modal.videoId} />
             break;
         // case 'openMessage':
         //      component = <MessageShowContainer />
@@ -51,7 +51,6 @@ function Modal({ modal, closeModal, history, profileUser, video }) {
 const mSTP = state => ({
     modal: state.modal,
     profileUser: Object.values(state.user.profileUser)[0],
-    video: state.videos[0]
 });
 
 const mDTP = dispatch => ({
