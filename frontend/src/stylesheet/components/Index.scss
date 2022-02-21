@@ -25,10 +25,32 @@
     cursor: pointer;
 }
 
+h2.video-index-title {
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 7px;
+    margin-top: 15px;
+}
+
+h3.row-title-video {
+    padding-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+
+h3.row-title-tutor {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $medium-purple;
+}
+
+h3.row-title-student {
+    padding-bottom: 5px;
+    border-bottom: 1px solid $yellow;
+}
+
 .index-container h3 {
     font-size: 40px;
     padding-top: 20px;
-    margin-left: 30px;
+    margin: 0 30px;
     color: $darkestGray;
 }
 

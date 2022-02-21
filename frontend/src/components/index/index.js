@@ -19,7 +19,7 @@ export default class Index extends React.Component {
             <div className="index-container">
                 <NavbarContainer />
                 <div className="index-video-container">
-                    <h3>Videos</h3>
+                    <h3 className="row-title-video">Videos</h3>
                     <ul className="video-carousel">
                         {this.props.videos.map(video => (
                             <IndexVideoItem 
@@ -31,7 +31,7 @@ export default class Index extends React.Component {
                     </ul>
                 </div>
                 <div className="index-tutor-container">
-                    <h3>Tutors</h3>
+                    <h3 className="row-title-tutor">Tutors</h3>
                     <ul className="carousel">
                         {this.props.tutors.map((tutor, idx) => (
                             <Link 
@@ -46,7 +46,7 @@ export default class Index extends React.Component {
                     </ul>
                 </div>
                 <div className="index-student-container">
-                    <h3>Students</h3>
+                    <h3 className="row-title-student">Students</h3>
                     <ul className="carousel">
                         {this.props.students.map((student, idx) => (
                             <Link 
