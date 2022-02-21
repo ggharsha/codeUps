@@ -51,7 +51,7 @@ class MainPage extends React.Component {
               <Card 
                 title={'Collaboration'}
                 image={require('../../images/community.png')}
-                body={'Get connect with tutors in real time with live video calling.'}
+                body={'Get connect with tutors for a personalized experience.'}
               />
               <Card 
                 title={'Learning'}
