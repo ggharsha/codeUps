@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   const userId = ownProps.match.params.userId;
   const user = state.user.profileUser[userId];
   const reviews = Object.values(state.reviews);
-  const videos = Object.values(state.videos)
+  const videos = Object.values(state.videos).filter(video => video.authorId === userId)
   return {
     userId,
     user,
