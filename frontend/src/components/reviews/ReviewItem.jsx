@@ -9,7 +9,7 @@ class ReviewItem extends React.Component {
 
     render() {
         const { student, review, onStudentPage, tutor } = this.props;
-
+        if (!student || !review || !tutor) return null;
         return (
             <li className="review-item">
                 <div className='rating-header'>

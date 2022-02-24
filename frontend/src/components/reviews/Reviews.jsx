@@ -8,10 +8,11 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getReviews(this.props.userId);
         this.props.fetchStudents();
         this.props.fetchTutors();
-        this.props.fetchUser(this.props.userId);
+        this.props.fetchUser(this.props.match.params.userId)
+            .then(() => this.props.getReviews(this.props.match.params.userId));
+        // debugger
     }
 
     // findStudent(studentId) {

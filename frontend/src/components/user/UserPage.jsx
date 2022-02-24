@@ -29,9 +29,9 @@ class UserPage extends React.Component {
   }
 
   render() {
-    const { user, openModal, videos, reviews, currUser, userId } = this.props;
+    let { user, openModal, videos, reviews, currUser, userId } = this.props;
     if (!user) {return null}
-    if (user.role === 'tutor' && !videos.length ) return null
+    // if (user.role === 'tutor' && !videos.length) videos = []; 
     let ownReview = null;
 
 

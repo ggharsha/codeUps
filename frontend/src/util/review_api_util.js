@@ -5,7 +5,9 @@ import axios from 'axios';
 // }
 
 export const getReviews = id => {
-    return axios.get(`/api/reviews/${id}`)
+    const res = axios.get(`/api/reviews/${id}`)
+    // debugger
+    return res
 }
 
 export const createReview = review => {

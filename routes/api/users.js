@@ -57,7 +57,8 @@ router.post('/register', (req, res) => {
                     email: req.body.email,
                     password: req.body.password,
                     role: req.body.role,
-                    languages: req.body.languages
+                    languages: req.body.languages,
+                    photoUrl: "https://codeups-aa-seeds.s3.us-west-2.amazonaws.com/logo+copy.jpg"
                 })
 
                 bcrypt.genSalt(10, (err, salt) => {

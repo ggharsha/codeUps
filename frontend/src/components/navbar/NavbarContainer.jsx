@@ -3,6 +3,7 @@ import { logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
 import { fetchAllInboxes } from '../../actions/inbox_actions';
 import { getVideos } from '../../actions/video_actions';
+import { getReviews } from '../../actions/review_actions';
 
 import NavBar from './NavBar';
 
@@ -19,7 +20,8 @@ const mDTP = dispatch => ({
   logout: () => dispatch(logout()),
   openModal: modal => dispatch(openModal(modal)),
   fetchAllInboxes: userId => dispatch(fetchAllInboxes(userId)),
-  getVideos: () => dispatch(getVideos())
+  getVideos: () => dispatch(getVideos()),
+  getReviews: userId => dispatch(getReviews(userId))
 })
 
 export default connect(

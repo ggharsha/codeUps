@@ -83,7 +83,6 @@ class SearchBar extends React.Component {
         } else {
             searchIcon = <i className="fa-solid fa-magnifying-glass fa-1x"></i>
         }
-        console.log(result)
  
 
         return (
