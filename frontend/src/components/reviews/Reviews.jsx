@@ -12,7 +12,6 @@ class Reviews extends React.Component {
         this.props.fetchTutors();
         this.props.fetchUser(this.props.match.params.userId)
             .then(() => this.props.getReviews(this.props.match.params.userId));
-        // debugger
     }
 
     // findStudent(studentId) {

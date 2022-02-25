@@ -15,7 +15,6 @@ const VideoModal = ({ video, videoId }) => {
 };
 
 const mSTP = (state, ownProps) => {
-    // debugger
     return {
         video: state.videos.filter(video => video._id === ownProps.videoId)[0]
     }

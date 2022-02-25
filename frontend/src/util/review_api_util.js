@@ -6,7 +6,6 @@ import axios from 'axios';
 
 export const getReviews = id => {
     const res = axios.get(`/api/reviews/${id}`)
-    // debugger
     return res
 }
 
