@@ -39,8 +39,8 @@ export const getReviews = (id)=> dispatch =>{
     return ReviewApiUtil.getReviews(id)
         .then(reviews => {
             dispatch(receiveReviews(reviews))
-        }, err => {
-            console.log(err)
+        }, errors => {
+            dispatch(receiveReviewErrors(errors.response.data))
         })
 }
 

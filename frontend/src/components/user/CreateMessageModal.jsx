@@ -13,7 +13,6 @@ export default class CreateMessageModal extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // console.log(this.props.currentInbox)
 
         let action;
         if (this.props.currentInbox.length > 0) action = this.props.updateInbox;

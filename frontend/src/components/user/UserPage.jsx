@@ -21,6 +21,9 @@ class UserPage extends React.Component {
   }
 
   calculateAvgReview() {
+
+    if (Object.keys(this.props.reviews).length === 0) return ('-')
+
     let sum = 0;
     Object.values(this.props.reviews).forEach(review => {
       sum+=review.rating

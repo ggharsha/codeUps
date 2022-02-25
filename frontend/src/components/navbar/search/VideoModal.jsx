@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const VideoModal = ({ video, videoId }) => {
-    console.log(video)
     return (
         <div>
             <video className='carousel-video' controls>

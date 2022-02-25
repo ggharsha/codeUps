@@ -22,7 +22,6 @@ class NavBar extends React.Component {
   }
 
   profile() {
-    console.log("test")
     this.props.getReviews(this.props.currentUser.id)
   }
 

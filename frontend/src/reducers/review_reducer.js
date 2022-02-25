@@ -10,10 +10,10 @@ const reviewReducer = (state={}, action)=>{
     switch(action.type){
         case RECEIVE_REVIEWS:
             const reviewsObj = {};
+            if (Object.keys(action.reviews.data).length === 0) return {}
             action.reviews.data.forEach((review) => {
                 reviewsObj[review._id] = review
             })
-            console.log(reviewsObj)
             return reviewsObj;
 
         case RECEIVE_REVIEW:
