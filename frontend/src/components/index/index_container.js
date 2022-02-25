@@ -28,8 +28,6 @@ const mSTP = state => {
         return state.user.students[id]
     })
 
-    // console.log(students);
-    // console.log(shuffleArray(Object.values(state.user.students)).slice(0, 5))
 
     return {
     tutors: shuffleArray(Object.values(state.user.tutors)).slice(0, 5),

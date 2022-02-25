@@ -18,7 +18,7 @@ const tutorReviews = (req, res, next) => {
     Review.find({ tutorId: req.params.id })
         .then(reviews => {
             if (reviews.length < 1) {
-                next()
+                return res.json({})
             } else {
                 return res.json(reviews)
             }
@@ -77,7 +77,6 @@ router.delete('/delete/:id',(req, res)=>{
     
     Review.findByIdAndRemove({_id: id},null, (err, docs)=>{
         if(err){
-            console.log(err)
             return res.json(err)
         }else{
 
